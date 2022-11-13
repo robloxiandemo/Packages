@@ -57,15 +57,22 @@ end
 --[=[
 	@within Cleanser
 
+	@param Tasks TableTask -- The cleanse tasks.
+
 	@return table -- Return the cleanser class's metatable.
 
 	Index a new cleanser.
 ]=]
-function Cleanser.New(): table
+function Cleanser.New(Tasks: TableTask): table
 	local self: CleanserData = setmetatable({
 
 		["Cleanser"] = Cleanser;
-		["Tasks"] = {}
+
+		["Tasks"] = {
+
+			Tasks
+
+		}
 
 	}, Cleanser)
 
