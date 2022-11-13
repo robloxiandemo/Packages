@@ -48,6 +48,18 @@ local Cleanser: table = require(script.Parent.Parent.Parent["Cleanser"])
 	@return table -- Return the signal class's metatable.
 
 	Index a new Signal.
+
+	```lua
+		local Table: table = {
+
+			[1] = 1;
+			[2] = 3;
+			[3] = 5;
+
+		}
+
+		local TableSignal: table = Signal.New("TableSignal")
+	```
 ]=]
 function Signal.New(Name: string, Listener: Function?): table
 	local Connections: table = Signal["Connections"]
@@ -82,9 +94,17 @@ end
 
 	@param Object table -- The specified object.
 
-	@return boolean -- Return whether or not the specified object is a SignalMethods.
+	@return boolean -- Return whether or not the specified object is a Signal.
 
-	Return whether or not the specified object is a SignalMethods.
+	Return whether or not the specified object is a Signal.
+
+	```lua
+		task.defer(function(): any?
+			print(TableSignal.Is(TableSignal)) --> true
+			print(TableSignal.Is("string")) --> false
+			print(TableSignal.Is(0)) --> false
+		end)
+	```
 ]=]
 local function Is(Object: table?): boolean
 	return ((type(Object)) == ("table")) and ((getmetatable(Object)) == (Signal)) :: boolean
@@ -98,6 +118,18 @@ end
 	@return Connection -- Return a table consisting of disconnect-related functions.
 
 	Connect to the signal while waiting for a fire to load the specified callback function.
+
+	```lua
+		local function Callback(String: string, ...: any?): any?
+			if (((type(string)) == ("string")) and ((String) == ("NewEntry"))) then
+				table.insert(Table, ...)
+
+				print(Table)
+			end
+		end
+
+		TableSignal:Connect(Callback)
+	```
 ]=]
 function SignalMethods:Connect(Callback: Function): Connection
 	local Item: table = Signal["Connections"][self["Name"]]
@@ -129,6 +161,18 @@ end
 	@return Connection -- Return a table consisting of disconnect-related functions.
 
 	Unlike the normal connect method, this will run once.
+
+	```lua
+		local function Callback(String: string, ...: any?): any?
+			if (((type(string)) == ("string")) and ((String) == ("NewEntry"))) then
+				table.insert(Table, ...)
+
+				print(Table)
+			end
+		end
+
+		TableSignal:ConnectOnce(Callback)
+	```
 ]=]
 function SignalMethods:ConnectOnce(Callback: Function): Connection
 	local Connection: Function?
@@ -153,6 +197,18 @@ end
 	@return Connection -- Return a table consisting of disconnect-related functions.
 
 	Unlike the normal connect method, this will run when specified callback when the server's closing.
+
+	```lua
+		local function Callback(String: string, ...: any?): any?
+			if (((type(string)) == ("string")) and ((String) == ("NewEntry"))) then
+				table.insert(Table, ...)
+
+				print(Table)
+			end
+		end
+
+		TableSignal:ConnectToOnClose(Callback)
+	```
 ]=]
 function SignalMethods:ConnectToOnClose(Callback: Function): Connection
 	local Connection: Function?
@@ -177,6 +233,18 @@ end
 	@return Connection -- Return a table consisting of disconnect-related functions.
 
 	Unlike the normal connect method, this will run in parallel, resulting in zero code interference.
+
+	```lua
+		local function Callback(String: string, ...: any?): any?
+			if (((type(string)) == ("string")) and ((String) == ("NewEntry"))) then
+				table.insert(Table, ...)
+
+				print(Table)
+			end
+		end
+
+		TableSignal:ConnectParallel(Callback)
+	```
 ]=]
 function SignalMethods:ConnectParallel(Callback: Function): Connection
 	return (self:Connect(function(...)
@@ -192,9 +260,17 @@ end
 	@return Wait -- Return a table consisting of any retrieved values.
 
 	Wait for the connection to be fired and then return any retrieved values.
+
+	```lua
+		task.defer(function(): any?
+			local Arguments: any = {TableSignal:Wait()}
+
+			print(table.unpack(Arguments))
+		end)
+	```
 ]=]
 function SignalMethods:Wait(): Wait?
-	local Result: any?
+	local Result: Wait?
 	local WaitSignal: any?
 
 	WaitSignal = self:Connect(function(...)
@@ -204,7 +280,7 @@ function SignalMethods:Wait(): Wait?
 
 	repeat
 		task.wait()
-	until (Result)
+	until (Result) :: Wait?
 
 	return ((Result) :: Wait?)
 end
@@ -215,6 +291,10 @@ end
 	@param ... any? -- The specified arguments to fire with.
 
 	Fire the current signal's connections.
+
+	```lua
+		TableSignal:Fire("NewEntry", 1)
+	```
 ]=]
 function SignalMethods:Fire(...: any?): any?
 	local Item: table = Signal["Connections"][self["Name"]]
@@ -236,6 +316,17 @@ end
 	@param ... any? -- The specified arguments to fire with.
 
 	Fire the current signal's connections until the specified callback is reached.
+
+	```lua
+		--// Very poor usage, though this works.
+		local function Callback(): any?
+			repeat
+				task.wait(1)
+			until (table.find(Table, 7))
+		end
+
+		TableSignal:FireUntil(Callback, "NewEntry", 1)
+	```
 ]=]
 function SignalMethods:FireUntil(Callback: Function, ...: any?): any?
 	local Item: table = Signal["Connections"][self["Name"]]
@@ -259,6 +350,16 @@ end
 	@param Callback Function -- The specified callback function.
 
 	Create a callback function that'd be activated on invoke, retrieving the function's callback.
+
+	```lua
+		local function Callback(String: string): number
+			if (((type(string)) == ("string")) and ((String) == ("RetrieveTotalCount"))) then
+				return (Table[table.getn(Table)]) :: table
+			end
+		end
+
+		TableSignal:OnInvoke(Callback)
+	```
 ]=]
 function SignalMethods:OnInvoke(Callback: Function): any?
 	Signal["Connections"][self["Name"]]["OnInvoke"] = Callback :: Function
@@ -272,6 +373,10 @@ end
 	@return Function -- Return the function associated with \"OnInvoke\".
 
 	Wait until the \"OnInvoke\" method exists and then invoke with the necessary arguments.
+
+	```lua
+		TableSignal:Invoke("RetrieveTotal")
+	```
 ]=]
 function SignalMethods:Invoke(...: any?): Function
 	local Item: table = Signal["Connections"][self["Name"]]
@@ -286,7 +391,11 @@ end
 --[=[
 	@within Signal
 
-	Destroy and cleanup a SignalMethods.
+	Destroy and cleanup a Signal.
+
+	```lua
+		TableSignal:Destroy()
+	```
 ]=]
 function SignalMethods:Destroy(): any?
 	Signal["Connections"][self["Name"]] = nil
