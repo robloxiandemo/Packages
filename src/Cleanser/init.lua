@@ -26,7 +26,8 @@ type CleanserData = {
 
 	:::info Warning
 	If you are seeking a more customizable handler for `RBXScriptConnections`,
-		then seek `Connector`.
+		then seek Trove, found here:
+			https://sleitnick.github.io/RbxUtil/api/Trove
 ]=]
 local Cleanser: table = {}
 Cleanser.ClassName = "Cleanser" :: string
