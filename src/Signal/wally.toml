@@ -1,7 +1,7 @@
 [package]
 name = "robloxiandemo/signal"
 description = "A custom signal implementation, which has built-in compatiblity for usage with Wally."
-version = "0.1.3"
+version = "0.1.4"
 license = "MIT"
 authors = ["Demo (https://github.com/RobloxianDemo)"]
 registry = "https://github.com/UpliftGames/wally-index"

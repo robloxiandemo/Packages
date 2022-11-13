@@ -370,9 +370,9 @@ end
 
 	@param ... any? -- The specified arguments to invoke with.
 
-	@return Function -- Return the function associated with \"OnInvoke\".
+	@return Function -- Return the function associated with "OnInvoke."
 
-	Wait until the \"OnInvoke\" method exists and then invoke with the necessary arguments.
+	Wait until the "OnInvoke" method exists and then invoke with the necessary arguments.
 
 	```lua
 		TableSignal:Invoke("RetrieveTotal")
