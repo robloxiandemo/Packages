@@ -22,6 +22,11 @@ type Connection = {
 
 type Wait = () -> (... any)
 
+--[=[
+	@class Signal
+
+	A class providing the cleanest and most efficient way of managing events via code.
+]=]
 local Signal: table = {}
 Signal.__index = Signal
 
