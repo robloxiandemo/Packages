@@ -31,7 +31,9 @@ local Signal: table = {}
 Signal.__index = Signal
 
 --[=[
-	@class SignalMethods
+	@within Signal
+
+	@interface SignalMethods
 
 	All of the subsidiary code within Signal.
 ]=]
@@ -47,6 +49,8 @@ local Cleanser: table = require(script.Parent.Parent.Parent["Cleanser"])
 
 --[=[
 	@within Signal
+
+	@method New
 
 	@param Name string -- The name to use for the newly created Signal.
 
@@ -85,6 +89,8 @@ function Signal.New(Name: string, Listener: Function?): table
 end
 
 --[=[
+	@within SignalMethods
+
 	@function Is
 
 	@param Object table -- The specified object.
@@ -98,7 +104,9 @@ local function Is(Object: table?): boolean
 end
 
 --[=[
-	@method Connect
+	@within SignalMethods
+
+	@function Connect
 
 	@param Callback Function -- The specified callback function.
 
@@ -129,7 +137,9 @@ function SignalMethods:Connect(Callback: Function): Connection
 end
 
 --[=[
-	@method ConnectOnce
+	@within SignalMethods
+
+	@function ConnectOnce
 
 	@param Callback Function -- The specified callback function.
 
@@ -153,7 +163,9 @@ function SignalMethods:ConnectOnce(Callback: Function): Connection
 end
 
 --[=[
-	@method ConnectToOnClose
+	@within SignalMethods
+
+	@function ConnectToOnClose
 
 	@param Callback Function -- The specified callback function.
 
@@ -177,7 +189,9 @@ function SignalMethods:ConnectToOnClose(Callback: Function): Connection
 end
 
 --[=[
-	@method ConnectParallel
+	@within SignalMethods
+
+	@function ConnectParallel
 
 	@param Callback Function -- The specified callback function.
 
@@ -194,7 +208,9 @@ function SignalMethods:ConnectParallel(Callback: Function): Connection
 end
 
 --[=[
-	@method Wait
+	@within SignalMethods
+
+	@function Wait
 
 	@return Wait -- Return a table consisting of any retrieved values.
 
@@ -217,7 +233,9 @@ function SignalMethods:Wait(): Wait?
 end
 
 --[=[
-	@method Fire
+	@within SignalMethods
+
+	@function Fire
 
 	@param ... any? -- The specified arguments to fire with.
 
@@ -236,7 +254,9 @@ function SignalMethods:Fire(...: any?): any?
 end
 
 --[=[
-	@method FireUntil
+	@within SignalMethods
+
+	@function FireUntil
 
 	@param Callback Function -- The specified callback.
 
@@ -261,7 +281,9 @@ function SignalMethods:FireUntil(Callback: Function, ...: any?): any?
 end
 
 --[=[
-	@method OnInvoke
+	@within SignalMethods
+
+	@function OnInvoke
 
 	@param Callback Function -- The specified callback function.
 
@@ -272,7 +294,9 @@ function SignalMethods:OnInvoke(Callback: Function): any?
 end
 
 --[=[
-	@method Invoke
+	@within SignalMethods
+
+	@function Invoke
 
 	@param ... any? -- The specified arguments to invoke with.
 
@@ -291,7 +315,9 @@ function SignalMethods:Invoke(...: any?): Function
 end
 
 --[=[
-	@method Destroy
+	@within SignalMethods
+
+	@function Destroy
 
 	Destroy and cleanup a SignalMethods.
 ]=]
