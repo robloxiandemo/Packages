@@ -85,11 +85,13 @@ function Signal.New(Name: string, Listener: Function?): table
 end
 
 --[=[
+	@within Signal
+
 	@param Object table -- The specified object.
 
-	@return boolean -- Return whether or not the specified object is a SignalMethods.
+	@return boolean -- Return whether or not the specified object is a Signal.
 
-	Return whether or not the specified object is a SignalMethods.
+	Return whether or not the specified object is a Signal.
 ]=]
 local function Is(Object: table?): boolean
 	return ((type(Object)) == ("table")) and ((getmetatable(Object)) == (Signal)) :: boolean
