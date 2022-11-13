@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[656],{63891:s=>{s.exports=JSON.parse('{"sourceUrl":"https://github.com/RobloxianDemo/Roblox-Modules/blob/main","baseUrl":"/Roblox-Modules/","classOrder":[{"classes":["Signal","Cleanser","Player"]}],"apiCategories":[]}')}}]);
