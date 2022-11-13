@@ -1,4 +1,4 @@
-# Getting Started With Roblox Modules!
+# Getting Started With Roblox-Modules
 
 These Roblox Modules could be acquired using [Wally](https://wally.run/), a package manager designed specifically for Roblox-related project development.
 

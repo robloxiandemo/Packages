@@ -31,22 +31,9 @@ local Signal: table = {}
 Signal.__index = Signal
 
 --[=[
-	@interface SignalMethods
-
 	@within Signal
-	.Connect table -- Connect to the signal while waiting for a fire to load the
-		specified callback function.
-	.ConnectOnce table -- Unlike the normal connect method, this will run once.
-	.ConnectParallel table -- Unlike the normal connect method, this will run in parallel,
-		resulting in zero code interference.
-	.Wait Wait -- Wait for the connection to be fired and then return any retrieved values.
-	.Fire table -- Fire the current signal's connections.
-	.FireUntil table -- Fire the current signal's connections until the specified callback is reached.
-	.OnInvoke table -- Create a callback function that'd be activated on invoke,
-		retrieving the function's callback.
-	.Invoke table -- Wait until the \"OnInvoke\" method exists and then invoke with the
-		necessary arguments.
-	.Destroy table -- Destroy and cleanup a Signal.
+
+	@interface SignalMethods
 
 	All of the subsidiary code within Signal.
 ]=]
@@ -102,14 +89,23 @@ end
 
 	@param Object table -- The specified object.
 
-	@return boolean -- Return whether or not the specified object is a Signal.
+	@return boolean -- Return whether or not the specified object is a SignalMethods.
 
-	Return whether or not the specified object is a Signal.
+	Return whether or not the specified object is a SignalMethods.
 ]=]
 local function Is(Object: table?): boolean
 	return ((type(Object)) == ("table")) and ((getmetatable(Object)) == (Signal)) :: boolean
 end
 
+--[=[
+	@within Signal
+
+	@param Callback Function -- The specified callback function.
+
+	@return Connection -- Return a table consisting of disconnect-related functions.
+
+	Connect to the signal while waiting for a fire to load the specified callback function.
+]=]
 function SignalMethods:Connect(Callback: Function): Connection
 	local Item: table = Signal["Connections"][self["Name"]]
 	local Head: any = (("C") .. (Item["Listening"]))
@@ -132,6 +128,15 @@ function SignalMethods:Connect(Callback: Function): Connection
 	}) :: Connection
 end
 
+--[=[
+	@within Signal
+
+	@param Callback Function -- The specified callback function.
+
+	@return Connection -- Return a table consisting of disconnect-related functions.
+
+	Unlike the normal connect method, this will run once.
+]=]
 function SignalMethods:ConnectOnce(Callback: Function): Connection
 	local Connection: Function?
 
@@ -147,6 +152,15 @@ function SignalMethods:ConnectOnce(Callback: Function): Connection
 	end) :: Connection
 end
 
+--[=[
+	@within Signal
+
+	@param Callback Function -- The specified callback function.
+
+	@return Connection -- Return a table consisting of disconnect-related functions.
+
+	Unlike the normal connect method, this will run when specified callback when the server's closing.
+]=]
 function SignalMethods:ConnectToOnClose(Callback: Function): Connection
 	local Connection: Function?
 
@@ -162,6 +176,15 @@ function SignalMethods:ConnectToOnClose(Callback: Function): Connection
 	end) :: Connection
 end
 
+--[=[
+	@within Signal
+
+	@param Callback Function -- The specified callback function.
+
+	@return Connection -- Return a table consisting of disconnect-related functions.
+
+	Unlike the normal connect method, this will run in parallel, resulting in zero code interference.
+]=]
 function SignalMethods:ConnectParallel(Callback: Function): Connection
 	return (self:Connect(function(...)
 		task.desynchronize()
@@ -170,6 +193,13 @@ function SignalMethods:ConnectParallel(Callback: Function): Connection
 	end)) :: Connection
 end
 
+--[=[
+	@within Signal
+
+	@return Wait -- Return a table consisting of any retrieved values.
+
+	Wait for the connection to be fired and then return any retrieved values.
+]=]
 function SignalMethods:Wait(): Wait?
 	local Result: any?
 	local WaitSignal: any?
@@ -186,6 +216,13 @@ function SignalMethods:Wait(): Wait?
 	return ((Result) :: Wait?)
 end
 
+--[=[
+	@within Signal
+
+	@param ... any? -- The specified arguments to fire with.
+
+	Fire the current signal's connections.
+]=]
 function SignalMethods:Fire(...: any?): any?
 	local Item: table = Signal["Connections"][self["Name"]]
 
@@ -198,6 +235,15 @@ function SignalMethods:Fire(...: any?): any?
 	end
 end
 
+--[=[
+	@within Signal
+
+	@param Callback Function -- The specified callback.
+
+	@param ... any? -- The specified arguments to fire with.
+
+	Fire the current signal's connections until the specified callback is reached.
+]=]
 function SignalMethods:FireUntil(Callback: Function, ...: any?): any?
 	local Item: table = Signal["Connections"][self["Name"]]
 
@@ -214,10 +260,26 @@ function SignalMethods:FireUntil(Callback: Function, ...: any?): any?
 	end
 end
 
+--[=[
+	@within Signal
+
+	@param Callback Function -- The specified callback function.
+
+	Create a callback function that'd be activated on invoke, retrieving the function's callback.
+]=]
 function SignalMethods:OnInvoke(Callback: Function): any?
 	Signal["Connections"][self["Name"]]["OnInvoke"] = Callback :: Function
 end
 
+--[=[
+	@within Signal
+
+	@param ... any? -- The specified arguments to invoke with.
+
+	@return Function -- Return the function associated with \"OnInvoke\".
+
+	Wait until the \"OnInvoke\" method exists and then invoke with the necessary arguments.
+]=]
 function SignalMethods:Invoke(...: any?): Function
 	local Item: table = Signal["Connections"][self["Name"]]
 
@@ -228,6 +290,11 @@ function SignalMethods:Invoke(...: any?): Function
 	return (Item["OnInvoke"](...)) :: Function
 end
 
+--[=[
+	@within Signal
+
+	Destroy and cleanup a SignalMethods.
+]=]
 function SignalMethods:Destroy(): any?
 	Signal["Connections"][self["Name"]] = nil
 
