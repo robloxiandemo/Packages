@@ -2,11 +2,7 @@ gitRepoUrl = "https://github.com/RobloxianDemo/Roblox-Modules"
 gitSourceBranch = "main"
 
 [[classOrder]]
-classes = ["Signal", "Cleanser"]
-
-[[classOrder]]
-section = "Input"
-classes = ["Input", "PreferredInput", "Keyboard", "Mouse", "Touch", "Gamepad"]
+classes = ["Signal", "Cleanser", "Player"]
 
 [home]
 enabled = true
