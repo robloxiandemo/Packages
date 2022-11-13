@@ -48,10 +48,6 @@ local Cleanser: table = require(script.Parent.Parent.Parent["Cleanser"])
 --// Functions
 
 --[=[
-	@within Signal
-
-	@method New
-
 	@param Name string -- The name to use for the newly created Signal.
 
 	@param Listener string -- The listener to use for the newly created Signal.
@@ -89,10 +85,6 @@ function Signal.New(Name: string, Listener: Function?): table
 end
 
 --[=[
-	@within SignalMethods
-
-	@function Is
-
 	@param Object table -- The specified object.
 
 	@return boolean -- Return whether or not the specified object is a SignalMethods.
@@ -104,11 +96,7 @@ local function Is(Object: table?): boolean
 end
 
 --[=[
-	@within SignalMethods
-
-	@function Connect
-
-	@param Callback Function -- The specified callback function.
+	param Callback Function -- The specified callback function.
 
 	@return Connection -- Return a table consisting of disconnect-related functions.
 
@@ -137,10 +125,6 @@ function SignalMethods:Connect(Callback: Function): Connection
 end
 
 --[=[
-	@within SignalMethods
-
-	@function ConnectOnce
-
 	@param Callback Function -- The specified callback function.
 
 	@return Connection -- Return a table consisting of disconnect-related functions.
@@ -163,10 +147,6 @@ function SignalMethods:ConnectOnce(Callback: Function): Connection
 end
 
 --[=[
-	@within SignalMethods
-
-	@function ConnectToOnClose
-
 	@param Callback Function -- The specified callback function.
 
 	@return Connection -- Return a table consisting of disconnect-related functions.
@@ -189,10 +169,6 @@ function SignalMethods:ConnectToOnClose(Callback: Function): Connection
 end
 
 --[=[
-	@within SignalMethods
-
-	@function ConnectParallel
-
 	@param Callback Function -- The specified callback function.
 
 	@return Connection -- Return a table consisting of disconnect-related functions.
@@ -208,10 +184,6 @@ function SignalMethods:ConnectParallel(Callback: Function): Connection
 end
 
 --[=[
-	@within SignalMethods
-
-	@function Wait
-
 	@return Wait -- Return a table consisting of any retrieved values.
 
 	Wait for the connection to be fired and then return any retrieved values.
@@ -233,10 +205,6 @@ function SignalMethods:Wait(): Wait?
 end
 
 --[=[
-	@within SignalMethods
-
-	@function Fire
-
 	@param ... any? -- The specified arguments to fire with.
 
 	Fire the current signal's connections.
@@ -254,10 +222,6 @@ function SignalMethods:Fire(...: any?): any?
 end
 
 --[=[
-	@within SignalMethods
-
-	@function FireUntil
-
 	@param Callback Function -- The specified callback.
 
 	@param ... any? -- The specified arguments to fire with.
@@ -281,10 +245,6 @@ function SignalMethods:FireUntil(Callback: Function, ...: any?): any?
 end
 
 --[=[
-	@within SignalMethods
-
-	@function OnInvoke
-
 	@param Callback Function -- The specified callback function.
 
 	Create a callback function that'd be activated on invoke, retrieving the function's callback.
@@ -294,10 +254,6 @@ function SignalMethods:OnInvoke(Callback: Function): any?
 end
 
 --[=[
-	@within SignalMethods
-
-	@function Invoke
-
 	@param ... any? -- The specified arguments to invoke with.
 
 	@return Function -- Return the function associated with \"OnInvoke\".
@@ -315,11 +271,7 @@ function SignalMethods:Invoke(...: any?): Function
 end
 
 --[=[
-	@within SignalMethods
-
-	@function Destroy
-
-	Destroy and cleanup a SignalMethods.
+	Destroy and cleanup a Signal.
 ]=]
 function SignalMethods:Destroy(): any?
 	Signal["Connections"][self["Name"]] = nil
