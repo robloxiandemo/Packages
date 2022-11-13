@@ -62,6 +62,16 @@ end
 	@return table -- Return the cleanser class's metatable.
 
 	Index a new cleanser.
+
+	```lua
+		local Object: Instance | Part = Instance.new("Part")
+		Object.Name = "Part"
+		Object.Position = Vector2.new(0, 5, 0)
+		Object.Size = Vector2.new(5, 1, 5)
+		Object.Parent = game:GetService("Workspace")
+
+		local ObjectCleanser: table = Cleanser.New(Object)
+	```
 ]=]
 function Cleanser.New(Tasks: TableTask): table
 	local self: CleanserData = setmetatable({
@@ -86,9 +96,22 @@ end
 
 	@param Tasks TableTask -- The cleanse tasks.
 
+	@return table -- Return the cleanser class's metatable.
+
 	Grant (add) a new cleanser task.
+
+	```lua
+		local Object: Instance | Part = Instance.new("Part")
+		Object.Name = "Part"
+		Object.Position = Vector2.new(0, 5, 0)
+		Object.Size = Vector2.new(5, 1, 5)
+		Object.Parent = game:GetService("Workspace")
+
+		local ObjectCleanser: table = Cleanser.New()
+		ObjectCleanser:Grant(Object)
+	```
 ]=]
-function Cleanser:Grant(Tasks: TableTask): any?
+function Cleanser:Grant(Tasks: TableTask): table
 	if ((type(Tasks)) == ("table")) then
 		for _: number, Task: Task in ipairs(Tasks) do
 			self["Tasks"][(#self["Tasks"] + 1)] = Task
@@ -96,6 +119,8 @@ function Cleanser:Grant(Tasks: TableTask): any?
 	else
 		self["Tasks"][(#self["Tasks"] + 1)] = Tasks
 	end
+
+	return (self)
 end
 
 --[=[
@@ -104,6 +129,10 @@ end
 	@method Cleanse
 
 	Cleanse the specified cleanser objects.
+
+	```lua
+		ObjectCleanser:Cleanse()
+	```
 ]=]
 function Cleanser:Cleanse(): any?
 	local Tasks: TableTask = self["Tasks"]
@@ -143,6 +172,10 @@ end
 	@return boolean -- Return whether or not the object has been destroyed.
 
 	Destroy and cleanup a cleanser after a certain period of time.
+
+	```lua
+		ObjectCleanser:DelayedDestroy(Time :: number)
+	```
 ]=]
 function Cleanser:DelayedDestroy(Time: number): boolean
 	task.defer(function(): any?
@@ -162,6 +195,10 @@ end
 	@method Destroy
 
 	Destroy and cleanup a cleanser.
+
+	```lua
+		ObjectCleanser:Destroy()
+	```
 ]=]
 function Cleanser:Destroy(): any?
 	self:Cleanse()

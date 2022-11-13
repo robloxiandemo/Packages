@@ -56,6 +56,10 @@ local IsClient: boolean = RunService:IsClient()
 	@return table -- Return the player class's metatable.
 
 	Index a new player.
+
+	```lua
+		local PlayerMethods: table = PlayerClass.New(LocalPlayer)
+	```
 ]=]
 function Player.New(LocalPlayer: Player): table
 	local self: PlayerData = setmetatable({
@@ -80,11 +84,13 @@ end
 --[=[
 	@within Player
 
-	@method RetrieveCharacter
-
 	@return Model -- Return the player's character model.
 
 	Return the player's character.
+
+	```lua
+		local Character: Model = PlayerMethods:RetrieveCharacter()
+	```
 ]=]
 function Player:RetrieveCharacter(): Model
 	return ((self["Character"]) or (self["Player"].Character)
@@ -94,11 +100,13 @@ end
 --[=[
 	@within Player
 
-	@method RetrieveHumanoid
-
 	@return Humanoid -- Return the player's humanoid.
 
 	Return the player's character's humanoid.
+
+	```lua
+		local Humanoid: Humanoid = PlayerMethods:RetrieveHumanoid()
+	```
 ]=]
 function Player:RetrieveHumanoid(): Humanoid
 	return ((self["Humanoid"]) or ((self:RetrieveCharacter():FindFirstChildOfClass("Humanoid"))
@@ -108,11 +116,101 @@ end
 --[=[
 	@within Player
 
-	@method RetrieveName
+	@param Callback Function? -- The specified callback function.
+
+	@return Model | boolean? -- Return the player's character model or false.
+
+	Wait for and retrn the player's character (cancel if five attempts fail).
+
+	```lua
+		PlayerMethods:WaitForCharacter(function(...: Humanoid | boolean?): any?
+			print(...) --> Model | Model.Name
+
+			print(PlayerMethods:RetrieveCharacter().Name) --> Model.Name
+		end)
+	```
+]=]
+function Player:WaitForCharacter(Callback: Function?): Model | boolean?
+	return (Cleanser.New():Grant(
+		function(): any?
+			local Character: Model?
+			local Count: number = 0
+
+			repeat
+				Character = self:RetrieveCharacter()
+
+				task.wait(1)
+
+				Count += 1
+			until ((Character) ~= (nil))
+
+			if ((Character)) then
+				return (Callback(Character)) :: Model
+			end
+
+			if ((Count) > (5)) then
+				return (false) :: boolean
+			end
+		end
+	):Destroy())
+end
+
+--[=[
+	@within Player
+
+	@param Callback Function? -- The specified callback function.
+
+	@return Humanoid | boolean? -- Return the player's humanoid or false.
+
+	Wait for and retrn the player's characters' humanoid (cancel if five attempts fail).
+
+	```lua
+		PlayerMethods:WaitForHumanoid(function(...: Humanoid | boolean?): any?
+			print(...) --> Humanoid | Humanoid.Name
+
+			PlayerMethods:SetWalkSpeed(1e+1) --> 10
+			print(PlayerMethods:RetrieveHumanoid().WalkSpeed) --> 10
+
+			PlayerMethods:SetWalkSpeed(1e+2) --> 100
+			print(PlayerMethods:RetrieveHumanoid().WalkSpeed) --> 100
+		end)
+	```
+]=]
+function Player:WaitForHumanoid(Callback: Function?): Humanoid | boolean?
+	return (Cleanser.New():Grant(
+		function(): any?
+			local Humanoid: Humanoid?
+			local Count: number = 0
+
+			repeat
+				Humanoid = self:RetrieveHumanoid()
+
+				task.wait(1)
+
+				Count += 1
+			until ((Humanoid) ~= (nil))
+
+			if ((Humanoid)) then
+				return (Callback(Humanoid)) :: Humanoid
+			end
+
+			if ((Count) > (5)) then
+				return (false) :: boolean
+			end
+		end
+	):Destroy())
+end
+
+--[=[
+	@within Player
 
 	@return string -- Return the player's name.
 
 	Return the player's name.
+
+	```lua
+		print(PlayerMethods:RetrieveName()) --> Player.Name
+	```
 ]=]
 function Player:RetrieveName(): string
 	return (self["Name"]) :: string
@@ -121,11 +219,13 @@ end
 --[=[
 	@within Player
 
-	@method RetrievePlayer
-
 	@return Player -- Return the player's player object.
 
 	Return the player's player object.
+
+	```lua
+		print(PlayerMethods:RetrievePlayer()) --> Player | Player.Name
+	```
 ]=]
 function Player:RetrievePlayer(): Player
 	return (self["Player"]) :: Player
@@ -134,11 +234,13 @@ end
 --[=[
 	@within Player
 
-	@method RetrieveUserId
-
 	@return number -- Return the player's UserId.
 
 	Return the player's unique UserId.
+
+	```lua
+		print(PlayerMethods:RetrieveUserId()) --> Player.UserId
+	```
 ]=]
 function Player:RetrieveUserId(): number
 	return (self["UserId"]) :: number
@@ -147,14 +249,20 @@ end
 --[=[
 	@within Player
 
-	@method CharacterAdded
-
 	@param Callback Function -- The specified callback function.
 
 	Run the specified callback function on the addition of the player's character.
+
+	```lua
+		local function Callback(): any?
+			print("The character has been added!")
+		end
+
+		PlayerMethods:CharacterAdded(Callback)
+	```
 ]=]
 function Player:CharacterAdded(Callback: Function): any?
-	Cleanser.New(
+	Cleanser.New():Grant(
 		task.defer(function(): any?
 			Callback(self:RetrieveCharacter())
 		end)
@@ -164,14 +272,20 @@ end
 --[=[
 	@within Player
 
-	@method HumanoidAdded
-
 	@param Callback Function -- The specified callback function.
 
 	Run the specified callback function on the addition of the player's humanoid.
+
+	```lua
+		local function Callback(): any?
+			print("The humanoid has been added!")
+		end
+
+		PlayerMethods:HumanoidAdded(Callback)
+	```
 ]=]
 function Player:HumanoidAdded(Callback: Function): any?
-	Cleanser.New(
+	Cleanser.New():Grant(
 		task.defer(function(): any?
 			Callback(self:RetrieveHumanoid())
 		end)
@@ -181,75 +295,95 @@ end
 --[=[
 	@within Player
 
-	@method SetJumpPower
-
 	@param JumpPower number? -- The specified jump-power to use in a numerical value.
 
 	Set the player's jump-power.
+
+	```lua
+		PlayerMethods:SetJumpPower(JumpPower :: number) --> number
+	```
 ]=]
 function Player:SetJumpPower(JumpPower: number?): any?
-	self:HumanoidAdded(function(Humanoid: Humanoid): any?
+	self:WaitForHumanoid(function(Humanoid: Humanoid): any?
 		Humanoid.JumpPower = ((JumpPower) or (DefaultJumpPower))
+
+		self["Humanoid"] = Humanoid
 	end)
 end
 
 --[=[
 	@within Player
-
-	@method UseJumpPower
 
 	@param Value boolean? -- The status of whether or not to use the player's jump-power.
 
 	Set whether or not to use the player's jump-power for jump-related adjustments.
+
+	```lua
+		PlayerMethods:UseJumpPower(Value :: boolean) --> boolean
+	```
 ]=]
 function Player:UseJumpPower(Value: boolean?): any?
-	self:HumanoidAdded(function(Humanoid: Humanoid): any?
+	self:WaitForHumanoid(function(Humanoid: Humanoid): any?
 		Humanoid.UseJumpPower = ((Value) or (DefaultJumpPowerValue))
+
+		self["Humanoid"] = Humanoid
 	end)
 end
 
 --[=[
 	@within Player
-
-	@method SetJumpHeight
 
 	@param Height number? -- The specified jump-height to use in a numerical value.
 
 	Set the player's jump-height.
+
+	```lua
+		PlayerMethods:SetJumpHeight(Height :: number) --> number
+	```
 ]=]
 function Player:SetJumpHeight(Height: number?): any?
-	self:HumanoidAdded(function(Humanoid: Humanoid): any?
+	self:WaitForHumanoid(function(Humanoid: Humanoid): any?
 		Humanoid.JumpHeight = ((Height) or (DefaultJumpHeight))
+
+		self["Humanoid"] = Humanoid
 	end)
 end
 
 --[=[
 	@within Player
-
-	@method SetMaxSlopeAngle
 
 	@param Angle number? -- The specified angle to use in a numerical value.
 
 	Set the player's maximum slope angle.
+
+	```lua
+		PlayerMethods:SetMaxSlopeAngle(Angle :: number) --> number
+	```
 ]=]
 function Player:SetMaxSlopeAngle(Angle: number?): any?
-	self:HumanoidAdded(function(Humanoid: Humanoid): any?
+	self:WaitForHumanoid(function(Humanoid: Humanoid): any?
 		Humanoid.SetMaxSlopeAngle = ((Angle) or (DefaultMaxSlopAngle))
+
+		self["Humanoid"] = Humanoid
 	end)
 end
 
 --[=[
 	@within Player
 
-	@method SetWalkSpeed
-
 	@param WalkSpeed number? -- The specified walking speed to use in a numerical value.
 
 	Set the player's walking speed.
+
+	```lua
+		PlayerMethods:SetWalkSpeed(WalkSpeed :: number) --> number
+	```
 ]=]
 function Player:SetWalkSpeed(WalkSpeed: number?): any?
-	self:HumanoidAdded(function(Humanoid: Humanoid): any?
+	self:WaitForHumanoid(function(Humanoid: Humanoid): any?
 		Humanoid.WalkSpeed = ((WalkSpeed) or (DefaultWalkSpeed))
+
+		self["Humanoid"] = Humanoid
 	end)
 end
 
@@ -258,13 +392,16 @@ end
 
 	@server
 
-	@method Kick
-
 	@param Reason string? -- The specified walking speed to use in a numerical value.
 
 	@return boolean -- Was the player successfuly kicked?
 
 	Kick the player.
+
+	```lua
+		--// Server
+		PlayerMethods:Kick("nerd") --> boolean
+	```
 ]=]
 function Player:Kick(Reason: string?): boolean
 	if ((self["Player"]) and (not (IsClient))) then
@@ -279,9 +416,11 @@ end
 --[=[
 	@within Player
 
-	@method Destroy
-
 	Destroy and cleanup the player class.
+
+	```lua
+		PlayerMethods:Destroy()
+	```
 ]=]
 function Player:Destroy(): any?
 	self["Cleanser"]:Destroy()
@@ -300,6 +439,9 @@ Player.retrieveCharacter = Player.RetrieveCharacter
 Player.getHumanoid = Player.RetrieveHumanoid
 Player.retrieveHumanoid = Player.RetrieveHumanoid
 
+Player.waitForCharacter = Player.WaitForCharacter
+Player.waitForHumanoid = Player.WaitForHumanoid
+
 Player.getName = Player.RetrieveName
 Player.retrieveName = Player.RetrieveName
 
@@ -315,8 +457,8 @@ Player.characterAdded = Player.CharacterAdded
 Player.humanoidAdded = Player.HumanoidAdded
 
 Player.useJumpPower = Player.UseJumpPower
-
 Player.setJumpPower = Player.SetJumpPower
+
 Player.setJumpHeight = Player.SetJumpHeight
 
 Player.setMaxSlopeAngle = Player.SetMaxSlopeAngle
