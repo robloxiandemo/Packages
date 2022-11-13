@@ -374,7 +374,7 @@ do
 end
 
 --[=[
-	@prop ProfileService
+	@class ProfileService
 
 	A service providing the easiest solution to handling the Roblox DataStore.
 ]=]

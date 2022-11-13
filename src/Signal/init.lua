@@ -33,7 +33,7 @@ Signal.__index = Signal
 --[=[
 	@within Signal
 
-	@prop SignalMethods
+	@class SignalMethods
 
 	All of the subsidiary code within Signal.
 ]=]
