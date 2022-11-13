@@ -120,7 +120,7 @@ end
 
 	@return Model | boolean? -- Return the player's character model or false.
 
-	Wait for and retrn the player's character (cancel if five attempts fail).
+	Wait for and return the player's character (cancel if five attempts fail).
 
 	```lua
 		PlayerMethods:WaitForCharacter(function(...: Humanoid | boolean?): any?
@@ -162,7 +162,7 @@ end
 
 	@return Humanoid | boolean? -- Return the player's humanoid or false.
 
-	Wait for and retrn the player's characters' humanoid (cancel if five attempts fail).
+	Wait for and return the player's characters' humanoid (cancel if five attempts fail).
 
 	```lua
 		PlayerMethods:WaitForHumanoid(function(...: Humanoid | boolean?): any?
