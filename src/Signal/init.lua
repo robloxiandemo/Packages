@@ -31,7 +31,7 @@ local Signal: table = {}
 Signal.__index = Signal
 
 --[=[
-	@interface SignalMethods
+	@class SignalMethods
 
 	@within Signal
 	.Connect table -- Connect to the signal while waiting for a fire to load the
