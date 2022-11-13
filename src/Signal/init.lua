@@ -31,9 +31,22 @@ local Signal: table = {}
 Signal.__index = Signal
 
 --[=[
-	@within Signal
-
 	@interface SignalMethods
+
+	@within Signal
+	.Connect table -- Connect to the signal while waiting for a fire to load the
+		specified callback function.
+	.ConnectOnce table -- Unlike the normal connect method, this will run once.
+	.ConnectParallel table -- Unlike the normal connect method, this will run in parallel,
+		resulting in zero code interference.
+	.Wait Wait -- Wait for the connection to be fired and then return any retrieved values.
+	.Fire table -- Fire the current signal's connections.
+	.FireUntil table -- Fire the current signal's connections until the specified callback is reached.
+	.OnInvoke table -- Create a callback function that'd be activated on invoke,
+		retrieving the function's callback.
+	.Invoke table -- Wait until the \"OnInvoke\" method exists and then invoke with the
+		necessary arguments.
+	.Destroy table -- Destroy and cleanup a Signal.
 
 	All of the subsidiary code within Signal.
 ]=]
