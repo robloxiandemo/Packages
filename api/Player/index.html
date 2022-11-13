@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.1">
 <title data-rh="true">Player | Roblox-Modules</title><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://RobloxianDemo.github.io/Roblox-Modules/api/Player"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Player | Roblox-Modules"><meta data-rh="true" name="description" content="A class that wraps the Player object to give more development power."><meta data-rh="true" property="og:description" content="A class that wraps the Player object to give more development power."><link data-rh="true" rel="canonical" href="https://RobloxianDemo.github.io/Roblox-Modules/api/Player"><link data-rh="true" rel="alternate" href="https://RobloxianDemo.github.io/Roblox-Modules/api/Player" hreflang="en"><link data-rh="true" rel="alternate" href="https://RobloxianDemo.github.io/Roblox-Modules/api/Player" hreflang="x-default"><link rel="stylesheet" href="/Roblox-Modules/assets/css/styles.77d02042.css">
-<link rel="preload" href="/Roblox-Modules/assets/js/runtime~main.ee0be51e.js" as="script">
-<link rel="preload" href="/Roblox-Modules/assets/js/main.2bb9ac16.js" as="script">
+<link rel="preload" href="/Roblox-Modules/assets/js/runtime~main.3e27b74e.js" as="script">
+<link rel="preload" href="/Roblox-Modules/assets/js/main.57a9fa95.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -37,7 +37,7 @@
 </span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Model" target="_blank" rel="noopener noreferrer">Model<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS">boolean?</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the player's character model or false.</p>
 </span></span></div><div>
-<p>Wait for and retrn the player's character (cancel if five attempts fail).</p>
+<p>Wait for and return the player's character (cancel if five attempts fail).</p>
 <pre class="language-lua"><code class="language-lua">	PlayerMethods<span class="token punctuation">:</span><span class="token function">WaitForCharacter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">...</span><span class="token punctuation">:</span> Humanoid <span class="token operator">|</span> boolean?<span class="token punctuation">)</span><span class="token punctuation">:</span> any?
 		<span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">...</span><span class="token punctuation">)</span> <span class="token comment">--> Model | Model.Name</span>
 
@@ -49,7 +49,7 @@
 </span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Humanoid" target="_blank" rel="noopener noreferrer">Humanoid<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS">boolean?</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the player's humanoid or false.</p>
 </span></span></div><div>
-<p>Wait for and retrn the player's characters' humanoid (cancel if five attempts fail).</p>
+<p>Wait for and return the player's characters' humanoid (cancel if five attempts fail).</p>
 <pre class="language-lua"><code class="language-lua">	PlayerMethods<span class="token punctuation">:</span><span class="token function">WaitForHumanoid</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">...</span><span class="token punctuation">:</span> Humanoid <span class="token operator">|</span> boolean?<span class="token punctuation">)</span><span class="token punctuation">:</span> any?
 		<span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">...</span><span class="token punctuation">)</span> <span class="token comment">--> Humanoid | Humanoid.Name</span>
 
@@ -199,7 +199,7 @@
         },
         {
             &quot;name&quot;: &quot;WaitForCharacter&quot;,
-            &quot;desc&quot;: &quot;Wait for and retrn the player&#x27;s character (cancel if five attempts fail).\n\n```lua\n\tPlayerMethods:WaitForCharacter(function(...: Humanoid | boolean?): any?\n\t\tprint(...) --&gt; Model | Model.Name\n\n\t\tprint(PlayerMethods:RetrieveCharacter().Name) --&gt; Model.Name\n\tend)\n```&quot;,
+            &quot;desc&quot;: &quot;Wait for and return the player&#x27;s character (cancel if five attempts fail).\n\n```lua\n\tPlayerMethods:WaitForCharacter(function(...: Humanoid | boolean?): any?\n\t\tprint(...) --&gt; Model | Model.Name\n\n\t\tprint(PlayerMethods:RetrieveCharacter().Name) --&gt; Model.Name\n\tend)\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;Callback&quot;,
@@ -221,7 +221,7 @@
         },
         {
             &quot;name&quot;: &quot;WaitForHumanoid&quot;,
-            &quot;desc&quot;: &quot;Wait for and retrn the player&#x27;s characters&#x27; humanoid (cancel if five attempts fail).\n\n```lua\n\tPlayerMethods:WaitForHumanoid(function(...: Humanoid | boolean?): any?\n\t\tprint(...) --&gt; Humanoid | Humanoid.Name\n\n\t\tPlayerMethods:SetWalkSpeed(1e+1) --&gt; 10\n\t\tprint(PlayerMethods:RetrieveHumanoid().WalkSpeed) --&gt; 10\n\n\t\tPlayerMethods:SetWalkSpeed(1e+2) --&gt; 100\n\t\tprint(PlayerMethods:RetrieveHumanoid().WalkSpeed) --&gt; 100\n\tend)\n```&quot;,
+            &quot;desc&quot;: &quot;Wait for and return the player&#x27;s characters&#x27; humanoid (cancel if five attempts fail).\n\n```lua\n\tPlayerMethods:WaitForHumanoid(function(...: Humanoid | boolean?): any?\n\t\tprint(...) --&gt; Humanoid | Humanoid.Name\n\n\t\tPlayerMethods:SetWalkSpeed(1e+1) --&gt; 10\n\t\tprint(PlayerMethods:RetrieveHumanoid().WalkSpeed) --&gt; 10\n\n\t\tPlayerMethods:SetWalkSpeed(1e+2) --&gt; 100\n\t\tprint(PlayerMethods:RetrieveHumanoid().WalkSpeed) --&gt; 100\n\tend)\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;Callback&quot;,
@@ -302,7 +302,7 @@
             &quot;returns&quot;: [
                 {
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;any?\n&quot;
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;method&quot;,
@@ -324,7 +324,7 @@
             &quot;returns&quot;: [
                 {
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;any?\n&quot;
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;method&quot;,
@@ -346,7 +346,7 @@
             &quot;returns&quot;: [
                 {
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;any?\n&quot;
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;method&quot;,
@@ -368,7 +368,7 @@
             &quot;returns&quot;: [
                 {
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;any?\n&quot;
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;method&quot;,
@@ -390,7 +390,7 @@
             &quot;returns&quot;: [
                 {
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;any?\n&quot;
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;method&quot;,
@@ -412,7 +412,7 @@
             &quot;returns&quot;: [
                 {
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;any?\n&quot;
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;method&quot;,
@@ -434,7 +434,7 @@
             &quot;returns&quot;: [
                 {
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;any?\n&quot;
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;method&quot;,
@@ -475,7 +475,7 @@
             &quot;returns&quot;: [
                 {
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;any?\n&quot;
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;method&quot;,
@@ -494,7 +494,7 @@
         &quot;path&quot;: &quot;src/Player/init.lua&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#CharacterAdded" class="table-of-contents__link toc-highlight">:CharacterAdded</a></li><li><a href="#Destroy" class="table-of-contents__link toc-highlight">:Destroy</a></li><li><a href="#HumanoidAdded" class="table-of-contents__link toc-highlight">:HumanoidAdded</a></li><li><a href="#Kick" class="table-of-contents__link toc-highlight">:Kick</a></li><li><a href="#RetrieveCharacter" class="table-of-contents__link toc-highlight">:RetrieveCharacter</a></li><li><a href="#RetrieveHumanoid" class="table-of-contents__link toc-highlight">:RetrieveHumanoid</a></li><li><a href="#RetrieveName" class="table-of-contents__link toc-highlight">:RetrieveName</a></li><li><a href="#RetrievePlayer" class="table-of-contents__link toc-highlight">:RetrievePlayer</a></li><li><a href="#RetrieveUserId" class="table-of-contents__link toc-highlight">:RetrieveUserId</a></li><li><a href="#SetJumpHeight" class="table-of-contents__link toc-highlight">:SetJumpHeight</a></li><li><a href="#SetJumpPower" class="table-of-contents__link toc-highlight">:SetJumpPower</a></li><li><a href="#SetMaxSlopeAngle" class="table-of-contents__link toc-highlight">:SetMaxSlopeAngle</a></li><li><a href="#SetWalkSpeed" class="table-of-contents__link toc-highlight">:SetWalkSpeed</a></li><li><a href="#UseJumpPower" class="table-of-contents__link toc-highlight">:UseJumpPower</a></li><li><a href="#WaitForCharacter" class="table-of-contents__link toc-highlight">:WaitForCharacter</a></li><li><a href="#WaitForHumanoid" class="table-of-contents__link toc-highlight">:WaitForHumanoid</a></li><li><a href="#New" class="table-of-contents__link toc-highlight">.New</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022 Demo. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/Roblox-Modules/assets/js/runtime~main.ee0be51e.js"></script>
-<script src="/Roblox-Modules/assets/js/main.2bb9ac16.js"></script>
+<script src="/Roblox-Modules/assets/js/runtime~main.3e27b74e.js"></script>
+<script src="/Roblox-Modules/assets/js/main.57a9fa95.js"></script>
 </body>
 </html>
