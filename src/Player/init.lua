@@ -51,8 +51,6 @@ local IsClient: boolean = RunService:IsClient()
 --[=[
 	@within Player
 
-	@method New
-
 	@param LocalPlayer Player -- The player object.
 
 	@return table -- Return the player class's metatable.

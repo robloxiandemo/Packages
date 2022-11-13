@@ -48,8 +48,6 @@ local Cleanser: table = require(script.Parent.Parent.Parent["Cleanser"])
 --[=[
 	@within Signal
 
-	@method New
-
 	@param Name string -- The name to use for the newly created Signal.
 
 	@param Listener string -- The listener to use for the newly created Signal.

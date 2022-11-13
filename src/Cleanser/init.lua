@@ -57,8 +57,6 @@ end
 --[=[
 	@within Cleanser
 
-	@method New
-
 	@return table -- Return the cleanser class's metatable.
 
 	Index a new cleanser.
