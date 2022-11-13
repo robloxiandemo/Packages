@@ -13,7 +13,9 @@ realm = "shared"
 
 [dependencies]
 Cleanser = "robloxiandemo/cleanser@^0"
+Player = "robloxiandemo/player@^0"
 ProfileService = "robloxiandemo/profileservice-demo@^0"
+Signal = "robloxiandemo/signal@^0"
 ```
 
 To install these dependencies, run `wally install` within your project. Wally will then create a `Package` folder in your directory with the installed dependencies.
