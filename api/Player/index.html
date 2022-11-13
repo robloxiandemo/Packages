@@ -5,80 +5,147 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.1">
 <title data-rh="true">Player | Roblox-Modules</title><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://RobloxianDemo.github.io/Roblox-Modules/api/Player"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Player | Roblox-Modules"><meta data-rh="true" name="description" content="A class that wraps the Player object to give more development power."><meta data-rh="true" property="og:description" content="A class that wraps the Player object to give more development power."><link data-rh="true" rel="canonical" href="https://RobloxianDemo.github.io/Roblox-Modules/api/Player"><link data-rh="true" rel="alternate" href="https://RobloxianDemo.github.io/Roblox-Modules/api/Player" hreflang="en"><link data-rh="true" rel="alternate" href="https://RobloxianDemo.github.io/Roblox-Modules/api/Player" hreflang="x-default"><link rel="stylesheet" href="/Roblox-Modules/assets/css/styles.77d02042.css">
-<link rel="preload" href="/Roblox-Modules/assets/js/runtime~main.f71d751c.js" as="script">
-<link rel="preload" href="/Roblox-Modules/assets/js/main.0a55fa4f.js" as="script">
+<link rel="preload" href="/Roblox-Modules/assets/js/runtime~main.e3563467.js" as="script">
+<link rel="preload" href="/Roblox-Modules/assets/js/main.eac86527.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
 <div role="region"><a href="#" class="skipToContent_fXgn">Skip to main content</a></div><nav class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Navigation bar toggle" class="navbar__toggle clean-btn" type="button" tabindex="0"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Roblox-Modules/"><b class="navbar__title text--truncate">Roblox-Modules</b></a><a class="navbar__item navbar__link" href="/Roblox-Modules/docs/intro">Docs</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Roblox-Modules/api/">API</a></div><div class="navbar__items navbar__items--right"><a href="https://discord.gg/zCQTzAr" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/RobloxianDemo/Roblox-Modules" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="searchBox_ZlJk"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Press S to Search..." aria-label="Search" class="navbar__search-input search-bar"></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div class="main-wrapper mainWrapper_z2l0 docPageContainer_wNNk"><div class="docPage_Dpn1"><div class="docSidebarContainer_o_re"><div class="sidebar_njMd"><nav class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Roblox-Modules/api/Cleanser">​Cleanser</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/Roblox-Modules/api/Player">​Player</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Roblox-Modules/api/Signal">​Signal</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Roblox-Modules/api/ProfileService">​Profile​Service</a></li></ul></nav></div></div><main class="docMainContainer_HJE1"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_MU3C"><div class="docItemContainer_Wv98"><article><div class="member_J0w1 markdown"><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_oUs_"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><header><h1 class="docTitle_mZRt" style="text-decoration:none"><span style="display:inline-block">Player</span></h1><div class="luaClassTags_EipM"></div><div>
 <p>A class that wraps the Player object to give more development power.</p>
-</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a class="hash-link" href="#functions" title="Direct link to heading">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="New"><code style="text-decoration:none">New</code><a class="hash-link" href="#New" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L60"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->.</code><code class="green_DgR4">New</code><code>(</code><div class="inset_uKQm"><div><code>LocalPlayer<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Roblox-Modules/api/Player">Player</a></code><span class="inlineDescription_G7Er">-- <span>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a class="hash-link" href="#functions" title="Direct link to heading">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="New"><code style="text-decoration:none">New</code><a class="hash-link" href="#New" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L64"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->.</code><code class="green_DgR4">New</code><code>(</code><div class="inset_uKQm"><div><code>LocalPlayer<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Roblox-Modules/api/Player">Player</a></code><span class="inlineDescription_G7Er">-- <span>
 <p>The player object.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the player class's metatable.</p>
 </span></span></div><div>
 <p>Index a new player.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="RetrieveCharacter"><code style="text-decoration:none">RetrieveCharacter</code><a class="hash-link" href="#RetrieveCharacter" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L89"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">RetrieveCharacter</code><code>(</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Model" target="_blank" rel="noopener noreferrer">Model<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<pre class="language-lua"><code class="language-lua">	<span class="token keyword">local</span> PlayerMethods<span class="token punctuation">:</span> table <span class="token operator">=</span> PlayerClass<span class="token punctuation">.</span><span class="token function">New</span><span class="token punctuation">(</span>LocalPlayer<span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="RetrieveCharacter"><code style="text-decoration:none">RetrieveCharacter</code><a class="hash-link" href="#RetrieveCharacter" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L95"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">RetrieveCharacter</code><code>(</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Model" target="_blank" rel="noopener noreferrer">Model<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the player's character model.</p>
 </span></span></div><div>
 <p>Return the player's character.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="RetrieveHumanoid"><code style="text-decoration:none">RetrieveHumanoid</code><a class="hash-link" href="#RetrieveHumanoid" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L103"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">RetrieveHumanoid</code><code>(</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Humanoid" target="_blank" rel="noopener noreferrer">Humanoid<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<pre class="language-lua"><code class="language-lua">	<span class="token keyword">local</span> Character<span class="token punctuation">:</span> Model <span class="token operator">=</span> PlayerMethods<span class="token punctuation">:</span><span class="token function">RetrieveCharacter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="RetrieveHumanoid"><code style="text-decoration:none">RetrieveHumanoid</code><a class="hash-link" href="#RetrieveHumanoid" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L111"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">RetrieveHumanoid</code><code>(</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Humanoid" target="_blank" rel="noopener noreferrer">Humanoid<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the player's humanoid.</p>
 </span></span></div><div>
 <p>Return the player's character's humanoid.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="RetrieveName"><code style="text-decoration:none">RetrieveName</code><a class="hash-link" href="#RetrieveName" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L117"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">RetrieveName</code><code>(</code><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+<pre class="language-lua"><code class="language-lua">	<span class="token keyword">local</span> Humanoid<span class="token punctuation">:</span> Humanoid <span class="token operator">=</span> PlayerMethods<span class="token punctuation">:</span><span class="token function">RetrieveHumanoid</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="WaitForCharacter"><code style="text-decoration:none">WaitForCharacter</code><a class="hash-link" href="#WaitForCharacter" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L133"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">WaitForCharacter</code><code>(</code><div class="inset_uKQm"><div><code>Callback<!-- -->: </code><code class="blue_P4bS">Function?</code><span class="inlineDescription_G7Er">-- <span>
+<p>The specified callback function.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Model" target="_blank" rel="noopener noreferrer">Model<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS">boolean?</code><span class="inlineDescription_G7Er">-- <span>
+<p>Return the player's character model or false.</p>
+</span></span></div><div>
+<p>Wait for and retrn the player's character (cancel if five attempts fail).</p>
+<pre class="language-lua"><code class="language-lua">	PlayerMethods<span class="token punctuation">:</span><span class="token function">WaitForCharacter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">...</span><span class="token punctuation">:</span> Humanoid <span class="token operator">|</span> boolean?<span class="token punctuation">)</span><span class="token punctuation">:</span> any?
+		<span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">...</span><span class="token punctuation">)</span> <span class="token comment">--> Model | Model.Name</span>
+
+		<span class="token function">print</span><span class="token punctuation">(</span>PlayerMethods<span class="token punctuation">:</span><span class="token function">RetrieveCharacter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Name<span class="token punctuation">)</span> <span class="token comment">--> Model.Name</span>
+	<span class="token keyword">end</span><span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="WaitForHumanoid"><code style="text-decoration:none">WaitForHumanoid</code><a class="hash-link" href="#WaitForHumanoid" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L179"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">WaitForHumanoid</code><code>(</code><div class="inset_uKQm"><div><code>Callback<!-- -->: </code><code class="blue_P4bS">Function?</code><span class="inlineDescription_G7Er">-- <span>
+<p>The specified callback function.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Humanoid" target="_blank" rel="noopener noreferrer">Humanoid<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS">boolean?</code><span class="inlineDescription_G7Er">-- <span>
+<p>Return the player's humanoid or false.</p>
+</span></span></div><div>
+<p>Wait for and retrn the player's characters' humanoid (cancel if five attempts fail).</p>
+<pre class="language-lua"><code class="language-lua">	PlayerMethods<span class="token punctuation">:</span><span class="token function">WaitForHumanoid</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">...</span><span class="token punctuation">:</span> Humanoid <span class="token operator">|</span> boolean?<span class="token punctuation">)</span><span class="token punctuation">:</span> any?
+		<span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">...</span><span class="token punctuation">)</span> <span class="token comment">--> Humanoid | Humanoid.Name</span>
+
+		PlayerMethods<span class="token punctuation">:</span><span class="token function">SetWalkSpeed</span><span class="token punctuation">(</span><span class="token number">1e+1</span><span class="token punctuation">)</span> <span class="token comment">--> 10</span>
+		<span class="token function">print</span><span class="token punctuation">(</span>PlayerMethods<span class="token punctuation">:</span><span class="token function">RetrieveHumanoid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>WalkSpeed<span class="token punctuation">)</span> <span class="token comment">--> 10</span>
+
+		PlayerMethods<span class="token punctuation">:</span><span class="token function">SetWalkSpeed</span><span class="token punctuation">(</span><span class="token number">1e+2</span><span class="token punctuation">)</span> <span class="token comment">--> 100</span>
+		<span class="token function">print</span><span class="token punctuation">(</span>PlayerMethods<span class="token punctuation">:</span><span class="token function">RetrieveHumanoid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>WalkSpeed<span class="token punctuation">)</span> <span class="token comment">--> 100</span>
+	<span class="token keyword">end</span><span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="RetrieveName"><code style="text-decoration:none">RetrieveName</code><a class="hash-link" href="#RetrieveName" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L215"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">RetrieveName</code><code>(</code><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the player's name.</p>
 </span></span></div><div>
 <p>Return the player's name.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="RetrievePlayer"><code style="text-decoration:none">RetrievePlayer</code><a class="hash-link" href="#RetrievePlayer" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L130"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">RetrievePlayer</code><code>(</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Roblox-Modules/api/Player">Player</a></code><span class="inlineDescription_G7Er">-- <span>
+<pre class="language-lua"><code class="language-lua">	<span class="token function">print</span><span class="token punctuation">(</span>PlayerMethods<span class="token punctuation">:</span><span class="token function">RetrieveName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> Player.Name</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="RetrievePlayer"><code style="text-decoration:none">RetrievePlayer</code><a class="hash-link" href="#RetrievePlayer" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L230"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">RetrievePlayer</code><code>(</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Roblox-Modules/api/Player">Player</a></code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the player's player object.</p>
 </span></span></div><div>
 <p>Return the player's player object.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="RetrieveUserId"><code style="text-decoration:none">RetrieveUserId</code><a class="hash-link" href="#RetrieveUserId" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L143"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">RetrieveUserId</code><code>(</code><code>) → </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<pre class="language-lua"><code class="language-lua">	<span class="token function">print</span><span class="token punctuation">(</span>PlayerMethods<span class="token punctuation">:</span><span class="token function">RetrievePlayer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> Player | Player.Name</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="RetrieveUserId"><code style="text-decoration:none">RetrieveUserId</code><a class="hash-link" href="#RetrieveUserId" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L245"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">RetrieveUserId</code><code>(</code><code>) → </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the player's UserId.</p>
 </span></span></div><div>
 <p>Return the player's unique UserId.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="CharacterAdded"><code style="text-decoration:none">CharacterAdded</code><a class="hash-link" href="#CharacterAdded" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L156"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">CharacterAdded</code><code>(</code><div class="inset_uKQm"><div><code>Callback<!-- -->: </code><code class="blue_P4bS">Function</code><span class="inlineDescription_G7Er">-- <span>
+<pre class="language-lua"><code class="language-lua">	<span class="token function">print</span><span class="token punctuation">(</span>PlayerMethods<span class="token punctuation">:</span><span class="token function">RetrieveUserId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> Player.UserId</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="CharacterAdded"><code style="text-decoration:none">CharacterAdded</code><a class="hash-link" href="#CharacterAdded" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L264"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">CharacterAdded</code><code>(</code><div class="inset_uKQm"><div><code>Callback<!-- -->: </code><code class="blue_P4bS">Function</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified callback function.</p>
-</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">any?</code></div><div>
 <p>Run the specified callback function on the addition of the player's character.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="HumanoidAdded"><code style="text-decoration:none">HumanoidAdded</code><a class="hash-link" href="#HumanoidAdded" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L173"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">HumanoidAdded</code><code>(</code><div class="inset_uKQm"><div><code>Callback<!-- -->: </code><code class="blue_P4bS">Function</code><span class="inlineDescription_G7Er">-- <span>
+<pre class="language-lua"><code class="language-lua">	<span class="token keyword">local</span> <span class="token keyword">function</span> <span class="token function">Callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> any?
+		<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"The character has been added!"</span><span class="token punctuation">)</span>
+	<span class="token keyword">end</span>
+
+	PlayerMethods<span class="token punctuation">:</span><span class="token function">CharacterAdded</span><span class="token punctuation">(</span>Callback<span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="HumanoidAdded"><code style="text-decoration:none">HumanoidAdded</code><a class="hash-link" href="#HumanoidAdded" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L287"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">HumanoidAdded</code><code>(</code><div class="inset_uKQm"><div><code>Callback<!-- -->: </code><code class="blue_P4bS">Function</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified callback function.</p>
-</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">any?</code></div><div>
 <p>Run the specified callback function on the addition of the player's humanoid.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SetJumpPower"><code style="text-decoration:none">SetJumpPower</code><a class="hash-link" href="#SetJumpPower" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L190"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">SetJumpPower</code><code>(</code><div class="inset_uKQm"><div><code>JumpPower<!-- -->: </code><code class="blue_P4bS">number?</code><span class="inlineDescription_G7Er">-- <span>
+<pre class="language-lua"><code class="language-lua">	<span class="token keyword">local</span> <span class="token keyword">function</span> <span class="token function">Callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> any?
+		<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"The humanoid has been added!"</span><span class="token punctuation">)</span>
+	<span class="token keyword">end</span>
+
+	PlayerMethods<span class="token punctuation">:</span><span class="token function">HumanoidAdded</span><span class="token punctuation">(</span>Callback<span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SetJumpPower"><code style="text-decoration:none">SetJumpPower</code><a class="hash-link" href="#SetJumpPower" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L306"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">SetJumpPower</code><code>(</code><div class="inset_uKQm"><div><code>JumpPower<!-- -->: </code><code class="blue_P4bS">number?</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified jump-power to use in a numerical value.</p>
-</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">any?</code></div><div>
 <p>Set the player's jump-power.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="UseJumpPower"><code style="text-decoration:none">UseJumpPower</code><a class="hash-link" href="#UseJumpPower" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L205"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">UseJumpPower</code><code>(</code><div class="inset_uKQm"><div><code>Value<!-- -->: </code><code class="blue_P4bS">boolean?</code><span class="inlineDescription_G7Er">-- <span>
+<pre class="language-lua"><code class="language-lua">	PlayerMethods<span class="token punctuation">:</span><span class="token function">SetJumpPower</span><span class="token punctuation">(</span>JumpPower <span class="token punctuation">::</span> number<span class="token punctuation">)</span> <span class="token comment">--> number</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="UseJumpPower"><code style="text-decoration:none">UseJumpPower</code><a class="hash-link" href="#UseJumpPower" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L325"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">UseJumpPower</code><code>(</code><div class="inset_uKQm"><div><code>Value<!-- -->: </code><code class="blue_P4bS">boolean?</code><span class="inlineDescription_G7Er">-- <span>
 <p>The status of whether or not to use the player's jump-power.</p>
-</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">any?</code></div><div>
 <p>Set whether or not to use the player's jump-power for jump-related adjustments.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SetJumpHeight"><code style="text-decoration:none">SetJumpHeight</code><a class="hash-link" href="#SetJumpHeight" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L220"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">SetJumpHeight</code><code>(</code><div class="inset_uKQm"><div><code>Height<!-- -->: </code><code class="blue_P4bS">number?</code><span class="inlineDescription_G7Er">-- <span>
+<pre class="language-lua"><code class="language-lua">	PlayerMethods<span class="token punctuation">:</span><span class="token function">UseJumpPower</span><span class="token punctuation">(</span>Value <span class="token punctuation">::</span> boolean<span class="token punctuation">)</span> <span class="token comment">--> boolean</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SetJumpHeight"><code style="text-decoration:none">SetJumpHeight</code><a class="hash-link" href="#SetJumpHeight" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L344"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">SetJumpHeight</code><code>(</code><div class="inset_uKQm"><div><code>Height<!-- -->: </code><code class="blue_P4bS">number?</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified jump-height to use in a numerical value.</p>
-</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">any?</code></div><div>
 <p>Set the player's jump-height.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SetMaxSlopeAngle"><code style="text-decoration:none">SetMaxSlopeAngle</code><a class="hash-link" href="#SetMaxSlopeAngle" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L235"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">SetMaxSlopeAngle</code><code>(</code><div class="inset_uKQm"><div><code>Angle<!-- -->: </code><code class="blue_P4bS">number?</code><span class="inlineDescription_G7Er">-- <span>
+<pre class="language-lua"><code class="language-lua">	PlayerMethods<span class="token punctuation">:</span><span class="token function">SetJumpHeight</span><span class="token punctuation">(</span>Height <span class="token punctuation">::</span> number<span class="token punctuation">)</span> <span class="token comment">--> number</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SetMaxSlopeAngle"><code style="text-decoration:none">SetMaxSlopeAngle</code><a class="hash-link" href="#SetMaxSlopeAngle" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L363"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">SetMaxSlopeAngle</code><code>(</code><div class="inset_uKQm"><div><code>Angle<!-- -->: </code><code class="blue_P4bS">number?</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified angle to use in a numerical value.</p>
-</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">any?</code></div><div>
 <p>Set the player's maximum slope angle.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SetWalkSpeed"><code style="text-decoration:none">SetWalkSpeed</code><a class="hash-link" href="#SetWalkSpeed" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L250"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">SetWalkSpeed</code><code>(</code><div class="inset_uKQm"><div><code>WalkSpeed<!-- -->: </code><code class="blue_P4bS">number?</code><span class="inlineDescription_G7Er">-- <span>
+<pre class="language-lua"><code class="language-lua">	PlayerMethods<span class="token punctuation">:</span><span class="token function">SetMaxSlopeAngle</span><span class="token punctuation">(</span>Angle <span class="token punctuation">::</span> number<span class="token punctuation">)</span> <span class="token comment">--> number</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SetWalkSpeed"><code style="text-decoration:none">SetWalkSpeed</code><a class="hash-link" href="#SetWalkSpeed" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L382"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">SetWalkSpeed</code><code>(</code><div class="inset_uKQm"><div><code>WalkSpeed<!-- -->: </code><code class="blue_P4bS">number?</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified walking speed to use in a numerical value.</p>
-</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">any?</code></div><div>
 <p>Set the player's walking speed.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Kick"><code style="text-decoration:none">Kick</code><a class="hash-link" href="#Kick" title="Direct link to heading">​</a></h3><span class="badge_Ba2I" style="color:#00CC67"><span class="badgeTooltip_cWXP">This item only works when running on the server.</span><span class="badgeToolTipTail_H9D_"><svg fill="#00CC67" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 90 90" role="img" aria-label="This item only works when running on the server."><polygon points="6.125,72.421 58.544,88.523 58.544,24.372 6.125,8.269 "></polygon><polygon points="79.818,15.77 79.868,15.755 29.615,1.453 10.328,6.318 60.102,21.609 "></polygon><path d="M61.643,78.738l22.232-6.582V17.801l-22.232,6.584V78.738z M73.811,69.257c-1.174,0-2.125-1.19-2.125-2.659  c0-1.468,0.951-2.658,2.125-2.658c1.172,0,2.123,1.19,2.123,2.658C75.934,68.066,74.982,69.257,73.811,69.257z M64.898,32.121  l16.336-4.41v7.117l-16.336,4.409V32.121z M64.898,41.292l16.336-4.41v7.116l-16.336,4.409V41.292z M64.898,50.463l16.336-4.411  v7.116l-16.336,4.411V50.463z"></path><polygon points="83.875,74.893 61.643,81.477 61.643,88.547 83.875,81.963 "></polygon></svg> <!-- -->Server</span></span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L269"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">Kick</code><code>(</code><div class="inset_uKQm"><div><code>Reason<!-- -->: </code><code class="blue_P4bS">string?</code><span class="inlineDescription_G7Er">-- <span>
+<pre class="language-lua"><code class="language-lua">	PlayerMethods<span class="token punctuation">:</span><span class="token function">SetWalkSpeed</span><span class="token punctuation">(</span>WalkSpeed <span class="token punctuation">::</span> number<span class="token punctuation">)</span> <span class="token comment">--> number</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Kick"><code style="text-decoration:none">Kick</code><a class="hash-link" href="#Kick" title="Direct link to heading">​</a></h3><span class="badge_Ba2I" style="color:#00CC67"><span class="badgeTooltip_cWXP">This item only works when running on the server.</span><span class="badgeToolTipTail_H9D_"><svg fill="#00CC67" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 90 90" role="img" aria-label="This item only works when running on the server."><polygon points="6.125,72.421 58.544,88.523 58.544,24.372 6.125,8.269 "></polygon><polygon points="79.818,15.77 79.868,15.755 29.615,1.453 10.328,6.318 60.102,21.609 "></polygon><path d="M61.643,78.738l22.232-6.582V17.801l-22.232,6.584V78.738z M73.811,69.257c-1.174,0-2.125-1.19-2.125-2.659  c0-1.468,0.951-2.658,2.125-2.658c1.172,0,2.123,1.19,2.123,2.658C75.934,68.066,74.982,69.257,73.811,69.257z M64.898,32.121  l16.336-4.41v7.117l-16.336,4.409V32.121z M64.898,41.292l16.336-4.41v7.116l-16.336,4.409V41.292z M64.898,50.463l16.336-4.411  v7.116l-16.336,4.411V50.463z"></path><polygon points="83.875,74.893 61.643,81.477 61.643,88.547 83.875,81.963 "></polygon></svg> <!-- -->Server</span></span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L406"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">Kick</code><code>(</code><div class="inset_uKQm"><div><code>Reason<!-- -->: </code><code class="blue_P4bS">string?</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified walking speed to use in a numerical value.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
 <p>Was the player successfuly kicked?</p>
 </span></span></div><div>
 <p>Kick the player.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Destroy"><code style="text-decoration:none">Destroy</code><a class="hash-link" href="#Destroy" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L286"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">Destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+<pre class="language-lua"><code class="language-lua">	<span class="token comment">--// Server</span>
+	PlayerMethods<span class="token punctuation">:</span><span class="token function">Kick</span><span class="token punctuation">(</span><span class="token string">"nerd"</span><span class="token punctuation">)</span> <span class="token comment">--> boolean</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Destroy"><code style="text-decoration:none">Destroy</code><a class="hash-link" href="#Destroy" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Player/init.lua#L425"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Player<!-- -->:</code><code class="green_DgR4">Destroy</code><code>(</code><code>) → </code><code class="blue_P4bS">any?</code></div><div>
 <p>Destroy and cleanup the player class.</p>
+<pre class="language-lua"><code class="language-lua">	PlayerMethods<span class="token punctuation">:</span><span class="token function">Destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
         {
             &quot;name&quot;: &quot;New&quot;,
-            &quot;desc&quot;: &quot;Index a new player.&quot;,
+            &quot;desc&quot;: &quot;Index a new player.\n\n```lua\n\tlocal PlayerMethods: table = PlayerClass.New(LocalPlayer)\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;LocalPlayer&quot;,
@@ -94,13 +161,13 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 60,
+                &quot;line&quot;: 64,
                 &quot;path&quot;: &quot;src/Player/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;RetrieveCharacter&quot;,
-            &quot;desc&quot;: &quot;Return the player&#x27;s character.&quot;,
+            &quot;desc&quot;: &quot;Return the player&#x27;s character.\n\n```lua\n\tlocal Character: Model = PlayerMethods:RetrieveCharacter()\n```&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [
                 {
@@ -110,13 +177,13 @@
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 89,
+                &quot;line&quot;: 95,
                 &quot;path&quot;: &quot;src/Player/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;RetrieveHumanoid&quot;,
-            &quot;desc&quot;: &quot;Return the player&#x27;s character&#x27;s humanoid.&quot;,
+            &quot;desc&quot;: &quot;Return the player&#x27;s character&#x27;s humanoid.\n\n```lua\n\tlocal Humanoid: Humanoid = PlayerMethods:RetrieveHumanoid()\n```&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [
                 {
@@ -126,13 +193,57 @@
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 103,
+                &quot;line&quot;: 111,
+                &quot;path&quot;: &quot;src/Player/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;WaitForCharacter&quot;,
+            &quot;desc&quot;: &quot;Wait for and retrn the player&#x27;s character (cancel if five attempts fail).\n\n```lua\n\tPlayerMethods:WaitForCharacter(function(...: Humanoid | boolean?): any?\n\t\tprint(...) --&gt; Model | Model.Name\n\n\t\tprint(PlayerMethods:RetrieveCharacter().Name) --&gt; Model.Name\n\tend)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;Callback&quot;,
+                    &quot;desc&quot;: &quot;The specified callback function.&quot;,
+                    &quot;lua_type&quot;: &quot;Function?&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Return the player&#x27;s character model or false.&quot;,
+                    &quot;lua_type&quot;: &quot;Model | boolean?&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 133,
+                &quot;path&quot;: &quot;src/Player/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;WaitForHumanoid&quot;,
+            &quot;desc&quot;: &quot;Wait for and retrn the player&#x27;s characters&#x27; humanoid (cancel if five attempts fail).\n\n```lua\n\tPlayerMethods:WaitForHumanoid(function(...: Humanoid | boolean?): any?\n\t\tprint(...) --&gt; Humanoid | Humanoid.Name\n\n\t\tPlayerMethods:SetWalkSpeed(1e+1) --&gt; 10\n\t\tprint(PlayerMethods:RetrieveHumanoid().WalkSpeed) --&gt; 10\n\n\t\tPlayerMethods:SetWalkSpeed(1e+2) --&gt; 100\n\t\tprint(PlayerMethods:RetrieveHumanoid().WalkSpeed) --&gt; 100\n\tend)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;Callback&quot;,
+                    &quot;desc&quot;: &quot;The specified callback function.&quot;,
+                    &quot;lua_type&quot;: &quot;Function?&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Return the player&#x27;s humanoid or false.&quot;,
+                    &quot;lua_type&quot;: &quot;Humanoid | boolean?&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 179,
                 &quot;path&quot;: &quot;src/Player/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;RetrieveName&quot;,
-            &quot;desc&quot;: &quot;Return the player&#x27;s name.&quot;,
+            &quot;desc&quot;: &quot;Return the player&#x27;s name.\n\n```lua\n\tprint(PlayerMethods:RetrieveName()) --&gt; Player.Name\n```&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [
                 {
@@ -142,13 +253,13 @@
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 117,
+                &quot;line&quot;: 215,
                 &quot;path&quot;: &quot;src/Player/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;RetrievePlayer&quot;,
-            &quot;desc&quot;: &quot;Return the player&#x27;s player object.&quot;,
+            &quot;desc&quot;: &quot;Return the player&#x27;s player object.\n\n```lua\n\tprint(PlayerMethods:RetrievePlayer()) --&gt; Player | Player.Name\n```&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [
                 {
@@ -158,13 +269,13 @@
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 130,
+                &quot;line&quot;: 230,
                 &quot;path&quot;: &quot;src/Player/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;RetrieveUserId&quot;,
-            &quot;desc&quot;: &quot;Return the player&#x27;s unique UserId.&quot;,
+            &quot;desc&quot;: &quot;Return the player&#x27;s unique UserId.\n\n```lua\n\tprint(PlayerMethods:RetrieveUserId()) --&gt; Player.UserId\n```&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [
                 {
@@ -174,13 +285,13 @@
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 143,
+                &quot;line&quot;: 245,
                 &quot;path&quot;: &quot;src/Player/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;CharacterAdded&quot;,
-            &quot;desc&quot;: &quot;Run the specified callback function on the addition of the player&#x27;s character.&quot;,
+            &quot;desc&quot;: &quot;Run the specified callback function on the addition of the player&#x27;s character.\n\n```lua\n\tlocal function Callback(): any?\n\t\tprint(\&quot;The character has been added!\&quot;)\n\tend\n\n\tPlayerMethods:CharacterAdded(Callback)\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;Callback&quot;,
@@ -188,16 +299,21 @@
                     &quot;lua_type&quot;: &quot;Function&quot;
                 }
             ],
-            &quot;returns&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
+                }
+            ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 156,
+                &quot;line&quot;: 264,
                 &quot;path&quot;: &quot;src/Player/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;HumanoidAdded&quot;,
-            &quot;desc&quot;: &quot;Run the specified callback function on the addition of the player&#x27;s humanoid.&quot;,
+            &quot;desc&quot;: &quot;Run the specified callback function on the addition of the player&#x27;s humanoid.\n\n```lua\n\tlocal function Callback(): any?\n\t\tprint(\&quot;The humanoid has been added!\&quot;)\n\tend\n\n\tPlayerMethods:HumanoidAdded(Callback)\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;Callback&quot;,
@@ -205,16 +321,21 @@
                     &quot;lua_type&quot;: &quot;Function&quot;
                 }
             ],
-            &quot;returns&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
+                }
+            ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 173,
+                &quot;line&quot;: 287,
                 &quot;path&quot;: &quot;src/Player/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;SetJumpPower&quot;,
-            &quot;desc&quot;: &quot;Set the player&#x27;s jump-power.&quot;,
+            &quot;desc&quot;: &quot;Set the player&#x27;s jump-power.\n\n```lua\n\tPlayerMethods:SetJumpPower(JumpPower :: number) --&gt; number\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;JumpPower&quot;,
@@ -222,16 +343,21 @@
                     &quot;lua_type&quot;: &quot;number?&quot;
                 }
             ],
-            &quot;returns&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
+                }
+            ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 190,
+                &quot;line&quot;: 306,
                 &quot;path&quot;: &quot;src/Player/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;UseJumpPower&quot;,
-            &quot;desc&quot;: &quot;Set whether or not to use the player&#x27;s jump-power for jump-related adjustments.&quot;,
+            &quot;desc&quot;: &quot;Set whether or not to use the player&#x27;s jump-power for jump-related adjustments.\n\n```lua\n\tPlayerMethods:UseJumpPower(Value :: boolean) --&gt; boolean\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;Value&quot;,
@@ -239,16 +365,21 @@
                     &quot;lua_type&quot;: &quot;boolean?&quot;
                 }
             ],
-            &quot;returns&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
+                }
+            ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 205,
+                &quot;line&quot;: 325,
                 &quot;path&quot;: &quot;src/Player/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;SetJumpHeight&quot;,
-            &quot;desc&quot;: &quot;Set the player&#x27;s jump-height.&quot;,
+            &quot;desc&quot;: &quot;Set the player&#x27;s jump-height.\n\n```lua\n\tPlayerMethods:SetJumpHeight(Height :: number) --&gt; number\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;Height&quot;,
@@ -256,16 +387,21 @@
                     &quot;lua_type&quot;: &quot;number?&quot;
                 }
             ],
-            &quot;returns&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
+                }
+            ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 220,
+                &quot;line&quot;: 344,
                 &quot;path&quot;: &quot;src/Player/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;SetMaxSlopeAngle&quot;,
-            &quot;desc&quot;: &quot;Set the player&#x27;s maximum slope angle.&quot;,
+            &quot;desc&quot;: &quot;Set the player&#x27;s maximum slope angle.\n\n```lua\n\tPlayerMethods:SetMaxSlopeAngle(Angle :: number) --&gt; number\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;Angle&quot;,
@@ -273,16 +409,21 @@
                     &quot;lua_type&quot;: &quot;number?&quot;
                 }
             ],
-            &quot;returns&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
+                }
+            ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 235,
+                &quot;line&quot;: 363,
                 &quot;path&quot;: &quot;src/Player/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;SetWalkSpeed&quot;,
-            &quot;desc&quot;: &quot;Set the player&#x27;s walking speed.&quot;,
+            &quot;desc&quot;: &quot;Set the player&#x27;s walking speed.\n\n```lua\n\tPlayerMethods:SetWalkSpeed(WalkSpeed :: number) --&gt; number\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;WalkSpeed&quot;,
@@ -290,16 +431,21 @@
                     &quot;lua_type&quot;: &quot;number?&quot;
                 }
             ],
-            &quot;returns&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
+                }
+            ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 250,
+                &quot;line&quot;: 382,
                 &quot;path&quot;: &quot;src/Player/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;Kick&quot;,
-            &quot;desc&quot;: &quot;Kick the player.&quot;,
+            &quot;desc&quot;: &quot;Kick the player.\n\n```lua\n\t--// Server\n\tPlayerMethods:Kick(\&quot;nerd\&quot;) --&gt; boolean\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;Reason&quot;,
@@ -318,18 +464,23 @@
                 &quot;Server&quot;
             ],
             &quot;source&quot;: {
-                &quot;line&quot;: 269,
+                &quot;line&quot;: 406,
                 &quot;path&quot;: &quot;src/Player/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;Destroy&quot;,
-            &quot;desc&quot;: &quot;Destroy and cleanup the player class.&quot;,
+            &quot;desc&quot;: &quot;Destroy and cleanup the player class.\n\n```lua\n\tPlayerMethods:Destroy()\n```&quot;,
             &quot;params&quot;: [],
-            &quot;returns&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;any?\r\n&quot;
+                }
+            ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 286,
+                &quot;line&quot;: 425,
                 &quot;path&quot;: &quot;src/Player/init.lua&quot;
             }
         }
@@ -342,8 +493,8 @@
         &quot;line&quot;: 26,
         &quot;path&quot;: &quot;src/Player/init.lua&quot;
     }
-}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#CharacterAdded" class="table-of-contents__link toc-highlight">:CharacterAdded</a></li><li><a href="#Destroy" class="table-of-contents__link toc-highlight">:Destroy</a></li><li><a href="#HumanoidAdded" class="table-of-contents__link toc-highlight">:HumanoidAdded</a></li><li><a href="#Kick" class="table-of-contents__link toc-highlight">:Kick</a></li><li><a href="#RetrieveCharacter" class="table-of-contents__link toc-highlight">:RetrieveCharacter</a></li><li><a href="#RetrieveHumanoid" class="table-of-contents__link toc-highlight">:RetrieveHumanoid</a></li><li><a href="#RetrieveName" class="table-of-contents__link toc-highlight">:RetrieveName</a></li><li><a href="#RetrievePlayer" class="table-of-contents__link toc-highlight">:RetrievePlayer</a></li><li><a href="#RetrieveUserId" class="table-of-contents__link toc-highlight">:RetrieveUserId</a></li><li><a href="#SetJumpHeight" class="table-of-contents__link toc-highlight">:SetJumpHeight</a></li><li><a href="#SetJumpPower" class="table-of-contents__link toc-highlight">:SetJumpPower</a></li><li><a href="#SetMaxSlopeAngle" class="table-of-contents__link toc-highlight">:SetMaxSlopeAngle</a></li><li><a href="#SetWalkSpeed" class="table-of-contents__link toc-highlight">:SetWalkSpeed</a></li><li><a href="#UseJumpPower" class="table-of-contents__link toc-highlight">:UseJumpPower</a></li><li><a href="#New" class="table-of-contents__link toc-highlight">.New</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022 Demo. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/Roblox-Modules/assets/js/runtime~main.f71d751c.js"></script>
-<script src="/Roblox-Modules/assets/js/main.0a55fa4f.js"></script>
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#CharacterAdded" class="table-of-contents__link toc-highlight">:CharacterAdded</a></li><li><a href="#Destroy" class="table-of-contents__link toc-highlight">:Destroy</a></li><li><a href="#HumanoidAdded" class="table-of-contents__link toc-highlight">:HumanoidAdded</a></li><li><a href="#Kick" class="table-of-contents__link toc-highlight">:Kick</a></li><li><a href="#RetrieveCharacter" class="table-of-contents__link toc-highlight">:RetrieveCharacter</a></li><li><a href="#RetrieveHumanoid" class="table-of-contents__link toc-highlight">:RetrieveHumanoid</a></li><li><a href="#RetrieveName" class="table-of-contents__link toc-highlight">:RetrieveName</a></li><li><a href="#RetrievePlayer" class="table-of-contents__link toc-highlight">:RetrievePlayer</a></li><li><a href="#RetrieveUserId" class="table-of-contents__link toc-highlight">:RetrieveUserId</a></li><li><a href="#SetJumpHeight" class="table-of-contents__link toc-highlight">:SetJumpHeight</a></li><li><a href="#SetJumpPower" class="table-of-contents__link toc-highlight">:SetJumpPower</a></li><li><a href="#SetMaxSlopeAngle" class="table-of-contents__link toc-highlight">:SetMaxSlopeAngle</a></li><li><a href="#SetWalkSpeed" class="table-of-contents__link toc-highlight">:SetWalkSpeed</a></li><li><a href="#UseJumpPower" class="table-of-contents__link toc-highlight">:UseJumpPower</a></li><li><a href="#WaitForCharacter" class="table-of-contents__link toc-highlight">:WaitForCharacter</a></li><li><a href="#WaitForHumanoid" class="table-of-contents__link toc-highlight">:WaitForHumanoid</a></li><li><a href="#New" class="table-of-contents__link toc-highlight">.New</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022 Demo. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
+<script src="/Roblox-Modules/assets/js/runtime~main.e3563467.js"></script>
+<script src="/Roblox-Modules/assets/js/main.eac86527.js"></script>
 </body>
 </html>

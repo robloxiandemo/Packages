@@ -17,8 +17,8 @@ If you are seeking a more customizable handler for `RBXScriptConnections`,
 :::info Warning
 If you are seeking a more customizable handler for `RBXScriptConnections`,
 	then seek `Connector`."><link data-rh="true" rel="canonical" href="https://RobloxianDemo.github.io/Roblox-Modules/api/Cleanser"><link data-rh="true" rel="alternate" href="https://RobloxianDemo.github.io/Roblox-Modules/api/Cleanser" hreflang="en"><link data-rh="true" rel="alternate" href="https://RobloxianDemo.github.io/Roblox-Modules/api/Cleanser" hreflang="x-default"><link rel="stylesheet" href="/Roblox-Modules/assets/css/styles.77d02042.css">
-<link rel="preload" href="/Roblox-Modules/assets/js/runtime~main.f71d751c.js" as="script">
-<link rel="preload" href="/Roblox-Modules/assets/js/main.0a55fa4f.js" as="script">
+<link rel="preload" href="/Roblox-Modules/assets/js/runtime~main.e3563467.js" as="script">
+<link rel="preload" href="/Roblox-Modules/assets/js/main.eac86527.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -50,26 +50,51 @@ If you are seeking a more customizable handler for `RBXScriptConnections`,
 <pre class="language-lua"><code class="language-lua">	<span class="token function">print</span><span class="token punctuation">(</span>Cleanser<span class="token punctuation">.</span><span class="token function">Is</span><span class="token punctuation">(</span>Cleanser<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> true</span>
 	<span class="token function">print</span><span class="token punctuation">(</span>Cleanser<span class="token punctuation">.</span><span class="token function">Is</span><span class="token punctuation">(</span><span class="token keyword">nil</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> false</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="New"><code style="text-decoration:none">New</code><a class="hash-link" href="#New" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Cleanser/init.lua#L66"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Cleanser<!-- -->.</code><code class="green_DgR4">New</code><code>(</code><div class="inset_uKQm"><div><code>Tasks<!-- -->: </code><code class="blue_P4bS">TableTask</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="New"><code style="text-decoration:none">New</code><a class="hash-link" href="#New" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Cleanser/init.lua#L76"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Cleanser<!-- -->.</code><code class="green_DgR4">New</code><code>(</code><div class="inset_uKQm"><div><code>Tasks<!-- -->: </code><code class="blue_P4bS">TableTask</code><span class="inlineDescription_G7Er">-- <span>
 <p>The cleanse tasks.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the cleanser class's metatable.</p>
 </span></span></div><div>
 <p>Index a new cleanser.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Grant"><code style="text-decoration:none">Grant</code><a class="hash-link" href="#Grant" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Cleanser/init.lua#L91"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Cleanser<!-- -->:</code><code class="green_DgR4">Grant</code><code>(</code><div class="inset_uKQm"><div><code>Tasks<!-- -->: </code><code class="blue_P4bS">TableTask</code><span class="inlineDescription_G7Er">-- <span>
+<pre class="language-lua"><code class="language-lua">	<span class="token keyword">local</span> Object<span class="token punctuation">:</span> Instance <span class="token operator">|</span> Part <span class="token operator">=</span> Instance<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token string">"Part"</span><span class="token punctuation">)</span>
+	Object<span class="token punctuation">.</span>Name <span class="token operator">=</span> <span class="token string">"Part"</span>
+	Object<span class="token punctuation">.</span>Position <span class="token operator">=</span> Vector2<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+	Object<span class="token punctuation">.</span>Size <span class="token operator">=</span> Vector2<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+	Object<span class="token punctuation">.</span>Parent <span class="token operator">=</span> game<span class="token punctuation">:</span><span class="token function">GetService</span><span class="token punctuation">(</span><span class="token string">"Workspace"</span><span class="token punctuation">)</span>
+
+	<span class="token keyword">local</span> ObjectCleanser<span class="token punctuation">:</span> table <span class="token operator">=</span> Cleanser<span class="token punctuation">.</span><span class="token function">New</span><span class="token punctuation">(</span>Object<span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Grant"><code style="text-decoration:none">Grant</code><a class="hash-link" href="#Grant" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Cleanser/init.lua#L114"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Cleanser<!-- -->:</code><code class="green_DgR4">Grant</code><code>(</code><div class="inset_uKQm"><div><code>Tasks<!-- -->: </code><code class="blue_P4bS">TableTask</code><span class="inlineDescription_G7Er">-- <span>
 <p>The cleanse tasks.</p>
-</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
+<p>Return the cleanser class's metatable.</p>
+</span></span></div><div>
 <p>Grant (add) a new cleanser task.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Cleanse"><code style="text-decoration:none">Cleanse</code><a class="hash-link" href="#Cleanse" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Cleanser/init.lua#L108"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Cleanser<!-- -->:</code><code class="green_DgR4">Cleanse</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+<pre class="language-lua"><code class="language-lua">	<span class="token keyword">local</span> Object<span class="token punctuation">:</span> Instance <span class="token operator">|</span> Part <span class="token operator">=</span> Instance<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token string">"Part"</span><span class="token punctuation">)</span>
+	Object<span class="token punctuation">.</span>Name <span class="token operator">=</span> <span class="token string">"Part"</span>
+	Object<span class="token punctuation">.</span>Position <span class="token operator">=</span> Vector2<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+	Object<span class="token punctuation">.</span>Size <span class="token operator">=</span> Vector2<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+	Object<span class="token punctuation">.</span>Parent <span class="token operator">=</span> game<span class="token punctuation">:</span><span class="token function">GetService</span><span class="token punctuation">(</span><span class="token string">"Workspace"</span><span class="token punctuation">)</span>
+
+	<span class="token keyword">local</span> ObjectCleanser<span class="token punctuation">:</span> table <span class="token operator">=</span> Cleanser<span class="token punctuation">.</span><span class="token function">New</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	ObjectCleanser<span class="token punctuation">:</span><span class="token function">Grant</span><span class="token punctuation">(</span>Object<span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Cleanse"><code style="text-decoration:none">Cleanse</code><a class="hash-link" href="#Cleanse" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Cleanser/init.lua#L137"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Cleanser<!-- -->:</code><code class="green_DgR4">Cleanse</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Cleanse the specified cleanser objects.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="DelayedDestroy"><code style="text-decoration:none">DelayedDestroy</code><a class="hash-link" href="#DelayedDestroy" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Cleanser/init.lua#L147"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Cleanser<!-- -->:</code><code class="green_DgR4">DelayedDestroy</code><code>(</code><div class="inset_uKQm"><div><code>Time<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<pre class="language-lua"><code class="language-lua">	ObjectCleanser<span class="token punctuation">:</span><span class="token function">Cleanse</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="DelayedDestroy"><code style="text-decoration:none">DelayedDestroy</code><a class="hash-link" href="#DelayedDestroy" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Cleanser/init.lua#L180"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Cleanser<!-- -->:</code><code class="green_DgR4">DelayedDestroy</code><code>(</code><div class="inset_uKQm"><div><code>Time<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
 <p>The amount of seconds to wait before cleansing the cleanser's objects.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return whether or not the object has been destroyed.</p>
 </span></span></div><div>
 <p>Destroy and cleanup a cleanser after a certain period of time.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Destroy"><code style="text-decoration:none">Destroy</code><a class="hash-link" href="#Destroy" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Cleanser/init.lua#L166"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Cleanser<!-- -->:</code><code class="green_DgR4">Destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+<pre class="language-lua"><code class="language-lua">	ObjectCleanser<span class="token punctuation">:</span><span class="token function">DelayedDestroy</span><span class="token punctuation">(</span>Time <span class="token punctuation">::</span> number<span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Destroy"><code style="text-decoration:none">Destroy</code><a class="hash-link" href="#Destroy" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Cleanser/init.lua#L203"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Cleanser<!-- -->:</code><code class="green_DgR4">Destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Destroy and cleanup a cleanser.</p>
+<pre class="language-lua"><code class="language-lua">	ObjectCleanser<span class="token punctuation">:</span><span class="token function">Destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
         {
@@ -96,7 +121,7 @@ If you are seeking a more customizable handler for `RBXScriptConnections`,
         },
         {
             &quot;name&quot;: &quot;New&quot;,
-            &quot;desc&quot;: &quot;Index a new cleanser.&quot;,
+            &quot;desc&quot;: &quot;Index a new cleanser.\n\n```lua\n\tlocal Object: Instance | Part = Instance.new(\&quot;Part\&quot;)\n\tObject.Name = \&quot;Part\&quot;\n\tObject.Position = Vector2.new(0, 5, 0)\n\tObject.Size = Vector2.new(5, 1, 5)\n\tObject.Parent = game:GetService(\&quot;Workspace\&quot;)\n\n\tlocal ObjectCleanser: table = Cleanser.New(Object)\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;Tasks&quot;,
@@ -112,13 +137,13 @@ If you are seeking a more customizable handler for `RBXScriptConnections`,
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 66,
+                &quot;line&quot;: 76,
                 &quot;path&quot;: &quot;src/Cleanser/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;Grant&quot;,
-            &quot;desc&quot;: &quot;Grant (add) a new cleanser task.&quot;,
+            &quot;desc&quot;: &quot;Grant (add) a new cleanser task.\n\n```lua\n\tlocal Object: Instance | Part = Instance.new(\&quot;Part\&quot;)\n\tObject.Name = \&quot;Part\&quot;\n\tObject.Position = Vector2.new(0, 5, 0)\n\tObject.Size = Vector2.new(5, 1, 5)\n\tObject.Parent = game:GetService(\&quot;Workspace\&quot;)\n\n\tlocal ObjectCleanser: table = Cleanser.New()\n\tObjectCleanser:Grant(Object)\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;Tasks&quot;,
@@ -126,27 +151,32 @@ If you are seeking a more customizable handler for `RBXScriptConnections`,
                     &quot;lua_type&quot;: &quot;TableTask&quot;
                 }
             ],
-            &quot;returns&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Return the cleanser class&#x27;s metatable.&quot;,
+                    &quot;lua_type&quot;: &quot;table&quot;
+                }
+            ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 91,
+                &quot;line&quot;: 114,
                 &quot;path&quot;: &quot;src/Cleanser/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;Cleanse&quot;,
-            &quot;desc&quot;: &quot;Cleanse the specified cleanser objects.&quot;,
+            &quot;desc&quot;: &quot;Cleanse the specified cleanser objects.\n\n```lua\n\tObjectCleanser:Cleanse()\n```&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 108,
+                &quot;line&quot;: 137,
                 &quot;path&quot;: &quot;src/Cleanser/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;DelayedDestroy&quot;,
-            &quot;desc&quot;: &quot;Destroy and cleanup a cleanser after a certain period of time.&quot;,
+            &quot;desc&quot;: &quot;Destroy and cleanup a cleanser after a certain period of time.\n\n```lua\n\tObjectCleanser:DelayedDestroy(Time :: number)\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;Time&quot;,
@@ -162,18 +192,18 @@ If you are seeking a more customizable handler for `RBXScriptConnections`,
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 147,
+                &quot;line&quot;: 180,
                 &quot;path&quot;: &quot;src/Cleanser/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;Destroy&quot;,
-            &quot;desc&quot;: &quot;Destroy and cleanup a cleanser.&quot;,
+            &quot;desc&quot;: &quot;Destroy and cleanup a cleanser.\n\n```lua\n\tObjectCleanser:Destroy()\n```&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 166,
+                &quot;line&quot;: 203,
                 &quot;path&quot;: &quot;src/Cleanser/init.lua&quot;
             }
         }
@@ -187,7 +217,7 @@ If you are seeking a more customizable handler for `RBXScriptConnections`,
         &quot;path&quot;: &quot;src/Cleanser/init.lua&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#Cleanse" class="table-of-contents__link toc-highlight">:Cleanse</a></li><li><a href="#DelayedDestroy" class="table-of-contents__link toc-highlight">:DelayedDestroy</a></li><li><a href="#Destroy" class="table-of-contents__link toc-highlight">:Destroy</a></li><li><a href="#Grant" class="table-of-contents__link toc-highlight">:Grant</a></li><li><a href="#Is" class="table-of-contents__link toc-highlight">.Is</a></li><li><a href="#New" class="table-of-contents__link toc-highlight">.New</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022 Demo. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/Roblox-Modules/assets/js/runtime~main.f71d751c.js"></script>
-<script src="/Roblox-Modules/assets/js/main.0a55fa4f.js"></script>
+<script src="/Roblox-Modules/assets/js/runtime~main.e3563467.js"></script>
+<script src="/Roblox-Modules/assets/js/main.eac86527.js"></script>
 </body>
 </html>
