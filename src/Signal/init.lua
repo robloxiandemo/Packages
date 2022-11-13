@@ -30,13 +30,6 @@ type Wait = () -> (... any)
 local Signal: table = {}
 Signal.__index = Signal
 
---[=[
-	@within Signal
-
-	@interface SignalMethods
-
-	All of the subsidiary code within Signal.
-]=]
 local SignalMethods: table = {}
 SignalMethods.__index = SignalMethods
 
