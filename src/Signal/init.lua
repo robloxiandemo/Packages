@@ -31,8 +31,6 @@ local Signal: table = {}
 Signal.__index = Signal
 
 --[=[
-	@within Signal
-
 	@class SignalMethods
 
 	All of the subsidiary code within Signal.
