@@ -81,7 +81,7 @@ Cleanser:TimedDestroy(2)
 
 print("The cleanser has officially deleted!")
 
-local TableSignal: table = Signal.New()
+local TableSignal: table = Signal.New("TestSignal")
 
 TableSignal:Connect(function(Data: any?): any?
 	local TotalEntries: number = CountTableEntries(Data)
