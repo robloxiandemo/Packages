@@ -1,0 +1,25 @@
+name: Build for Roblox-Modules
+
+on: [push]
+
+jobs:
+  Lint:
+    name: Linting With Selene
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Setting up Aftman
+        uses: ok-nick/setup-aftman@v0
+
+        with:
+          version: "v0.2.7"
+          token: ${{ SECRETS.GITHUB_TOKEN }}
+
+      - name: Generate the standard library
+        run: selene generate-roblox-std
+
+      - name: Source checking with Selene
+        run: selene src

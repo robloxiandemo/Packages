@@ -1,0 +1,21 @@
+gitRepoUrl = "https://github.com/RobloxianDemo/Roblox-Modules"
+gitSourceBranch = "main"
+
+[[classOrder]]
+classes = ["Signal", "Cleanser"]
+
+[[classOrder]]
+section = "Input"
+classes = ["Input", "PreferredInput", "Keyboard", "Mouse", "Touch", "Gamepad"]
+
+[home]
+enabled = true
+includeReadme = true
+
+[docusaurus]
+tagline = "Collection of classes and utilities for Roblox-related project development."
+onBrokenLinks = "throw"
+onBrokenMarkdownLinks = "warn"
+
+[footer]
+style = "dark"
