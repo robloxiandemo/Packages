@@ -1,4 +1,6 @@
-[![Build for Roblox Modules](https://github.com/RobloxianDemo/Roblox-Modules/actions/workflows/Build-for-Roblox-Modules.yaml/badge.svg)](https://github.com/RobloxianDemo/Roblox-Modules/actions/workflows/Build-for-Roblox-Modules.yaml)
+[![Build](https://github.com/RobloxianDemo/Roblox-Modules/actions/workflows/workflow.yaml/badge.svg)](https://github.com/RobloxianDemo/Roblox-Modules/actions/workflows/workflow.yaml)
+[![Documentation](https://github.com/RobloxianDemo/Roblox-Modules/actions/workflows/documentation.yaml/badge.svg)](https://github.com/RobloxianDemo/Roblox-Modules/actions/workflows/documentation.yaml)
+[![Published](https://github.com/RobloxianDemo/Roblox-Modules/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/RobloxianDemo/Roblox-Modules/actions/workflows/pages/pages-build-deployment)
 
 | Module | Dependency | Description |
 | -- | -- | -- |
