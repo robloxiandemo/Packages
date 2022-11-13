@@ -13,14 +13,29 @@ tagline = "Collection of classes and utilities for Roblox-related project develo
 onBrokenLinks = "throw"
 onBrokenMarkdownLinks = "warn"
 
+[navbar]
+hideableSidebar = true
+
 [[navbar.items]]
 href = "https://discord.gg/zCQTzAr"
 label = "Discord"
 position = "right"
 
 [[home.features]]
-title = "Very versatile, compact, and simplified!"
+title = "Very Versatile"
+description = "This library of classes and utilities consists of many extensive modules which are consistenly updated!!"
+position = "center"
+
+[[home.features]]
+title = "Very Compact"
+description = "This library of classes and utilities has all been fit into one place that you could utilize within your project"
+position = "center"
+
+[[home.features]]
+title = "Very Simplified"
 description = "This library of classes and utilities is very easy to get accustomed to! Why not begin now?"
+position = "center"
 
 [footer]
 style = "dark"
+copyright = "Copyright © 2022 Demo. Built with Moonwave and Docusaurus."
