@@ -13,9 +13,6 @@ tagline = "Collection of classes and utilities for Roblox-related project develo
 onBrokenLinks = "throw"
 onBrokenMarkdownLinks = "warn"
 
-[navbar]
-hideableSidebar = true
-
 [[navbar.items]]
 href = "https://discord.gg/zCQTzAr"
 label = "Discord"
