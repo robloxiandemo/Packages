@@ -131,8 +131,7 @@ end
 
 	@method DelayedDestroy
 
-	@param Time number -- The amount of time (in seconds)
-		to wait before cleansing the cleanser's objects.
+	@param Time number -- The amount of seconds to wait before cleansing the cleanser's objects.
 
 	@return boolean -- Return whether or not the object has been destroyed.
 
