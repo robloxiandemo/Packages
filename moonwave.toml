@@ -13,5 +13,14 @@ tagline = "Collection of classes and utilities for Roblox-related project develo
 onBrokenLinks = "throw"
 onBrokenMarkdownLinks = "warn"
 
+[[navbar.items]]
+href = "https://discord.gg/zCQTzAr"
+label = "Discord"
+position = "right"
+
+[[home.features]]
+title = "Very versatile, compact, and simplified!"
+description = "This library of classes and utilities is very easy to get accustomed to! Why not begin now?"
+
 [footer]
 style = "dark"
