@@ -283,6 +283,8 @@ function Player:Destroy(): any?
 end
 
 --// Pascal patches
+Player.new = Player.New
+
 Player.getCharacter = Player.RetrieveCharacter
 Player.retrieveCharacter = Player.RetrieveCharacter
 
@@ -314,7 +316,6 @@ Player.setWalkSpeed = Player.SetWalkSpeed
 
 Player.kick = Player.Kick
 
-Player.new = Player.New
 Player.destroy = Player.Destroy
 
 return (Player)
