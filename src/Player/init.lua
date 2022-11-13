@@ -87,7 +87,8 @@ end
 	Return the player's character.
 ]=]
 function Player:RetrieveCharacter(): Model
-	return ((self["Character"]) or (self["Player"].CharacterAdded:Wait())) :: Model
+	return ((self["Character"]) or (self["Player"].Character)
+		or (self["Player"].CharacterAdded:Wait())) :: Model
 end
 
 --[=[
@@ -153,7 +154,11 @@ end
 	Run the specified callback function on the addition of the player's character.
 ]=]
 function Player:CharacterAdded(Callback: Function): any?
-	Cleanser.New(task.defer(Callback)(self:RetrieveCharacter())):Destroy()
+	Cleanser.New(
+		task.defer(function(): any?
+			Callback(self:RetrieveCharacter())
+		end)
+	):Destroy()
 end
 
 --[=[
@@ -166,7 +171,11 @@ end
 	Run the specified callback function on the addition of the player's humanoid.
 ]=]
 function Player:HumanoidAdded(Callback: Function): any?
-	Cleanser.New(task.defer(Callback)(self:RetrieveHumanoid())):Destroy()
+	Cleanser.New(
+		task.defer(function(): any?
+			Callback(self:RetrieveHumanoid())
+		end)
+	):Destroy()
 end
 
 --[=[
@@ -179,7 +188,7 @@ end
 	Set the player's jump-power.
 ]=]
 function Player:SetJumpPower(JumpPower: number?): any?
-	self:HumanoidAdded(function(Humanoid)
+	self:HumanoidAdded(function(Humanoid: Humanoid): any?
 		Humanoid.JumpPower = ((JumpPower) or (DefaultJumpPower))
 	end)
 end
@@ -194,7 +203,7 @@ end
 	Set whether or not to use the player's jump-power for jump-related adjustments.
 ]=]
 function Player:UseJumpPower(Value: boolean?): any?
-	self:HumanoidAdded(function(Humanoid)
+	self:HumanoidAdded(function(Humanoid: Humanoid): any?
 		Humanoid.UseJumpPower = ((Value) or (DefaultJumpPowerValue))
 	end)
 end
@@ -209,7 +218,7 @@ end
 	Set the player's jump-height.
 ]=]
 function Player:SetJumpHeight(Height: number?): any?
-	self:HumanoidAdded(function(Humanoid)
+	self:HumanoidAdded(function(Humanoid: Humanoid): any?
 		Humanoid.JumpHeight = ((Height) or (DefaultJumpHeight))
 	end)
 end
@@ -224,7 +233,7 @@ end
 	Set the player's maximum slope angle.
 ]=]
 function Player:SetMaxSlopeAngle(Angle: number?): any?
-	self:HumanoidAdded(function(Humanoid)
+	self:HumanoidAdded(function(Humanoid: Humanoid): any?
 		Humanoid.SetMaxSlopeAngle = ((Angle) or (DefaultMaxSlopAngle))
 	end)
 end
@@ -239,7 +248,7 @@ end
 	Set the player's walking speed.
 ]=]
 function Player:SetWalkSpeed(WalkSpeed: number?): any?
-	self:HumanoidAdded(function(Humanoid)
+	self:HumanoidAdded(function(Humanoid: Humanoid): any?
 		Humanoid.WalkSpeed = ((WalkSpeed) or (DefaultWalkSpeed))
 	end)
 end
