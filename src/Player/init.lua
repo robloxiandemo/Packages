@@ -18,6 +18,11 @@ type PlayerData = {
 
 }
 
+--[=[
+	@class Player
+
+	A class that wraps the Player object to give more development power.
+]=]
 local Player: table = {}
 Player.__index = Player
 
@@ -264,7 +269,7 @@ function Player:Kick(Reason: string?): boolean
 	end
 end
 
---[=[s
+--[=[
 	@within Player
 
 	@method Destroy
