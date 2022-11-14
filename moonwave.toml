@@ -1,15 +1,10 @@
+title = "Roblox-Modules"
+tagline = "Collection of classes and utilities for Roblox-related project development."
+
 gitRepoUrl = "https://github.com/RobloxianDemo/Roblox-Modules"
 gitSourceBranch = "main"
 
-[[classOrder]]
-classes = ["Cleanser", "Player", "Signal", "ProfileService"]
-
-[home]
-enabled = true
-includeReadme = true
-
 [docusaurus]
-tagline = "Collection of classes and utilities for Roblox-related project development."
 onBrokenLinks = "throw"
 onBrokenMarkdownLinks = "warn"
 
@@ -17,6 +12,18 @@ onBrokenMarkdownLinks = "warn"
 href = "https://discord.gg/zCQTzAr"
 label = "Discord"
 position = "right"
+
+[[classOrder]]
+section = "Classes"
+classes = ["Cleanser", "Player", "Signal"]
+
+[[classOrder]]
+section = "Services"
+classes = ["ProfileService"]
+
+[home]
+enabled = true
+includeReadme = true
 
 [[home.features]]
 title = "Very Versatile"
@@ -35,4 +42,4 @@ position = "right"
 
 [footer]
 style = "dark"
-copyright = "Copyright © 2022 Demo. Built with Moonwave and Docusaurus."
+copyright = "Copyright © 2022 Facilitative. Built with Moonwave and Docusaurus."
