@@ -1,9 +1,10 @@
-# Project place file
-/roblox-modules.rbxlx
+# Project place files
+/.rbxl
+/.rbxlx
 
 # Roblox Studio lock files
-/*.rbxlx.lock
 /*.rbxl.lock
+/*.rbxlx.lock
 
 # Miscellaneous
 *.zip
