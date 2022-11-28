@@ -8,6 +8,8 @@
 
 # Miscellaneous
 *.zip
+/.agf
+/.vscode
 packages/*/Packages
 /build
 /Packages
