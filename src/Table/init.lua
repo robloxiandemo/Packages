@@ -317,7 +317,7 @@ end
 	Overwrite entries within the specified table with the respective entry from the context table.
 
 	:::caution No cyclical references
-	Deep clones are _not_ protected against cyclical references.
+	Deep overwrites are _not_ protected against cyclical references.
 
 	Passing a table with cyclical references _and_ the `ShouldDeepOverwrite` parameter set to
 		`true` will result in a stack-overflow!
