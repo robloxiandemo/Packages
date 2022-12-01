@@ -15,15 +15,15 @@ position = "right"
 
 [[classOrder]]
 section = "Facilitator Framework"
-classes = ["Cleanser", "Player", "Signal"]
+classes = ["Cleanser", "Player", "Signal", "String", "Table"]
 
-[[classOrder]]
-section = "Loleris's Madwork Framework"
-classes = ["ProfileService", "ReplicaService"]
+# [[classOrder]]
+# section = "Loleris's Madwork Framework"
+# classes = ["ProfileService", "ReplicaService"]
 
-[[classOrder]]
-section = "Quenty's NevermoreEngine"
-classes = ["Maid"]
+# [[classOrder]]
+# section = "Quenty's NevermoreEngine"
+# classes = ["Maid"]
 
 [home]
 enabled = true
