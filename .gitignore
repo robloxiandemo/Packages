@@ -10,6 +10,8 @@
 *.zip
 /.agf
 /.vscode
-packages/*/Packages
 /build
-/Packages
+node_modules
+package*
+packages
+packages/*/Packages
