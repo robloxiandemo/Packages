@@ -40,8 +40,6 @@ local DefaultIndentationPower: number = 0
 --[=[
 	@within Table
 
-	@readonly
-
 	@param TargetTable table -- The target table.
 	@param ShouldDeepRead boolean? -- Whether or not to perform a recursive read.
 
