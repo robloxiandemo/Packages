@@ -312,7 +312,7 @@ end
 
 	@param TargetTable table -- The target table.
 	@param ContextTable table -- The context table.
-	@param ShouldDeepClone boolean? -- Whether or not to perform a deep overwrite.
+	@param ShouldDeepOverwrite boolean? -- Whether or not to perform a deep overwrite.
 
 	@return table -- Return the newly overwritten table.
 
