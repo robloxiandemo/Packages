@@ -14,12 +14,16 @@ label = "Discord"
 position = "right"
 
 [[classOrder]]
-section = "Classes"
+section = "Facilitator Framework"
 classes = ["Cleanser", "Player", "Signal"]
 
 [[classOrder]]
-section = "Services"
-classes = ["ProfileService"]
+section = "Loleris's Madwork Framework"
+classes = ["ProfileService", "ReplicaService"]
+
+[[classOrder]]
+section = "Quenty's NevermoreEngine"
+classes = ["Maid"]
 
 [home]
 enabled = true
