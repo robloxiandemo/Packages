@@ -78,7 +78,7 @@ function Signal.New(Name: string, Listener: Function?): table
 
 		["Cleanser"] = Cleanser.New();
 		["IsConnected"] = false;
-		["Listener"] = (Listener or nil);
+		["Listener"] = ((Listener) or (nil));
 		["Listening"] = 0;
 		["OnInvoke"] = nil
 
@@ -177,7 +177,7 @@ end
 function SignalMethods:ConnectOnce(Callback: Function): Connection
 	local Connection: Function?
 
-	Connection = self:Connect(function(...)
+	Connection = self:Connect(function(...: any?): Connection
 		if (not (Connection)) then
 			return
 		end
@@ -213,7 +213,7 @@ end
 function SignalMethods:ConnectToOnClose(Callback: Function): Connection
 	local Connection: Function?
 
-	Connection = self:Connect(function(...)
+	Connection = self:Connect(function(...: any?): Connection
 		if (not (Connection)) then
 			return
 		end
@@ -247,10 +247,10 @@ end
 	```
 ]=]
 function SignalMethods:ConnectParallel(Callback: Function): Connection
-	return (self:Connect(function(...)
+	return (self:Connect(function(...: any?)
 		task.desynchronize()
 
-		return (Callback(...))
+		return (Callback(...)) :: Function
 	end)) :: Connection
 end
 
@@ -273,8 +273,9 @@ function SignalMethods:Wait(): Wait?
 	local Result: Wait?
 	local WaitSignal: any?
 
-	WaitSignal = self:Connect(function(...)
+	WaitSignal = self:Connect(function(...: any?): Connection
 		Result = (...)
+
 		WaitSignal:Disconnect()
 	end) :: Connection
 
@@ -282,7 +283,7 @@ function SignalMethods:Wait(): Wait?
 		task.wait()
 	until (Result) :: Wait?
 
-	return ((Result) :: Wait?)
+	return (Result) :: Wait?
 end
 
 --[=[
