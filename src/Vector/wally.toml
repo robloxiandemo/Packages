@@ -1,0 +1,8 @@
+[package]
+name = "robloxiandemo/vector"
+description = "A collection of very useful vector-related functions, which has built-in compatiblity for usage with Wally."
+version = "0.1.0"
+license = "MIT"
+authors = ["Demo (https://github.com/RobloxianDemo)"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
