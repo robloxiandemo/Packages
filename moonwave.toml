@@ -15,7 +15,7 @@ position = "right"
 
 [[classOrder]]
 section = "Facilitator Framework"
-classes = ["Cleanser", "Player", "Signal", "String", "Table"]
+classes = ["Cleanser", "Debris", "Math", "Player", "Signal", "String", "Table", "Vector"]
 
 # [[classOrder]]
 # section = "Loleris's Madwork Framework"
