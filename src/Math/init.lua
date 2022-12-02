@@ -35,14 +35,14 @@ local DefaultPrecisionFactor: number = 1
 
 	Map the specified number using two ranges.
 ]=]
-local function Map(Number: number, MinmumA: number, MaximumA: number, MinimumB: number,
+local function Map(Number: number, MinimumA: number, MaximumA: number, MinimumB: number,
 	MaximumB: number): number
 
-	if ((MaximumA) == (MinmumA)) then
+	if ((MaximumA) == (MinimumA)) then
 		error("Range of zero.")
 	end
 
-	return (((((Number) - (MinmumA)) * ((MaximumB) - (MinimumB))) / ((MaximumA) - (MinmumA)))
+	return (((((Number) - (MinimumA)) * ((MaximumB) - (MinimumB))) / ((MaximumA) - (MinimumA)))
 		+ (MinimumB)) :: number
 end
 

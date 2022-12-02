@@ -7,7 +7,7 @@
 | -- | -- | -- |
 | [Cleanser](https://robloxiandemo.github.io/Roblox-Modules/api/Cleanser) | `Cleanser = "robloxiandemo/cleanser@0.1.8"` | A lightweight task cleaner. |
 | [Debris](https://robloxiandemo.github.io/Roblox-Modules/api/Cleanser) | `Cleanser = "robloxiandemo/debris@0.1.0"` | A vast collection of very useful debris-related functions. |
-| [Math](https://robloxiandemo.github.io/Roblox-Modules/api/Cleanser) | `Cleanser = "robloxiandemo/math@0.1.0"` | A vast collection of very useful math-related functions. |
+| [Math](https://robloxiandemo.github.io/Roblox-Modules/api/Cleanser) | `Cleanser = "robloxiandemo/math@0.1.1"` | A vast collection of very useful math-related functions. |
 | [Player](https://robloxiandemo.github.io/Roblox-Modules/api/Player) | `Player = "robloxiandemo/player@0.1.6"` | A player wrapper class. |
 | [Signal](https://robloxiandemo.github.io/Roblox-Modules/api/Signal) | `Signal = "robloxiandemo/signal@0.1.8"` | A very useful custom `BindableEvent` / `BindableFunction` implementation of signals (based off of [Anaminus' SignalFire](https://github.com/Anaminus/roblox-library/tree/master/modules/SignalFire)). |
 | [String](https://robloxiandemo.github.io/Roblox-Modules/api/String) | `String = "robloxiandemo/string@0.1.0"` | A vast collection of very useful string-related functions. |
