@@ -44,6 +44,7 @@ local MaximumTuple: number = 7997
 	@within String
 
 	@param TargetString string -- The specified target string.
+
 	@param Uppercase boolean -- Should we convert the string to an uppercased form?
 
 	@return string -- Return the string.
@@ -138,6 +139,7 @@ end
 	@within String
 
 	@param TargetString string -- The specified target string.
+
 	@param EndingString string -- The ending string.
 
 	@return string -- Return the string.
@@ -152,6 +154,7 @@ end
 	@within String
 
 	@param TargetString string -- The specified target string.
+
 	@param StartingString string -- The starting string.
 
 	@return string -- Return the string.
@@ -166,6 +169,7 @@ end
 	@within String
 
 	@param TargetString string -- The specified target string.
+
 	@param ContainedString string -- The contained string.
 
 	@return string -- Return the string.
@@ -294,7 +298,8 @@ end
 	@within String
 
 	@param StringA string -- The primary string.
-	@param StringB string -- The primary string.
+
+	@param StringB string -- The secondary string.
 
 	@return string -- Return the string.
 

@@ -10,7 +10,7 @@
 | [Math](https://robloxiandemo.github.io/Roblox-Modules/api/Cleanser) | `Math = "robloxiandemo/math@0.1.1"` | A vast collection of very useful math-related functions. |
 | [Player](https://robloxiandemo.github.io/Roblox-Modules/api/Player) | `Player = "robloxiandemo/player@0.1.7"` | A player wrapper class. |
 | [Signal](https://robloxiandemo.github.io/Roblox-Modules/api/Signal) | `Signal = "robloxiandemo/signal@0.1.9"` | A very useful custom `BindableEvent` / `BindableFunction` implementation of signals (based off of [Anaminus' SignalFire](https://github.com/Anaminus/roblox-library/tree/master/modules/SignalFire)). |
-| [String](https://robloxiandemo.github.io/Roblox-Modules/api/String) | `String = "robloxiandemo/string@0.1.0"` | A vast collection of very useful string-related functions. |
+| [String](https://robloxiandemo.github.io/Roblox-Modules/api/String) | `String = "robloxiandemo/string@0.1.1"` | A vast collection of very useful string-related functions. |
 | [Table](https://robloxiandemo.github.io/Roblox-Modules/api/Table) | `Table = "robloxiandemo/table@0.1.4"` | A vast collection of very useful table-related functions. |
 | [Vector](https://robloxiandemo.github.io/Roblox-Modules/api/Vector) | `Vector = "robloxiandemo/vector@0.1.0"` | A vast collection of very useful vector-related functions. |
 
