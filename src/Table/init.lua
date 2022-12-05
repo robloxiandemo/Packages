@@ -399,7 +399,7 @@ end
 
 	@return table -- Return the newly reconciled table.
 
-	Unlike the overwrite method, this one simply replaces strings (used primarily for ProfileService).
+	Unlike the overwrite method, this one simply replaces strings (used primarily for `ProfileService`).
 ]=]
 local function Reconcile(TargetTable: table, ContextTable: table): table
 	for Key: Key, Value: any in pairs(ContextTable) do
