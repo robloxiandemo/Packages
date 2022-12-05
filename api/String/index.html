@@ -31,8 +31,8 @@ Strings that only work specifically with arrays or dictionaries are marked as su
 All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 	treat tables as immutable and will return copies of the given table(s)
 		with the operations performed on the copies."><link data-rh="true" rel="canonical" href="https://RobloxianDemo.github.io/Roblox-Modules/api/String"><link data-rh="true" rel="alternate" href="https://RobloxianDemo.github.io/Roblox-Modules/api/String" hreflang="en"><link data-rh="true" rel="alternate" href="https://RobloxianDemo.github.io/Roblox-Modules/api/String" hreflang="x-default"><link rel="stylesheet" href="/Roblox-Modules/assets/css/styles.77d02042.css">
-<link rel="preload" href="/Roblox-Modules/assets/js/runtime~main.06c949a7.js" as="script">
-<link rel="preload" href="/Roblox-Modules/assets/js/main.96dc5063.js" as="script">
+<link rel="preload" href="/Roblox-Modules/assets/js/runtime~main.7ec676b0.js" as="script">
+<link rel="preload" href="/Roblox-Modules/assets/js/main.6129f68d.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -92,13 +92,13 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
-<p>Similar to Trim(), with the difference being that only the start of the string is trimmed.</p>
+<p>Similar to <code>Trim()</code>, with the difference being that only the start of the string is trimmed.</p>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="TrimEnd"><code style="text-decoration:none">TrimEnd</code><a class="hash-link" href="#TrimEnd" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L107"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">TrimEnd</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
-<p>Similar to Trim(), with the difference being that only the end of the string is trimmed.</p>
+<p>Similar to <code>Trim()</code>, with the difference being that only the end of the string is trimmed.</p>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="RemoveExcessWhitespace"><code style="text-decoration:none">RemoveExcessWhitespace</code><a class="hash-link" href="#RemoveExcessWhitespace" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L121"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">RemoveExcessWhitespace</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
@@ -113,7 +113,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
-<p>Remove all whitespace from the specified targetstring.</p>
+<p>Remove all whitespace from the specified target string.</p>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="EndsWith"><code style="text-decoration:none">EndsWith</code><a class="hash-link" href="#EndsWith" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L149"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">EndsWith</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div><div><code>EndingString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
@@ -142,10 +142,10 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 <p>Return the newly created metatable (string builder).</p>
 </span></span></div><div>
 <p>
-  Create a StringBuilder object that can be used to build a string.
+  Create a <code>StringBuilder</code> object that can be used to build a string.
   This is useful when a large string needs to be concatenated.
   Traditional concatenation of a string using ".." can be a performance issue,
-  and thus StringBuilders can be used to store the pieces of the string in a table and
+  and thus <code>StringBuilders</code> can be used to store the pieces of the string in a table and
   then concatenate them all at once.
 </p>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToCharacterArray"><code style="text-decoration:none">ToCharacterArray</code><a class="hash-link" href="#ToCharacterArray" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L228"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToCharacterArray</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
@@ -179,25 +179,25 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
-<p>Return the specified target string in camelCase.</p>
+<p>Return the specified target string in <code>camelCase</code>.</p>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToPascalCase"><code style="text-decoration:none">ToPascalCase</code><a class="hash-link" href="#ToPascalCase" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L338"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToPascalCase</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
-<p>Return the specified target string in PascalCase.</p>
+<p>Return the specified target string in <code>PascalCase</code>.</p>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToSnakeCase"><code style="text-decoration:none">ToSnakeCase</code><a class="hash-link" href="#ToSnakeCase" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L353"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToSnakeCase</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div><div><code>Uppercase<!-- -->: </code><code class="blue_P4bS">boolean</code></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
-<p>Return the specified target string in snake_case or SNAKE_CASE.</p>
+<p>Return the specified target string in <code>snake_case</code> or <code>SNAKE_CASE</code>.</p>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToKebabCase"><code style="text-decoration:none">ToKebabCase</code><a class="hash-link" href="#ToKebabCase" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L374"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToKebabCase</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div><div><code>Uppercase<!-- -->: </code><code class="blue_P4bS">boolean</code></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
-<p>Return the specified target string in kebab-case or KEBAB-CASE.</p>
+<p>Return the specified target string in <code>kebab-case</code> or <code>KEBAB-CASE</code>.</p>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
         {
@@ -273,7 +273,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
         },
         {
             &quot;name&quot;: &quot;TrimStart&quot;,
-            &quot;desc&quot;: &quot;Similar to Trim(), with the difference being that only the start of the string is trimmed.&quot;,
+            &quot;desc&quot;: &quot;Similar to `Trim()`, with the difference being that only the start of the string is trimmed.&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;TargetString&quot;,
@@ -295,7 +295,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
         },
         {
             &quot;name&quot;: &quot;TrimEnd&quot;,
-            &quot;desc&quot;: &quot;Similar to Trim(), with the difference being that only the end of the string is trimmed.&quot;,
+            &quot;desc&quot;: &quot;Similar to `Trim()`, with the difference being that only the end of the string is trimmed.&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;TargetString&quot;,
@@ -339,7 +339,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
         },
         {
             &quot;name&quot;: &quot;RemoveWhitespace&quot;,
-            &quot;desc&quot;: &quot;Remove all whitespace from the specified targetstring.&quot;,
+            &quot;desc&quot;: &quot;Remove all whitespace from the specified target string.&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;TargetString&quot;,
@@ -442,7 +442,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
         },
         {
             &quot;name&quot;: &quot;StringBuilder&quot;,
-            &quot;desc&quot;: &quot;Create a StringBuilder object that can be used to build a string.\n\tThis is useful when a large string needs to be concatenated.\n\t\tTraditional concatenation of a string using \&quot;..\&quot; can be a performance issue,\n\t\t\tand thus StringBuilders can be used to store the pieces of the string in a table and\n\t\t\t\tthen concatenate them all at once.&quot;,
+            &quot;desc&quot;: &quot;Create a `StringBuilder` object that can be used to build a string.\n\tThis is useful when a large string needs to be concatenated.\n\t\tTraditional concatenation of a string using \&quot;..\&quot; can be a performance issue,\n\t\t\tand thus `StringBuilders` can be used to store the pieces of the string in a table and\n\t\t\t\tthen concatenate them all at once.&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [
                 {
@@ -551,7 +551,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
         },
         {
             &quot;name&quot;: &quot;ToCamelCase&quot;,
-            &quot;desc&quot;: &quot;Return the specified target string in camelCase.&quot;,
+            &quot;desc&quot;: &quot;Return the specified target string in `camelCase`.&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;TargetString&quot;,
@@ -573,7 +573,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
         },
         {
             &quot;name&quot;: &quot;ToPascalCase&quot;,
-            &quot;desc&quot;: &quot;Return the specified target string in PascalCase.&quot;,
+            &quot;desc&quot;: &quot;Return the specified target string in `PascalCase`.&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;TargetString&quot;,
@@ -595,7 +595,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
         },
         {
             &quot;name&quot;: &quot;ToSnakeCase&quot;,
-            &quot;desc&quot;: &quot;Return the specified target string in snake_case or SNAKE_CASE.&quot;,
+            &quot;desc&quot;: &quot;Return the specified target string in `snake_case` or `SNAKE_CASE`.&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;TargetString&quot;,
@@ -622,7 +622,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
         },
         {
             &quot;name&quot;: &quot;ToKebabCase&quot;,
-            &quot;desc&quot;: &quot;Return the specified target string in kebab-case or KEBAB-CASE.&quot;,
+            &quot;desc&quot;: &quot;Return the specified target string in `kebab-case` or `KEBAB-CASE`.&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;TargetString&quot;,
@@ -657,7 +657,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
         &quot;path&quot;: &quot;src/String/init.lua&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#ByteArrayToString" class="table-of-contents__link toc-highlight">.ByteArrayToString</a></li><li><a href="#Contains" class="table-of-contents__link toc-highlight">.Contains</a></li><li><a href="#EndsWith" class="table-of-contents__link toc-highlight">.EndsWith</a></li><li><a href="#EqualsIgnoreCase" class="table-of-contents__link toc-highlight">.EqualsIgnoreCase</a></li><li><a href="#Escape" class="table-of-contents__link toc-highlight">.Escape</a></li><li><a href="#RemoveExcessWhitespace" class="table-of-contents__link toc-highlight">.RemoveExcessWhitespace</a></li><li><a href="#RemoveWhitespace" class="table-of-contents__link toc-highlight">.RemoveWhitespace</a></li><li><a href="#StartsWith" class="table-of-contents__link toc-highlight">.StartsWith</a></li><li><a href="#StringBuilder" class="table-of-contents__link toc-highlight">.StringBuilder</a></li><li><a href="#ToByteArray" class="table-of-contents__link toc-highlight">.ToByteArray</a></li><li><a href="#ToCamelCase" class="table-of-contents__link toc-highlight">.ToCamelCase</a></li><li><a href="#ToCharacterArray" class="table-of-contents__link toc-highlight">.ToCharacterArray</a></li><li><a href="#ToKebabCase" class="table-of-contents__link toc-highlight">.ToKebabCase</a></li><li><a href="#ToPascalCase" class="table-of-contents__link toc-highlight">.ToPascalCase</a></li><li><a href="#ToSnakeCase" class="table-of-contents__link toc-highlight">.ToSnakeCase</a></li><li><a href="#Trim" class="table-of-contents__link toc-highlight">.Trim</a></li><li><a href="#TrimEnd" class="table-of-contents__link toc-highlight">.TrimEnd</a></li><li><a href="#TrimStart" class="table-of-contents__link toc-highlight">.TrimStart</a></li><li><a href="#UseUppercase" class="table-of-contents__link toc-highlight">.UseUppercase</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022 Facilitative. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/Roblox-Modules/assets/js/runtime~main.06c949a7.js"></script>
-<script src="/Roblox-Modules/assets/js/main.96dc5063.js"></script>
+<script src="/Roblox-Modules/assets/js/runtime~main.7ec676b0.js"></script>
+<script src="/Roblox-Modules/assets/js/main.6129f68d.js"></script>
 </body>
 </html>
