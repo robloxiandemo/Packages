@@ -31,8 +31,8 @@ Strings that only work specifically with arrays or dictionaries are marked as su
 All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 	treat tables as immutable and will return copies of the given table(s)
 		with the operations performed on the copies."><link data-rh="true" rel="canonical" href="https://RobloxianDemo.github.io/Roblox-Modules/api/String"><link data-rh="true" rel="alternate" href="https://RobloxianDemo.github.io/Roblox-Modules/api/String" hreflang="en"><link data-rh="true" rel="alternate" href="https://RobloxianDemo.github.io/Roblox-Modules/api/String" hreflang="x-default"><link rel="stylesheet" href="/Roblox-Modules/assets/css/styles.77d02042.css">
-<link rel="preload" href="/Roblox-Modules/assets/js/runtime~main.8082dbd5.js" as="script">
-<link rel="preload" href="/Roblox-Modules/assets/js/main.58090d65.js" as="script">
+<link rel="preload" href="/Roblox-Modules/assets/js/runtime~main.6c8bb05f.js" as="script">
+<link rel="preload" href="/Roblox-Modules/assets/js/main.ab7368bd.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -64,7 +64,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
     </p>
   </div>
 </div>
-</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a class="hash-link" href="#functions" title="Direct link to heading">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="UseUppercase"><code style="text-decoration:none">UseUppercase</code><a class="hash-link" href="#UseUppercase" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L53"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">UseUppercase</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a class="hash-link" href="#functions" title="Direct link to heading">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="UseUppercase"><code style="text-decoration:none">UseUppercase</code><a class="hash-link" href="#UseUppercase" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L54"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">UseUppercase</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div><div><code>Uppercase<!-- -->: </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
 <p>Should we convert the string to an uppercased form?</p>
@@ -72,7 +72,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 <p>Return the string.</p>
 </span></span></div><div>
 <p>Return the specified target string in either upper or lower cased.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Escape"><code style="text-decoration:none">Escape</code><a class="hash-link" href="#Escape" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L67"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">Escape</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Escape"><code style="text-decoration:none">Escape</code><a class="hash-link" href="#Escape" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L68"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">Escape</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
@@ -81,25 +81,25 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
   Escape the specified target string from pattern characters.
   In other words, it prefixes any special pattern characters with a <code>%</code>.
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Trim"><code style="text-decoration:none">Trim</code><a class="hash-link" href="#Trim" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L80"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">Trim</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Trim"><code style="text-decoration:none">Trim</code><a class="hash-link" href="#Trim" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L81"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">Trim</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
 <p>Trim the whitespace from the start and end of the specified target string.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="TrimStart"><code style="text-decoration:none">TrimStart</code><a class="hash-link" href="#TrimStart" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L93"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">TrimStart</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="TrimStart"><code style="text-decoration:none">TrimStart</code><a class="hash-link" href="#TrimStart" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L94"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">TrimStart</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
 <p>Similar to Trim(), with the difference being that only the start of the string is trimmed.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="TrimEnd"><code style="text-decoration:none">TrimEnd</code><a class="hash-link" href="#TrimEnd" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L106"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">TrimEnd</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="TrimEnd"><code style="text-decoration:none">TrimEnd</code><a class="hash-link" href="#TrimEnd" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L107"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">TrimEnd</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
 <p>Similar to Trim(), with the difference being that only the end of the string is trimmed.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="RemoveExcessWhitespace"><code style="text-decoration:none">RemoveExcessWhitespace</code><a class="hash-link" href="#RemoveExcessWhitespace" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L120"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">RemoveExcessWhitespace</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="RemoveExcessWhitespace"><code style="text-decoration:none">RemoveExcessWhitespace</code><a class="hash-link" href="#RemoveExcessWhitespace" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L121"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">RemoveExcessWhitespace</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
@@ -108,13 +108,13 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
   Replace all whitespace with a single space from the specified target string,
   (this does not trim the string).
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="RemoveWhitespace"><code style="text-decoration:none">RemoveWhitespace</code><a class="hash-link" href="#RemoveWhitespace" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L133"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">RemoveWhitespace</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="RemoveWhitespace"><code style="text-decoration:none">RemoveWhitespace</code><a class="hash-link" href="#RemoveWhitespace" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L134"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">RemoveWhitespace</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
 <p>Remove all whitespace from the specified targetstring.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="EndsWith"><code style="text-decoration:none">EndsWith</code><a class="hash-link" href="#EndsWith" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L147"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">EndsWith</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="EndsWith"><code style="text-decoration:none">EndsWith</code><a class="hash-link" href="#EndsWith" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L149"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">EndsWith</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div><div><code>EndingString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The ending string.</p>
@@ -122,7 +122,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 <p>Return the string.</p>
 </span></span></div><div>
 <p>Check if the specified target string ends with a certain string.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="StartsWith"><code style="text-decoration:none">StartsWith</code><a class="hash-link" href="#StartsWith" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L161"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">StartsWith</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="StartsWith"><code style="text-decoration:none">StartsWith</code><a class="hash-link" href="#StartsWith" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L164"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">StartsWith</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div><div><code>StartingString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The starting string.</p>
@@ -130,7 +130,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 <p>Return the string.</p>
 </span></span></div><div>
 <p>Check if the specified target string starts with a certain string.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Contains"><code style="text-decoration:none">Contains</code><a class="hash-link" href="#Contains" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L175"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">Contains</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Contains"><code style="text-decoration:none">Contains</code><a class="hash-link" href="#Contains" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L179"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">Contains</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div><div><code>ContainedString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The contained string.</p>
@@ -138,7 +138,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 <p>Return the string.</p>
 </span></span></div><div>
 <p>Check if the specified target string contains another string.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="StringBuilder"><code style="text-decoration:none">StringBuilder</code><a class="hash-link" href="#StringBuilder" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L190"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">StringBuilder</code><code>(</code><code>) → </code><code class="blue_P4bS">StringBuilder</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="StringBuilder"><code style="text-decoration:none">StringBuilder</code><a class="hash-link" href="#StringBuilder" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L194"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">StringBuilder</code><code>(</code><code>) → </code><code class="blue_P4bS">StringBuilder</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the newly created metatable (string builder).</p>
 </span></span></div><div>
 <p>
@@ -148,51 +148,51 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
   and thus StringBuilders can be used to store the pieces of the string in a table and
   then concatenate them all at once.
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToCharacterArray"><code style="text-decoration:none">ToCharacterArray</code><a class="hash-link" href="#ToCharacterArray" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L224"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToCharacterArray</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToCharacterArray"><code style="text-decoration:none">ToCharacterArray</code><a class="hash-link" href="#ToCharacterArray" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L228"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToCharacterArray</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the character array.</p>
 </span></span></div><div>
 <p>Return a table of all the characters in the specified target string.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToByteArray"><code style="text-decoration:none">ToByteArray</code><a class="hash-link" href="#ToByteArray" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L244"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToByteArray</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToByteArray"><code style="text-decoration:none">ToByteArray</code><a class="hash-link" href="#ToByteArray" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L248"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToByteArray</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the byte array.</p>
 </span></span></div><div>
 <p>Return a table of all the bytes of each character in the specified target string.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ByteArrayToString"><code style="text-decoration:none">ByteArrayToString</code><a class="hash-link" href="#ByteArrayToString" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L273"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ByteArrayToString</code><code>(</code><div class="inset_uKQm"><div><code>ByteCache<!-- -->: </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ByteArrayToString"><code style="text-decoration:none">ByteArrayToString</code><a class="hash-link" href="#ByteArrayToString" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L277"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ByteArrayToString</code><code>(</code><div class="inset_uKQm"><div><code>ByteCache<!-- -->: </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified byte array.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
 <p>Transform the array of bytes into a string.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="EqualsIgnoreCase"><code style="text-decoration:none">EqualsIgnoreCase</code><a class="hash-link" href="#EqualsIgnoreCase" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L303"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">EqualsIgnoreCase</code><code>(</code><div class="inset_uKQm"><div><code>StringA<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="EqualsIgnoreCase"><code style="text-decoration:none">EqualsIgnoreCase</code><a class="hash-link" href="#EqualsIgnoreCase" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L308"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">EqualsIgnoreCase</code><code>(</code><div class="inset_uKQm"><div><code>StringA<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The primary string.</p>
 </span></span></div><div><code>StringB<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
-<p>The primary string.</p>
+<p>The secondary string.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
 <p>Check if two strings are equal, while ignoring their case.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToCamelCase"><code style="text-decoration:none">ToCamelCase</code><a class="hash-link" href="#ToCamelCase" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L316"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToCamelCase</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToCamelCase"><code style="text-decoration:none">ToCamelCase</code><a class="hash-link" href="#ToCamelCase" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L321"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToCamelCase</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
 <p>Return the specified target string in camelCase.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToPascalCase"><code style="text-decoration:none">ToPascalCase</code><a class="hash-link" href="#ToPascalCase" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L333"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToPascalCase</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToPascalCase"><code style="text-decoration:none">ToPascalCase</code><a class="hash-link" href="#ToPascalCase" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L338"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToPascalCase</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
 <p>Return the specified target string in PascalCase.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToSnakeCase"><code style="text-decoration:none">ToSnakeCase</code><a class="hash-link" href="#ToSnakeCase" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L348"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToSnakeCase</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToSnakeCase"><code style="text-decoration:none">ToSnakeCase</code><a class="hash-link" href="#ToSnakeCase" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L353"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToSnakeCase</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div><div><code>Uppercase<!-- -->: </code><code class="blue_P4bS">boolean</code></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
 </span></span></div><div>
 <p>Return the specified target string in snake_case or SNAKE_CASE.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToKebabCase"><code style="text-decoration:none">ToKebabCase</code><a class="hash-link" href="#ToKebabCase" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L369"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToKebabCase</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToKebabCase"><code style="text-decoration:none">ToKebabCase</code><a class="hash-link" href="#ToKebabCase" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/String/init.lua#L374"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>String<!-- -->.</code><code class="green_DgR4">ToKebabCase</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified target string.</p>
 </span></span></div><div><code>Uppercase<!-- -->: </code><code class="blue_P4bS">boolean</code></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the string.</p>
@@ -223,7 +223,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 53,
+                &quot;line&quot;: 54,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -245,7 +245,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 67,
+                &quot;line&quot;: 68,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -267,7 +267,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 80,
+                &quot;line&quot;: 81,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -289,7 +289,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 93,
+                &quot;line&quot;: 94,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -311,7 +311,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 106,
+                &quot;line&quot;: 107,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -333,7 +333,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 120,
+                &quot;line&quot;: 121,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -355,7 +355,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 133,
+                &quot;line&quot;: 134,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -382,7 +382,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 147,
+                &quot;line&quot;: 149,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -409,7 +409,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 161,
+                &quot;line&quot;: 164,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -436,7 +436,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 175,
+                &quot;line&quot;: 179,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -452,7 +452,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 190,
+                &quot;line&quot;: 194,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -474,7 +474,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 224,
+                &quot;line&quot;: 228,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -496,7 +496,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 244,
+                &quot;line&quot;: 248,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -518,7 +518,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 273,
+                &quot;line&quot;: 277,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -533,7 +533,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
                 },
                 {
                     &quot;name&quot;: &quot;StringB&quot;,
-                    &quot;desc&quot;: &quot;The primary string.&quot;,
+                    &quot;desc&quot;: &quot;The secondary string.&quot;,
                     &quot;lua_type&quot;: &quot;string&quot;
                 }
             ],
@@ -545,7 +545,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 303,
+                &quot;line&quot;: 308,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -567,7 +567,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 316,
+                &quot;line&quot;: 321,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -589,7 +589,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 333,
+                &quot;line&quot;: 338,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -616,7 +616,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 348,
+                &quot;line&quot;: 353,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         },
@@ -643,7 +643,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 369,
+                &quot;line&quot;: 374,
                 &quot;path&quot;: &quot;src/String/init.lua&quot;
             }
         }
@@ -657,7 +657,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
         &quot;path&quot;: &quot;src/String/init.lua&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#ByteArrayToString" class="table-of-contents__link toc-highlight">.ByteArrayToString</a></li><li><a href="#Contains" class="table-of-contents__link toc-highlight">.Contains</a></li><li><a href="#EndsWith" class="table-of-contents__link toc-highlight">.EndsWith</a></li><li><a href="#EqualsIgnoreCase" class="table-of-contents__link toc-highlight">.EqualsIgnoreCase</a></li><li><a href="#Escape" class="table-of-contents__link toc-highlight">.Escape</a></li><li><a href="#RemoveExcessWhitespace" class="table-of-contents__link toc-highlight">.RemoveExcessWhitespace</a></li><li><a href="#RemoveWhitespace" class="table-of-contents__link toc-highlight">.RemoveWhitespace</a></li><li><a href="#StartsWith" class="table-of-contents__link toc-highlight">.StartsWith</a></li><li><a href="#StringBuilder" class="table-of-contents__link toc-highlight">.StringBuilder</a></li><li><a href="#ToByteArray" class="table-of-contents__link toc-highlight">.ToByteArray</a></li><li><a href="#ToCamelCase" class="table-of-contents__link toc-highlight">.ToCamelCase</a></li><li><a href="#ToCharacterArray" class="table-of-contents__link toc-highlight">.ToCharacterArray</a></li><li><a href="#ToKebabCase" class="table-of-contents__link toc-highlight">.ToKebabCase</a></li><li><a href="#ToPascalCase" class="table-of-contents__link toc-highlight">.ToPascalCase</a></li><li><a href="#ToSnakeCase" class="table-of-contents__link toc-highlight">.ToSnakeCase</a></li><li><a href="#Trim" class="table-of-contents__link toc-highlight">.Trim</a></li><li><a href="#TrimEnd" class="table-of-contents__link toc-highlight">.TrimEnd</a></li><li><a href="#TrimStart" class="table-of-contents__link toc-highlight">.TrimStart</a></li><li><a href="#UseUppercase" class="table-of-contents__link toc-highlight">.UseUppercase</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022 Facilitative. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/Roblox-Modules/assets/js/runtime~main.8082dbd5.js"></script>
-<script src="/Roblox-Modules/assets/js/main.58090d65.js"></script>
+<script src="/Roblox-Modules/assets/js/runtime~main.6c8bb05f.js"></script>
+<script src="/Roblox-Modules/assets/js/main.ab7368bd.js"></script>
 </body>
 </html>
