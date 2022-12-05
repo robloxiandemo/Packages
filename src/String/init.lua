@@ -89,7 +89,7 @@ end
 
 	@return string -- Return the string.
 
-	Similar to Trim(), with the difference being that only the start of the string is trimmed.
+	Similar to `Trim()`, with the difference being that only the start of the string is trimmed.
 ]=]
 local function TrimStart(TargetString: string): string
 	return (string.match(TargetString, "^%s*(.+)")) :: string
@@ -102,7 +102,7 @@ end
 
 	@return string -- Return the string.
 
-	Similar to Trim(), with the difference being that only the end of the string is trimmed.
+	Similar to `Trim()`, with the difference being that only the end of the string is trimmed.
 ]=]
 local function TrimEnd(TargetString: string): string
 	return (string.match(TargetString, "(.-)%s*$")) :: string
@@ -129,7 +129,7 @@ end
 
 	@return string -- Return the string.
 
-	Remove all whitespace from the specified targetstring.
+	Remove all whitespace from the specified target string.
 ]=]
 local function RemoveWhitespace(TargetString: string): string
 	return (string.gsub(TargetString, "%s+", "")) :: string
@@ -185,10 +185,10 @@ end
 
 	@return StringBuilder -- Return the newly created metatable (string builder).
 
-	Create a StringBuilder object that can be used to build a string.
+	Create a `StringBuilder` object that can be used to build a string.
 		This is useful when a large string needs to be concatenated.
 			Traditional concatenation of a string using ".." can be a performance issue,
-				and thus StringBuilders can be used to store the pieces of the string in a table and
+				and thus `StringBuilders` can be used to store the pieces of the string in a table and
 					then concatenate them all at once.
 ]=]
 local function StringBuilder(): StringBuilder
@@ -316,7 +316,7 @@ end
 
 	@return string -- Return the string.
 
-	Return the specified target string in camelCase.
+	Return the specified target string in `camelCase`.
 ]=]
 local function ToCamelCase(TargetString: string): string
 	TargetString = string.gsub(TargetString, "[%-_]+([^%-_])", function(NewString)
@@ -333,7 +333,7 @@ end
 
 	@return string -- Return the string.
 
-	Return the specified target string in PascalCase.
+	Return the specified target string in `PascalCase`.
 ]=]
 local function ToPascalCase(TargetString: string): string
 	TargetString = ToCamelCase(TargetString)
@@ -348,7 +348,7 @@ end
 
 	@return string -- Return the string.
 
-	Return the specified target string in snake_case or SNAKE_CASE.
+	Return the specified target string in `snake_case` or `SNAKE_CASE`.
 ]=]
 local function ToSnakeCase(TargetString: string, Uppercase: boolean): string
 	TargetString = string.gsub(string.gsub(TargetString, "[%-_]+", "_"), "([^%u%-_])(%u)",
@@ -369,7 +369,7 @@ end
 
 	@return string -- Return the string.
 
-	Return the specified target string in kebab-case or KEBAB-CASE.
+	Return the specified target string in `kebab-case` or `KEBAB-CASE`.
 ]=]
 local function ToKebabCase(TargetString: string, Uppercase: boolean): string
 	TargetString = string.gsub(string.gsub(TargetString, "[%-_]+", "-"), "([^%u%-_])(%u)",
