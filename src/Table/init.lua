@@ -41,6 +41,7 @@ local DefaultIndentationPower: number = 0
 	@within Table
 
 	@param TargetTable table -- The target table.
+
 	@param ShouldDeepRead boolean? -- Whether or not to perform a recursive read.
 
 	@return table -- Return the read-only table.
@@ -121,6 +122,7 @@ end
 	@within Table
 
 	@param TargetTable table -- The target table.
+
 	@param ContextTable table -- The context table.
 
 	@return table -- Return the newly concatted target table.
@@ -139,6 +141,7 @@ end
 	@within Table
 
 	@param OriginalTable table -- The original table.
+
 	@param SecondaryTable table -- The secondary table.
 
 	@return table -- Return the newly created and merged table.
@@ -163,6 +166,7 @@ end
 	@within Table
 
 	@param OriginalTable table -- The original table.
+
 	@param SecondaryTable table -- The secondary table.
 
 	@return table -- Return the newly created and merged table.
@@ -244,7 +248,9 @@ end
 	@within Table
 
 	@param TargetTable table -- The target table.
+
 	@param Indent number? -- The indentation power.
+
 	@param Output string? -- The output.
 
 	@return string -- Return the output.
@@ -273,6 +279,7 @@ end
 	@within Table
 
 	@param TargetTable table -- The target table to clone.
+
 	@param ShouldDeepClone boolean? -- Whether or not to perform a deep clone.
 
 	@return table -- Return the newly cloned table.
@@ -309,7 +316,9 @@ end
 	@within Table
 
 	@param TargetTable table -- The target table.
+
 	@param ContextTable table -- The context table.
+
 	@param ShouldDeepOverwrite boolean? -- Whether or not to perform a deep overwrite.
 
 	@return table -- Return the newly overwritten table.
@@ -348,6 +357,7 @@ end
 	@within Table
 
 	@param TargetTable table -- The target table.
+
 	@param ContextTable table -- The context table.
 
 	@return table -- Return the newly overwritten table.
@@ -384,6 +394,7 @@ end
 	@within Table
 
 	@param TargetTable table -- The target table.
+
 	@param ContextTable table -- The context table.
 
 	@return table -- Return the newly reconciled table.
@@ -409,6 +420,7 @@ end
 	@within Table
 
 	@param TargetTable table -- The target table.
+
 	@param TargetValue any? -- The target value.
 
 	@return Key -- Return the specified target value from within the target table.
@@ -426,6 +438,7 @@ end
 	@within Table
 
 	@param TargetTable table -- The target table.
+
 	@param TargetValue any? -- The target value.
 
 	@return boolean -- Return whether or not the specified target value has been
@@ -476,6 +489,7 @@ end
 	@within Table
 
 	@param TargetTable table -- The target table.
+
 	@param ... table -- The specified context tables.
 
 	@return table -- Return the altered target table.
@@ -498,6 +512,7 @@ end
 	@within Table
 
 	@param TargetTable table -- The target table.
+
 	@param Function Function -- The specified function.
 
 	@return table -- Return the altered target table.
@@ -518,6 +533,7 @@ end
 	@within Table
 
 	@param TargetTable table -- The target table.
+
 	@param Function Function -- The specified function.
 
 	@return number -- Return the reduced result.
@@ -582,6 +598,7 @@ end
 	@within Table
 
 	@param TargetTable table -- The target table.
+
 	@param Function Function -- The specified function.
 
 	@return table -- Return the newly filtered table.
@@ -618,6 +635,7 @@ end
 	@within Table
 
 	@param TargetTable table -- The target table.
+
 	@param TakeCount number -- The specified take counter.
 
 	@return table -- Return the newly altered table.
@@ -638,6 +656,7 @@ end
 	@within Table
 
 	@param TargetTable table -- The target table.
+
 	@param TakeCount number -- The specified take amount.
 
 	Return a random entry from a specified target table.
