@@ -23,7 +23,6 @@ Player = "robloxiandemo/player@^0"
 Signal = "robloxiandemo/signal@^0"
 String = "robloxiandemo/string@^0"
 Table = "robloxiandemo/table@^0"
-Tween = "robloxiandemo/tween@^0"
 Vector = "robloxiandemo/vector@^0"
 ```
 
