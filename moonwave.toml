@@ -19,7 +19,7 @@ classes = ["Cleanser", "Debris", "Math", "Player", "Signal", "String", "Table", 
 
 # [[classOrder]]
 # section = "Loleris's Madwork Framework"
-# classes = ["ProfileService", "ReplicaService"]
+# classes = ["ProfileService-Demo", "ReplicaService-Demo"]
 
 # [[classOrder]]
 # section = "Quenty's NevermoreEngine"
