@@ -17,9 +17,9 @@ position = "right"
 section = "Facilitator Framework"
 classes = ["Cleanser", "Debris", "Math", "Player", "Signal", "String", "Table", "Vector"]
 
-# [[classOrder]]
-# section = "Loleris's Madwork Framework"
-# classes = ["ProfileService-Demo", "ReplicaService-Demo"]
+[[classOrder]]
+section = "Loleris's Madwork Framework"
+classes = ["ProfileService", "ReplicaService"]
 
 # [[classOrder]]
 # section = "Quenty's NevermoreEngine"
