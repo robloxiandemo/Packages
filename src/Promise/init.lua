@@ -54,10 +54,10 @@ end
 --[=[
 	Constructs a new promise.
 
-	::warning
-	Do not yield within this callback's callback, as it will yield on the
-		main thread. This is a performance optimization.
-	::
+	:::warning
+	Do not yield within this callback's callback,
+		as it will yield on the main thread. This is a performance optimization.
+	:::
 
 	@param Callback (Resolve: (...) -> (), Reject: (...) -> ()) -> ()?
 
