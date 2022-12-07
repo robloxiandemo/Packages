@@ -29,8 +29,8 @@ local EmptyFulfilledPromise: table? = nil
 
 	Promises, though without error handling as this screws with stack traces, using Roblox signals.
 
-    This differs a tad bit from Quenty's Promise, as it provides an altered structure, though it's
-        still relatively the same!
+	This differs a tad bit from Quenty's Promise, as it provides an altered structure, though it's
+		still relatively the same!
 
 	Forked from Quenty's NevermoreEngine: https://quenty.github.io/NevermoreEngine/api/Promise
 
