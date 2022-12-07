@@ -18,8 +18,12 @@ section = "Facilitator Framework"
 classes = ["Cleanser", "Debris", "Math", "Player", "Signal", "String", "Table", "Vector"]
 
 [[classOrder]]
-section = "Loleris's Madwork Framework"
-classes = ["ProfileService", "ReplicaService"]
+section = "Loleris's ProfileService"
+classes = ["ProfileService"]
+
+[[classOrder]]
+section = "Loleris's ReplicaService"
+classes = ["ReplicaService", "MadworkMaid", "MadworkScriptSignal", "RateLimiter", "ReplicaController"]
 
 # [[classOrder]]
 # section = "Quenty's NevermoreEngine"
