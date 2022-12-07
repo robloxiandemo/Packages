@@ -295,6 +295,10 @@ end
 		`true` will result in a stack-overflow!
 ]=]
 local function Clone(TargetTable: table, ShouldDeepClone: boolean?): table
+	if (not (TargetTable) or (type(TargetTable) ~= ("table"))) then
+		return ({})
+	end
+
 	if (not (ShouldDeepClone)) then
 		return (table.clone(TargetTable)) :: table
 	end
@@ -332,6 +336,10 @@ end
 		`true` will result in a stack-overflow!
 ]=]
 local function Overwrite(TargetTable: table, ContextTable: table, ShouldDeepOverwrite: boolean?): table
+	if (not (TargetTable) or (type(TargetTable) ~= ("table"))) then
+		return ({})
+	end
+
 	if (not (ShouldDeepOverwrite)) then
 		for Index: Key, Value: any in pairs(ContextTable) do
 			TargetTable[Index] = Value
