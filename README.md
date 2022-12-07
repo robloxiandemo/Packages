@@ -18,7 +18,7 @@
 | Module | Dependency | Description |
 | -- | -- | -- |
 | [ProfileService](https://robloxiandemo.github.io/Roblox-Modules/api/ProfileService) | `ProfileService = "robloxiandemo/profileservice-demo@0.1.4"` | A forked variant of [Loleris's ProfileService](https://madstudioroblox.github.io/ProfileService/) that provides compatibility for usage with Wally. |
-| [ReplicaService](https://robloxiandemo.github.io/Roblox-Modules/api/ReplicaService) | `ReplicaService = "robloxiandemo/replicaservice-demo@0.1.0"` | A forked variant of [Loleris's ReplicaService](https://madstudioroblox.github.io/ReplicaService/) that provides compatibility for usage with Wally. |
+| [ReplicaService](https://robloxiandemo.github.io/Roblox-Modules/api/ReplicaService) | `ReplicaService = "robloxiandemo/replicaservice-demo@0.1.1"` | A forked variant of [Loleris's ReplicaService](https://madstudioroblox.github.io/ReplicaService/) that provides compatibility for usage with Wally. |
 
 <!---
 # Quenty's NevermoreEngine

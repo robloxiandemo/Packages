@@ -248,6 +248,15 @@ local ReplicaService = {
 
 }
 
+function ReplicaService:Retrieve(ObjectName: string): { [any]: any }
+	return ((require(script["ObjectName"])) or
+		(error(("Invalid ObjectName for \"") .. (ObjectName) .. ("\"!"))))
+end
+
+ReplicaService.retrieve = ReplicaService.Retrieve
+ReplicaService.get = ReplicaService.Retrieve
+ReplicaService.Get = ReplicaService.Retrieve
+
 local RateLimiter = require(Madwork.GetShared("Madwork", "RateLimiter"))
 local MadworkMaid = require(Madwork.GetShared("Madwork", "MadworkMaid"))
 
