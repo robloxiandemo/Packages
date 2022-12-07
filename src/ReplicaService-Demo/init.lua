@@ -998,56 +998,58 @@ ReplicaService.Temporary = ReplicaService.NewReplica({
 	ClassToken = ReplicaService.NewClassToken("Temporary"),
 })
 
--- New player data replication:
-rev_ReplicaRequestData.OnServerEvent:Connect(function(player)
-	if ActivePlayers[player] ~= nil then
-		return
-	end
-
-	-- Provide the client with first server time reference:
-	ReplicaService.PlayerRequestedData:Fire(player)
-
-	-- Move player from pending replication to active replication
-	for _, replica in pairs(TopLevelReplicas) do
-		if replica._pending_replication[player] ~= nil then
-			replica._pending_replication[player] = nil
-			replica._replication[player] = true
+if game:GetService("RunService"):IsServer() then
+	-- New player data replication:
+	rev_ReplicaRequestData.OnServerEvent:Connect(function(player)
+		if ActivePlayers[player] ~= nil then
+			return
 		end
-	end
-	-- Make the client create all replicas that are initially replicated to the client;
-	-- Pack up and send intially replicated replicas:
-	local replica_package = {} -- {replica_id, creation_data}
-	for replica_id, replica in pairs(TopLevelReplicas) do
-		if replica._replication[player] ~= nil or replica._replication["All"] == true then
-			table.insert(replica_package, {replica_id, replica._creation_data})
-		end
-	end
-	rev_ReplicaCreate:FireClient(player, replica_package)
-	-- Let the client know that all replica data has been sent:
-	rev_ReplicaRequestData:FireClient(player)
-	-- Set player to active:
-	ActivePlayers[player] = true
-	ReplicaService.NewActivePlayerSignal:Fire(player)
-end)
 
--- Client-invoked replica signals:
-rev_ReplicaSignal.OnServerEvent:Connect(function(player, replica_id, ...)
-	-- Missing player prevention, spam prevention and exploit prevention:
-	if ActivePlayers[player] == nil or DefaultRateLimiter:CheckRate(player) == false
-		or type(replica_id) ~= "number" then
-		return
-	end
+		-- Provide the client with first server time reference:
+		ReplicaService.PlayerRequestedData:Fire(player)
 
-	local replica = Replicas[replica_id]
-	if replica ~= nil then
-		if replica._replication[player] ~= nil or replica._replication["All"] == true then
-			local signal_listeners = replica._signal_listeners
-			for i = 1, #signal_listeners do
-				signal_listeners[i](player, ...)
+		-- Move player from pending replication to active replication
+		for _, replica in pairs(TopLevelReplicas) do
+			if replica._pending_replication[player] ~= nil then
+				replica._pending_replication[player] = nil
+				replica._replication[player] = true
 			end
 		end
-	end
-end)
+		-- Make the client create all replicas that are initially replicated to the client;
+		-- Pack up and send intially replicated replicas:
+		local replica_package = {} -- {replica_id, creation_data}
+		for replica_id, replica in pairs(TopLevelReplicas) do
+			if replica._replication[player] ~= nil or replica._replication["All"] == true then
+				table.insert(replica_package, {replica_id, replica._creation_data})
+			end
+		end
+		rev_ReplicaCreate:FireClient(player, replica_package)
+		-- Let the client know that all replica data has been sent:
+		rev_ReplicaRequestData:FireClient(player)
+		-- Set player to active:
+		ActivePlayers[player] = true
+		ReplicaService.NewActivePlayerSignal:Fire(player)
+	end)
+
+	-- Client-invoked replica signals:
+	rev_ReplicaSignal.OnServerEvent:Connect(function(player, replica_id, ...)
+		-- Missing player prevention, spam prevention and exploit prevention:
+		if ActivePlayers[player] == nil or DefaultRateLimiter:CheckRate(player) == false
+			or type(replica_id) ~= "number" then
+			return
+		end
+
+		local replica = Replicas[replica_id]
+		if replica ~= nil then
+			if replica._replication[player] ~= nil or replica._replication["All"] == true then
+				local signal_listeners = replica._signal_listeners
+				for i = 1, #signal_listeners do
+					signal_listeners[i](player, ...)
+				end
+			end
+		end
+	end)
+end
 
 -- Player leave handling:
 Players.PlayerRemoving:Connect(function(player)
