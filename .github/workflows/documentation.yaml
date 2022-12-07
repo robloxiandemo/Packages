@@ -1,6 +1,9 @@
 name: Documentation Build for Roblox-Modules
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
