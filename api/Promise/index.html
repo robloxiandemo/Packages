@@ -19,8 +19,8 @@ This differs a tad bit from Quenty&#x27;s Promise, as it provides an altered str
 Forked from Quenty&#x27;s NevermoreEngine: https://quenty.github.io/NevermoreEngine/api/Promise
 
 View: https://promisesaplus.com/"><link data-rh="true" rel="canonical" href="https://RobloxianDemo.github.io/Roblox-Modules/api/Promise"><link data-rh="true" rel="alternate" href="https://RobloxianDemo.github.io/Roblox-Modules/api/Promise" hreflang="en"><link data-rh="true" rel="alternate" href="https://RobloxianDemo.github.io/Roblox-Modules/api/Promise" hreflang="x-default"><link rel="stylesheet" href="/Roblox-Modules/assets/css/styles.77d02042.css">
-<link rel="preload" href="/Roblox-Modules/assets/js/runtime~main.58f9d0f7.js" as="script">
-<link rel="preload" href="/Roblox-Modules/assets/js/main.194a60fc.js" as="script">
+<link rel="preload" href="/Roblox-Modules/assets/js/runtime~main.4429b452.js" as="script">
+<link rel="preload" href="/Roblox-Modules/assets/js/main.1b88d564.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -36,12 +36,19 @@ View: https://promisesaplus.com/"><link data-rh="true" rel="canonical" href="htt
 <p>Determines whether a value is a promise or not.</p>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="New"><code style="text-decoration:none">New</code><a class="hash-link" href="#New" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Promise/init.lua#L66"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Promise<!-- -->.</code><code class="green_DgR4">New</code><code>(</code><code>Callback<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>Resolve<!-- -->: </code><code class="green_DgR4">(</code><code class="blue_P4bS">...</code><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="green_DgR4">(</code><code class="green_DgR4">)</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>Reject<!-- -->: </code><code class="green_DgR4">(</code><code class="blue_P4bS">...</code><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="green_DgR4">(</code><code class="green_DgR4">)</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="blue_P4bS">?</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Roblox-Modules/api/Promise">Promise</a></code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code></div><div>
 <p>Constructs a new promise.</p>
-<p>
-  ::warning
-  Do not yield within this callback's callback, as it will yield on the
-  main thread. This is a performance optimization.
-  ::
-</p>
+<div class="admonition admonition-warning alert alert--danger">
+  <div class="admonition-heading">
+    <h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
+          <path d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"></path>
+        </svg></span>warning</h5>
+  </div>
+  <div class="admonition-content">
+    <p>
+      Do not yield within this callback's callback,
+      as it will yield on the main thread. This is a performance optimization.
+    </p>
+  </div>
+</div>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Spawn"><code style="text-decoration:none">Spawn</code><a class="hash-link" href="#Spawn" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Promise/init.lua#L89"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Promise<!-- -->.</code><code class="green_DgR4">Spawn</code><code>(</code><code>Callback<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>Resolve<!-- -->: </code><code class="green_DgR4">(</code><code class="blue_P4bS">...</code><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="green_DgR4">(</code><code class="green_DgR4">)</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>Reject<!-- -->: </code><code class="green_DgR4">(</code><code class="blue_P4bS">...</code><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="green_DgR4">(</code><code class="green_DgR4">)</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="blue_P4bS">?</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Roblox-Modules/api/Promise">Promise</a></code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code></div><div>
 <p>Initializes a new promise with the given function in a spawned wrapper.</p>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Defer"><code style="text-decoration:none">Defer</code><a class="hash-link" href="#Defer" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Promise/init.lua#L104"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Promise<!-- -->.</code><code class="green_DgR4">Defer</code><code>(</code><code>Callback<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>Resolve<!-- -->: </code><code class="green_DgR4">(</code><code class="blue_P4bS">...</code><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="green_DgR4">(</code><code class="green_DgR4">)</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>Reject<!-- -->: </code><code class="green_DgR4">(</code><code class="blue_P4bS">...</code><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="green_DgR4">(</code><code class="green_DgR4">)</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="blue_P4bS">?</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Roblox-Modules/api/Promise">Promise</a></code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code></div><div>
@@ -168,7 +175,7 @@ View: https://promisesaplus.com/"><link data-rh="true" rel="canonical" href="htt
         },
         {
             &quot;name&quot;: &quot;New&quot;,
-            &quot;desc&quot;: &quot;Constructs a new promise.\n\n::warning\nDo not yield within this callback&#x27;s callback, as it will yield on the\n\tmain thread. This is a performance optimization.\n::&quot;,
+            &quot;desc&quot;: &quot;Constructs a new promise.\n\n:::warning\nDo not yield within this callback&#x27;s callback,\n\tas it will yield on the main thread. This is a performance optimization.\n:::&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;Callback&quot;,
@@ -598,7 +605,7 @@ View: https://promisesaplus.com/"><link data-rh="true" rel="canonical" href="htt
         &quot;path&quot;: &quot;src/Promise/init.lua&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#Catch" class="table-of-contents__link toc-highlight">:Catch</a></li><li><a href="#Destroy" class="table-of-contents__link toc-highlight">:Destroy</a></li><li><a href="#Finally" class="table-of-contents__link toc-highlight">:Finally</a></li><li><a href="#GetResults" class="table-of-contents__link toc-highlight">:GetResults</a></li><li><a href="#IsFulfilled" class="table-of-contents__link toc-highlight">:IsFulfilled</a></li><li><a href="#IsPending" class="table-of-contents__link toc-highlight">:IsPending</a></li><li><a href="#IsRejected" class="table-of-contents__link toc-highlight">:IsRejected</a></li><li><a href="#Reject" class="table-of-contents__link toc-highlight">:Reject</a></li><li><a href="#Resolve" class="table-of-contents__link toc-highlight">:Resolve</a></li><li><a href="#Tap" class="table-of-contents__link toc-highlight">:Tap</a></li><li><a href="#Then" class="table-of-contents__link toc-highlight">:Then</a></li><li><a href="#Wait" class="table-of-contents__link toc-highlight">:Wait</a></li><li><a href="#Yield" class="table-of-contents__link toc-highlight">:Yield</a></li><li><a href="#Defer" class="table-of-contents__link toc-highlight">.Defer</a></li><li><a href="#IsPromise" class="table-of-contents__link toc-highlight">.IsPromise</a></li><li><a href="#New" class="table-of-contents__link toc-highlight">.New</a></li><li><a href="#Rejected" class="table-of-contents__link toc-highlight">.Rejected</a></li><li><a href="#Resolved" class="table-of-contents__link toc-highlight">.Resolved</a></li><li><a href="#Spawn" class="table-of-contents__link toc-highlight">.Spawn</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022 Facilitative. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/Roblox-Modules/assets/js/runtime~main.58f9d0f7.js"></script>
-<script src="/Roblox-Modules/assets/js/main.194a60fc.js"></script>
+<script src="/Roblox-Modules/assets/js/runtime~main.4429b452.js"></script>
+<script src="/Roblox-Modules/assets/js/main.1b88d564.js"></script>
 </body>
 </html>
