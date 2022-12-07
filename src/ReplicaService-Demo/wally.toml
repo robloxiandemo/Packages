@@ -1,0 +1,13 @@
+[package]
+name = "robloxiandemo/replicaservice-demo"
+description = "A fork of Loleris's ReplicaService (MadStudioRoblox/ReplicaService), which has built-in compatiblity for usage with Wally."
+version = "0.1.0"
+license = "MIT"
+
+authors = [
+	"loleris (https://github.com/LM-loleris)",
+	"Demo (https://github.com/RobloxianDemo)"
+]
+
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

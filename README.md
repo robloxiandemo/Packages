@@ -14,13 +14,12 @@
 | [Table](https://robloxiandemo.github.io/Roblox-Modules/api/Table) | `Table = "robloxiandemo/table@0.1.5"` | A vast collection of very useful table-related functions. |
 | [Vector](https://robloxiandemo.github.io/Roblox-Modules/api/Vector) | `Vector = "robloxiandemo/vector@0.1.0"` | A vast collection of very useful vector-related functions. |
 
-<!---
 # Loleris's Madwork Framework
 | Module | Dependency | Description |
-| [ProfileService](https://robloxiandemo.github.io/Roblox-Modules/api/ProfileService) | `ProfileService = "robloxiandemo/profileservice@0.1.0"` | A forked variant of [Loleris's ProfileService](https://madstudioroblox.github.io/ProfileService/) that provides compatibility for usage with Wally. |
+| [ProfileService](https://robloxiandemo.github.io/Roblox-Modules/api/ProfileService) | `ProfileService = "robloxiandemo/profileservice-demo@0.1.4"` | A forked variant of [Loleris's ProfileService](https://madstudioroblox.github.io/ProfileService/) that provides compatibility for usage with Wally. |
+| [ReplicaService](https://robloxiandemo.github.io/Roblox-Modules/api/ProfileService) | `ReplicaService = "robloxiandemo/replicaservice-demo@0.1.0"` | A forked variant of [Loleris's ReplicaService](https://madstudioroblox.github.io/ReplicaService/) that provides compatibility for usage with Wally. |
 
-| [ReplicaService](https://robloxiandemo.github.io/Roblox-Modules/api/ProfileService) | `ReplicaService = "robloxiandemo/replicaservice@0.1.0"` | A forked variant of [Loleris's ReplicaService](https://madstudioroblox.github.io/ReplicaService/) that provides compatibility for usage with Wally. |
-
+<!---
 # Quenty's NevermoreEngine
 | Module | Dependency | Description |
 | [Maid](https://robloxiandemo.github.io/Roblox-Modules/api/Maid) | `Maid = "robloxiandemo/maid-demo@0.1.0"` | A forked variant of [Quenty's Maid](https://quenty.github.io/NevermoreEngine/api/Maid/) that provides compatibility for usage with Wally. |
