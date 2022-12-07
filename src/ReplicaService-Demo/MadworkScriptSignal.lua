@@ -38,8 +38,6 @@
 
 --]]
 
------ Module Table -----
-
 --[=[
 	@class MadworkScriptSignal
 
@@ -49,11 +47,7 @@ local MadworkScriptSignal = {
 
 }
 
------ Private variables -----
-
 local FreeRunnerThread = nil
-
------ Private functions -----
 
 --[[
 	Yield-safe coroutine reusing by stravant;
@@ -76,8 +70,6 @@ local function RunEventHandlerInFreeThread(...)
 		AcquireRunnerThreadAndCallEventHandler(coroutine.yield())
 	end
 end
-
------ Public -----
 
 -- ArrayScriptConnection object:
 

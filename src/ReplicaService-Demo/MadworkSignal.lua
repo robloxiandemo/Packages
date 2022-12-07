@@ -19,8 +19,6 @@
 
 --]]
 
------ Module Table -----
-
 --[=[
 	@class MadworkMaid
 
@@ -30,11 +28,7 @@ local MadworkMaid = {
 
 }
 
------ Private variables -----
-
 local FreeRunnerThread = nil
-
------ Private functions -----
 
 --[[
 	Yield-safe coroutine reusing by stravant;
@@ -80,8 +74,6 @@ local function PerformCleanupTask(...)
 	end
 	task.spawn(FreeRunnerThread, CleanupTask, ...)
 end
-
------ Public functions -----
 
 -- Maid object:
 

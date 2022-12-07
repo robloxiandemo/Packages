@@ -185,8 +185,6 @@ do
 	Madwork.NewArrayScriptConnection = MadworkScriptSignal.NewArrayScriptConnection
 end
 
------ Controller Table -----
-
 --[=[
 	@class ReplicaController
 
@@ -259,11 +257,7 @@ local ReplicaController = {
 		}
 --]]
 
------ Loaded Modules -----
-
 local MadworkMaid = require(Madwork.GetShared("Madwork", "MadworkMaid"))
-
------ Private Variables -----
 
 local Replica
 
@@ -300,8 +294,6 @@ local LoadedWriteLibPacks = {}
 --]]
 
 local WriteFunctionFlag = false -- Set to true when running inside a write function stack
-
------ Private functions -----
 
 local function GetWriteLibFunctionsRecursive(list_table, pointer, name_stack)
 	for key, value in pairs(pointer) do
@@ -681,8 +673,6 @@ local function ReplicaArrayRemove(replica_id, path_array, index) --> removed_val
 	return old_value
 end
 
------ Public functions -----
-
 -- Replica object:
 
 Replica = {}
@@ -971,8 +961,6 @@ end
 function ReplicaController.GetReplicaById(replica_id)
 	return Replicas[replica_id]
 end
-
------ Connections -----
 
 -- Fired from server after initial data is sent:
 rev_ReplicaRequestData.OnClientEvent:Connect(function()

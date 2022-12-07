@@ -32,8 +32,6 @@ local SETTINGS = {
 	DefaultRateLimiterRate = 120,
 }
 
------ Service Table -----
-
 --[=[
 	@class RateLimiter
 
@@ -43,14 +41,10 @@ local RateLimiter = {
 	Default = nil,
 }
 
------ Private Variables -----
-
 local Players = game:GetService("Players")
 
 local PlayerReference = {} -- {player = true}
 local RateLimiters = {} -- {rate_limiter = true, ...}
-
------ Public functions -----
 
 -- RateLimiter object:
 local RateLimiterObject = {
@@ -114,15 +108,11 @@ function RateLimiter.NewRateLimiter(rate) --> [RateLimiter]
 	return rate_limiter
 end
 
------ Initialize -----
-
 for _, player in ipairs(Players:GetPlayers()) do
 	PlayerReference[player] = true
 end
 
 RateLimiter.Default = RateLimiter.NewRateLimiter(SETTINGS.DefaultRateLimiterRate)
-
------ Connections -----
 
 Players.PlayerAdded:Connect(function(player)
 	PlayerReference[player] = true
