@@ -407,7 +407,7 @@ function Promise:Reject(...: any?): PromiseData
 end
 
 --[=[
-	Handlers if/when promise is fulfilled/rejected. It takes up to two arguments,
+	Handler if / when a promise is fulfilled / rejected. It takes up to two arguments,
 		callback functions for the success and failure cases of the Promise.
 			May return the same promise if certain behavior is met.
 
