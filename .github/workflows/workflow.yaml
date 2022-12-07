@@ -2,9 +2,13 @@ name: Build for Roblox-Modules
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - updates/maintenance
   pull_request:
-    branches: [main]
+    branches:
+      - main
+      - updates/maintenance
 
 jobs:
   Lint:
