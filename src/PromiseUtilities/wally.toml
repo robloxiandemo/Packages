@@ -1,0 +1,16 @@
+[package]
+name = "robloxiandemo/promiseutilities-demo"
+description = "A modification / rewrite of Quenty's PromiseUtilities (NevermoreEngine/PromiseUtilities), featuring type-syntaxing, which has built-in compatiblity for usage with Wally."
+version = "0.1.0"
+license = "MIT"
+
+authors = [
+	"Quenty (https://github.com/Quenty)",
+	"Demo (https://github.com/RobloxianDemo)"
+]
+
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Promise = "robloxiandemo/promise-demo@^0"

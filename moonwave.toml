@@ -25,9 +25,9 @@ classes = ["ProfileService"]
 section = "Loleris's ReplicaService"
 classes = ["ReplicaService", "MadworkMaid", "MadworkScriptSignal", "RateLimiter", "ReplicaController"]
 
-# [[classOrder]]
-# section = "Quenty's NevermoreEngine"
-# classes = ["Maid"]
+[[classOrder]]
+section = "Quenty's NevermoreEngine"
+classes = ["Promise", "PromiseUtilities"]
 
 [home]
 enabled = true

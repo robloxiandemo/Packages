@@ -20,8 +20,8 @@
 | [ProfileService](https://robloxiandemo.github.io/Roblox-Modules/api/ProfileService) | `ProfileService = "robloxiandemo/profileservice-demo@0.1.4"` | A forked variant of [Loleris's ProfileService](https://madstudioroblox.github.io/ProfileService/) that provides compatibility for usage with Wally. |
 | [ReplicaService](https://robloxiandemo.github.io/Roblox-Modules/api/ReplicaService) | `ReplicaService = "robloxiandemo/replicaservice-demo@0.1.4"` | A forked variant of [Loleris's ReplicaService](https://madstudioroblox.github.io/ReplicaService/) that provides compatibility for usage with Wally. |
 
-<!---
 # Quenty's NevermoreEngine
 | Module | Dependency | Description |
-| [Maid](https://robloxiandemo.github.io/Roblox-Modules/api/Maid) | `Maid = "robloxiandemo/maid-demo@0.1.0"` | A forked variant of [Quenty's Maid](https://quenty.github.io/NevermoreEngine/api/Maid/) that provides compatibility for usage with Wally. |
---->
+| -- | -- | -- |
+| [Promise](https://robloxiandemo.github.io/Roblox-Modules/api/Promise) | `Promise = "robloxiandemo/promise-demo@0.1.0"` | A forked variant of [Quenty's Promise](https://quenty.github.io/NevermoreEngine/api/Promise/) that provides compatibility for usage with Wally. |
+| [PromiseUtilities](https://robloxiandemo.github.io/Roblox-Modules/api/Promise) | `PromiseUtilities = "robloxiandemo/promiseutilities-demo@0.1.0"` | A forked variant of [Quenty's PromiseUtilities](https://quenty.github.io/NevermoreEngine/api/PromiseUtils/) that provides compatibility for usage with Wally. |
