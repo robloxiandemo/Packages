@@ -407,7 +407,7 @@ function Promise:Reject(...: any?): PromiseData
 end
 
 --[=[
-	Handler if / when a promise is fulfilled / rejected. It takes up to two arguments,
+	Handles if / when a promise is fulfilled / rejected. It takes up to two arguments,
 		callback functions for the success and failure cases of the Promise.
 			May return the same promise if certain behavior is met.
 
@@ -453,7 +453,7 @@ function Promise:Then(OnFulfilled: Function, OnRejected: Function): PromiseData
 end
 
 --[=[
-	Akin to then, though the value passed down the chain is the resolved value of the promise,
+	Akin to `Then`, though the value passed down the chain is the resolved value of the promise,
 		not the value returned from OnFulfilled or OnRejected.
 
 	Will still yield for the result if a promise is returned, but will discard the result.
