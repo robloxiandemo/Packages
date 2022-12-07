@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[1962],{2196:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"ReplicaService","desc":"A service providing the easiest solution to handling Roblox server -> networking and ownership of\\n\\tdata.","source":{"line":201,"path":"src/ReplicaService-Demo/init.lua"}}')}}]);
