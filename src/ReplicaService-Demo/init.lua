@@ -192,8 +192,6 @@ do
 	Madwork.NewArrayScriptConnection = MadworkScriptSignal.NewArrayScriptConnection
 end
 
------ Service Table -----
-
 --[=[
 	@class ReplicaService
 
@@ -250,12 +248,8 @@ local ReplicaService = {
 
 }
 
------ Loaded Services & Modules -----
-
 local RateLimiter = require(Madwork.GetShared("Madwork", "RateLimiter"))
 local MadworkMaid = require(Madwork.GetShared("Madwork", "MadworkMaid"))
-
------ Private Variables -----
 
 local DefaultRateLimiter = RateLimiter.Default
 
@@ -289,8 +283,6 @@ local CreatedClassTokens = {} -- [class_name] = true
 
 local LockReplicaMethods = {} -- A metatable to be set for destroyed replicas
 LockReplicaMethods.__index = LockReplicaMethods
-
------ Private functions -----
 
 local function ParseReplicaBranch(replica, func) -- func(replica)
 	func(replica)
@@ -393,8 +385,6 @@ local function DestroyReplicaAndDescendantsRecursive(replica, not_first_in_stack
 	-- Swap metatables:
 	setmetatable(replica, LockReplicaMethods)
 end
-
------ Public functions -----
 
 -- Replica object:
 
@@ -972,8 +962,6 @@ function ReplicaService.CheckWriteLib(module_script)
 	end
 end
 
------ Initialize -----
-
 -- Creating LockReplicaMethods members:
 do
 	local keep_methods = {
@@ -1000,8 +988,6 @@ end
 ReplicaService.Temporary = ReplicaService.NewReplica({
 	ClassToken = ReplicaService.NewClassToken("Temporary"),
 })
-
------ Connections -----
 
 -- New player data replication:
 rev_ReplicaRequestData.OnServerEvent:Connect(function(player)
