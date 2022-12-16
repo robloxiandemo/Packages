@@ -384,6 +384,10 @@ function Promise:Reject(...: any?): PromiseData
 		task.spawn(function(): any?
 			RunService.Heartbeat:Wait()
 
+			if ((#(self["Rejected"][1])) < (1)) then
+				return
+			end
+
 			if (self["UnconsumedException"]) then
 				if (EnableTraceback) then
 					warn(
