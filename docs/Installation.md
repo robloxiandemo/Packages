@@ -16,6 +16,9 @@ registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
+Promise = "robloxiandemo/promise-demo@^0"
+PromiseUtilities = "robloxiandemo/promiseutilities-demo@^0"
+
 Cleanser = "robloxiandemo/cleanser@^0"
 Debris = "robloxiandemo/debris@^0"
 Math = "robloxiandemo/math@^0"
