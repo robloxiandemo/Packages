@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[6900],{2913:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"MadworkScriptSignal","desc":"A fork of my Signal class, specifically designed for usage with Madwork-related tasks.","source":{"line":46,"path":"src/ReplicaService-Demo/MadworkScriptSignal.lua"}}')}}]);
