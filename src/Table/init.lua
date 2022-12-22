@@ -449,8 +449,7 @@ end
 
 	@param TargetValue any? -- The target value.
 
-	@return boolean -- Return whether or not the specified target value has been found,
-		at least within the target table.
+	@return boolean -- Return whether or not the specified value was found, given the target table.
 
 	Find a value within the specified target table that is identical to the specified target value
 		and return whether or not it has been found and within the specified target table.
