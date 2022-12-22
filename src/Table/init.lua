@@ -307,7 +307,7 @@ local function Clone(TargetTable: table, ShouldDeepClone: boolean?): table
 		local TemporaryTable: table = table.clone(ContextTable)
 
 		for Key: Key, Value: any in pairs(TemporaryTable) do
-			TemporaryTable[Key] = ((type(Value)) == ("table") and (Key(Value)))
+			TemporaryTable[Key] = ((type(Value)) == ("table") and (DeepClone(Value)))
 		end
 
 		return (TemporaryTable) :: table
@@ -350,9 +350,9 @@ local function Overwrite(TargetTable: table, ContextTable: table, ShouldDeepOver
 
 	local function DeepOverwrite(DeepTargetTable: table, DeepContextTable: table): table
 		for Key: Key, Value: any in pairs(DeepContextTable) do
-			DeepTargetTable[Key] = ((type(DeepTargetTable[Key])) == ("table"))
+			DeepTargetTable[Key] = (((type(DeepTargetTable[Key])) == ("table"))
 				and (((type(Value)) == ("table"))
-				and (DeepOverwrite(DeepTargetTable[Key], Value))) or (Value)
+				and (DeepOverwrite(DeepTargetTable[Key], Value))) or (Value))
 		end
 
 		return (TargetTable) :: table
@@ -449,8 +449,8 @@ end
 
 	@param TargetValue any? -- The target value.
 
-	@return boolean -- Return whether or not the specified target value has been
-		found in the target table.
+	@return boolean -- Return whether or not the specified target value has been found,
+		at least within the target table.
 
 	Find a value within the specified target table that is identical to the specified target value
 		and return whether or not it has been found and within the specified target table.
@@ -478,19 +478,40 @@ end
 	@within Table
 
 	@param TargetTable table -- The target table.
+	@param ShouldDeepCount boolean? -- Should we count all entries from every table?
 
 	@return number -- Return the count of all specified target table's entries.
 
 	Count the specified target table's entries and return the count.
 ]=]
-local function Count(TargetTable: table): number
-	local EntryCount: number = 0
-
-	for _: Key, _: any in pairs(TargetTable) do
-		Count += 1
+local function Count(TargetTable: table, ShouldDeepCount: boolean?): number
+	if (not (TargetTable) or (type(TargetTable) ~= ("table"))) then
+		return ({})
 	end
 
-	return (EntryCount) :: number
+	local EntryCount: number = 0
+
+	if (not (ShouldDeepCount)) then
+		for _: Key, _: any in pairs(TargetTable) do
+			EntryCount += 1
+		end
+
+		return (EntryCount) :: number
+	end
+
+	local function DeepCount(ContextTable: table): table
+		for _: Key, Value: any in pairs(ContextTable) do
+			EntryCount += 1
+
+			if ((type(Value)) == ("table")) then
+				DeepCount(Value)
+			end
+		end
+
+		return (DeepCount(ContextTable)) :: table
+	end
+
+	return (DeepCount(TargetTable)) :: number
 end
 
 --[=[
@@ -648,7 +669,7 @@ end
 
 	@return table -- Return the newly altered table.
 
-	Return the "count" number of entries from within the specified target table to clone.
+	Return the `TakeCount` amount [number] of entries from within the specified target table to clone.
 ]=]
 local function Take(TargetTable: table, TakeCount: number): table
 	local TemporaryTable: table = {}
@@ -790,6 +811,10 @@ Table.count = Count
 Table.Count = Count
 Table.entryCount = Count
 Table.EntryCount = Count
+Table.deepCount = Count(..., true)
+Table.DeepCount = Count(..., true)
+Table.deepEntryCount = Count(..., true)
+Table.DeepEntryCount = Count(..., true)
 
 Table.assign = Assign
 Table.Assign = Assign
