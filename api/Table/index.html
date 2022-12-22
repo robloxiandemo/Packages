@@ -31,8 +31,8 @@ Tables that only work specifically with arrays or dictionaries are marked as suc
 All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 	treat tables as immutable and will return clones of the specified table(s)
 		with the operations performed on the clones."><link data-rh="true" rel="canonical" href="https://RobloxianDemo.github.io/Roblox-Modules/api/Table"><link data-rh="true" rel="alternate" href="https://RobloxianDemo.github.io/Roblox-Modules/api/Table" hreflang="en"><link data-rh="true" rel="alternate" href="https://RobloxianDemo.github.io/Roblox-Modules/api/Table" hreflang="x-default"><link rel="stylesheet" href="/Roblox-Modules/assets/css/styles.77d02042.css">
-<link rel="preload" href="/Roblox-Modules/assets/js/runtime~main.40cab6ca.js" as="script">
-<link rel="preload" href="/Roblox-Modules/assets/js/main.d8ecae73.js" as="script">
+<link rel="preload" href="/Roblox-Modules/assets/js/runtime~main.39b767bf.js" as="script">
+<link rel="preload" href="/Roblox-Modules/assets/js/main.ec7ce12a.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -251,26 +251,24 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
   Find a value within the specified target table that is identical to the specified target value
   and return its index within the specified target table if found.
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="FindBoolean"><code style="text-decoration:none">FindBoolean</code><a class="hash-link" href="#FindBoolean" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L458"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">FindBoolean</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="FindBoolean"><code style="text-decoration:none">FindBoolean</code><a class="hash-link" href="#FindBoolean" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L457"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">FindBoolean</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target table.</p>
 </span></span></div><div><code>TargetValue<!-- -->: </code><code class="blue_P4bS">any?</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target value.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
-<p>Return whether or not the specified target value has been found,</p>
+<p>Return whether or not the specified value was found, given the target table.</p>
 </span></span></div><div>
-<pre><code>at least within the target table.
-</code></pre>
 <p>
   Find a value within the specified target table that is identical to the specified target value
   and return whether or not it has been found and within the specified target table.
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="IsEmpty"><code style="text-decoration:none">IsEmpty</code><a class="hash-link" href="#IsEmpty" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L473"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">IsEmpty</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="IsEmpty"><code style="text-decoration:none">IsEmpty</code><a class="hash-link" href="#IsEmpty" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L472"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">IsEmpty</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target table.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return whether or not the target table is empty.</p>
 </span></span></div><div>
 <p>Return whether or not the specified target table is empty.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Count"><code style="text-decoration:none">Count</code><a class="hash-link" href="#Count" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L487"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Count</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Count"><code style="text-decoration:none">Count</code><a class="hash-link" href="#Count" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L486"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Count</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target table.</p>
 </span></span></div><div><code>ShouldDeepCount<!-- -->: </code><code class="blue_P4bS">boolean?</code><span class="inlineDescription_G7Er">-- <span>
 <p>Should we count all entries from every table?</p>
@@ -278,7 +276,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 <p>Return the count of all specified target table's entries.</p>
 </span></span></div><div>
 <p>Count the specified target table's entries and return the count.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Assign"><code style="text-decoration:none">Assign</code><a class="hash-link" href="#Assign" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L528"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Assign</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Assign"><code style="text-decoration:none">Assign</code><a class="hash-link" href="#Assign" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L527"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Assign</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target table.</p>
 </span></span></div><div><code>...<!-- -->: </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified context tables.</p>
@@ -286,7 +284,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 <p>Return the altered target table.</p>
 </span></span></div><div>
 <p>Return an assigned variant of the specified target table using the specified context tables.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Map"><code style="text-decoration:none">Map</code><a class="hash-link" href="#Map" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L551"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Map</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Map"><code style="text-decoration:none">Map</code><a class="hash-link" href="#Map" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L550"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Map</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target table.</p>
 </span></span></div><div><code>Function<!-- -->: </code><code class="blue_P4bS">Function</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified function.</p>
@@ -294,7 +292,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 <p>Return the altered target table.</p>
 </span></span></div><div>
 <p>Return a mapped variant of the specified target table using the specified function.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Reduce"><code style="text-decoration:none">Reduce</code><a class="hash-link" href="#Reduce" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L572"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Reduce</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Reduce"><code style="text-decoration:none">Reduce</code><a class="hash-link" href="#Reduce" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L571"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Reduce</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target table.</p>
 </span></span></div><div><code>Function<!-- -->: </code><code class="blue_P4bS">Function</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified function.</p>
@@ -302,19 +300,19 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 <p>Return the reduced result.</p>
 </span></span></div><div>
 <p>Return a reduced number variant of the specified target table using the specified function.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Reverse"><code style="text-decoration:none">Reverse</code><a class="hash-link" href="#Reverse" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L591"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Reverse</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Reverse"><code style="text-decoration:none">Reverse</code><a class="hash-link" href="#Reverse" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L590"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Reverse</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target table.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the newly reversed table.</p>
 </span></span></div><div>
 <p>Return a reversed variant of the specified target table.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Randomize"><code style="text-decoration:none">Randomize</code><a class="hash-link" href="#Randomize" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L611"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Randomize</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Randomize"><code style="text-decoration:none">Randomize</code><a class="hash-link" href="#Randomize" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L610"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Randomize</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target table.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the newly randomized table.</p>
 </span></span></div><div>
 <p>Return a randomized variant of the specified target table.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Filter"><code style="text-decoration:none">Filter</code><a class="hash-link" href="#Filter" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L637"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Filter</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Filter"><code style="text-decoration:none">Filter</code><a class="hash-link" href="#Filter" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L636"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Filter</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target table.</p>
 </span></span></div><div><code>Function<!-- -->: </code><code class="blue_P4bS">Function</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified function.</p>
@@ -322,7 +320,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 <p>Return the newly filtered table.</p>
 </span></span></div><div>
 <p>Return a filtered variant of the specified target table using the specified function.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Take"><code style="text-decoration:none">Take</code><a class="hash-link" href="#Take" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L674"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Take</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Take"><code style="text-decoration:none">Take</code><a class="hash-link" href="#Take" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L673"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Take</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target table.</p>
 </span></span></div><div><code>TakeCount<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified take counter.</p>
@@ -330,25 +328,25 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
 <p>Return the newly altered table.</p>
 </span></span></div><div>
 <p>Return the <code>TakeCount</code> amount [number] of entries from within the specified target table to clone.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Random"><code style="text-decoration:none">Random</code><a class="hash-link" href="#Random" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L693"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Random</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Random"><code style="text-decoration:none">Random</code><a class="hash-link" href="#Random" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L692"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Random</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target table.</p>
 </span></span></div><div><code>TakeCount<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
 <p>The specified take amount.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">table</code></div><div>
 <p>Return a random entry from a specified target table.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="JSONEncode"><code style="text-decoration:none">JSONEncode</code><a class="hash-link" href="#JSONEncode" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L706"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">JSONEncode</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="JSONEncode"><code style="text-decoration:none">JSONEncode</code><a class="hash-link" href="#JSONEncode" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L705"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">JSONEncode</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target table.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">string?</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the newly created string.</p>
 </span></span></div><div>
 <p>JSON Encode the specified target table.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="JSONDecode"><code style="text-decoration:none">JSONDecode</code><a class="hash-link" href="#JSONDecode" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L719"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">JSONDecode</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="JSONDecode"><code style="text-decoration:none">JSONDecode</code><a class="hash-link" href="#JSONDecode" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L718"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">JSONDecode</code><code>(</code><div class="inset_uKQm"><div><code>TargetString<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target string.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">DecodedString</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return the decoded JSON string as a table or anything.</p>
 </span></span></div><div>
 <p>JSON Decode the specified target string.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Destroy"><code style="text-decoration:none">Destroy</code><a class="hash-link" href="#Destroy" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L732"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Destroy</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Destroy"><code style="text-decoration:none">Destroy</code><a class="hash-link" href="#Destroy" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/RobloxianDemo/Roblox-Modules/blob/main/src/Table/init.lua#L731"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Table<!-- -->.</code><code class="green_DgR4">Destroy</code><code>(</code><div class="inset_uKQm"><div><code>TargetTable<!-- -->: </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target table.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">nil</code><span class="inlineDescription_G7Er">-- <span>
 <p>Return a merely cleared table, resulting in a nil value.</p>
@@ -704,7 +702,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
         },
         {
             &quot;name&quot;: &quot;FindBoolean&quot;,
-            &quot;desc&quot;: &quot;\tat least within the target table.\n\nFind a value within the specified target table that is identical to the specified target value\n\tand return whether or not it has been found and within the specified target table.&quot;,
+            &quot;desc&quot;: &quot;Find a value within the specified target table that is identical to the specified target value\n\tand return whether or not it has been found and within the specified target table.&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;TargetTable&quot;,
@@ -719,13 +717,13 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;returns&quot;: [
                 {
-                    &quot;desc&quot;: &quot;Return whether or not the specified target value has been found,&quot;,
+                    &quot;desc&quot;: &quot;Return whether or not the specified value was found, given the target table.&quot;,
                     &quot;lua_type&quot;: &quot;boolean&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 458,
+                &quot;line&quot;: 457,
                 &quot;path&quot;: &quot;src/Table/init.lua&quot;
             }
         },
@@ -747,7 +745,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 473,
+                &quot;line&quot;: 472,
                 &quot;path&quot;: &quot;src/Table/init.lua&quot;
             }
         },
@@ -774,7 +772,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 487,
+                &quot;line&quot;: 486,
                 &quot;path&quot;: &quot;src/Table/init.lua&quot;
             }
         },
@@ -801,7 +799,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 528,
+                &quot;line&quot;: 527,
                 &quot;path&quot;: &quot;src/Table/init.lua&quot;
             }
         },
@@ -828,7 +826,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 551,
+                &quot;line&quot;: 550,
                 &quot;path&quot;: &quot;src/Table/init.lua&quot;
             }
         },
@@ -855,7 +853,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 572,
+                &quot;line&quot;: 571,
                 &quot;path&quot;: &quot;src/Table/init.lua&quot;
             }
         },
@@ -877,7 +875,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 591,
+                &quot;line&quot;: 590,
                 &quot;path&quot;: &quot;src/Table/init.lua&quot;
             }
         },
@@ -899,7 +897,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 611,
+                &quot;line&quot;: 610,
                 &quot;path&quot;: &quot;src/Table/init.lua&quot;
             }
         },
@@ -926,7 +924,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 637,
+                &quot;line&quot;: 636,
                 &quot;path&quot;: &quot;src/Table/init.lua&quot;
             }
         },
@@ -953,7 +951,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 674,
+                &quot;line&quot;: 673,
                 &quot;path&quot;: &quot;src/Table/init.lua&quot;
             }
         },
@@ -980,7 +978,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 693,
+                &quot;line&quot;: 692,
                 &quot;path&quot;: &quot;src/Table/init.lua&quot;
             }
         },
@@ -1002,7 +1000,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 706,
+                &quot;line&quot;: 705,
                 &quot;path&quot;: &quot;src/Table/init.lua&quot;
             }
         },
@@ -1024,7 +1022,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 719,
+                &quot;line&quot;: 718,
                 &quot;path&quot;: &quot;src/Table/init.lua&quot;
             }
         },
@@ -1046,7 +1044,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 732,
+                &quot;line&quot;: 731,
                 &quot;path&quot;: &quot;src/Table/init.lua&quot;
             }
         }
@@ -1060,7 +1058,7 @@ All functions (_except_ `SwapRemove`, `SwapRemoveFirstValue`, and `Lock`)
         &quot;path&quot;: &quot;src/Table/init.lua&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#Append" class="table-of-contents__link toc-highlight">.Append</a></li><li><a href="#Assign" class="table-of-contents__link toc-highlight">.Assign</a></li><li><a href="#Clone" class="table-of-contents__link toc-highlight">.Clone</a></li><li><a href="#Count" class="table-of-contents__link toc-highlight">.Count</a></li><li><a href="#Destroy" class="table-of-contents__link toc-highlight">.Destroy</a></li><li><a href="#Filter" class="table-of-contents__link toc-highlight">.Filter</a></li><li><a href="#FindBoolean" class="table-of-contents__link toc-highlight">.FindBoolean</a></li><li><a href="#FindIndex" class="table-of-contents__link toc-highlight">.FindIndex</a></li><li><a href="#IsEmpty" class="table-of-contents__link toc-highlight">.IsEmpty</a></li><li><a href="#JSONDecode" class="table-of-contents__link toc-highlight">.JSONDecode</a></li><li><a href="#JSONEncode" class="table-of-contents__link toc-highlight">.JSONEncode</a></li><li><a href="#Map" class="table-of-contents__link toc-highlight">.Map</a></li><li><a href="#Merge" class="table-of-contents__link toc-highlight">.Merge</a></li><li><a href="#MergeLists" class="table-of-contents__link toc-highlight">.MergeLists</a></li><li><a href="#Overwrite" class="table-of-contents__link toc-highlight">.Overwrite</a></li><li><a href="#Random" class="table-of-contents__link toc-highlight">.Random</a></li><li><a href="#Randomize" class="table-of-contents__link toc-highlight">.Randomize</a></li><li><a href="#ReadOnly" class="table-of-contents__link toc-highlight">.ReadOnly</a></li><li><a href="#Reconcile" class="table-of-contents__link toc-highlight">.Reconcile</a></li><li><a href="#Reduce" class="table-of-contents__link toc-highlight">.Reduce</a></li><li><a href="#RetrieveValues" class="table-of-contents__link toc-highlight">.RetrieveValues</a></li><li><a href="#Reverse" class="table-of-contents__link toc-highlight">.Reverse</a></li><li><a href="#Stringify" class="table-of-contents__link toc-highlight">.Stringify</a></li><li><a href="#SwapKeyValue" class="table-of-contents__link toc-highlight">.SwapKeyValue</a></li><li><a href="#Synchronize" class="table-of-contents__link toc-highlight">.Synchronize</a></li><li><a href="#Take" class="table-of-contents__link toc-highlight">.Take</a></li><li><a href="#ToList" class="table-of-contents__link toc-highlight">.ToList</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022 Facilitative. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/Roblox-Modules/assets/js/runtime~main.40cab6ca.js"></script>
-<script src="/Roblox-Modules/assets/js/main.d8ecae73.js"></script>
+<script src="/Roblox-Modules/assets/js/runtime~main.39b767bf.js"></script>
+<script src="/Roblox-Modules/assets/js/main.ec7ce12a.js"></script>
 </body>
 </html>
