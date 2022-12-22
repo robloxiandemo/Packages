@@ -85,7 +85,7 @@ function PromiseUtilities.All(Promises: table): PromiseData
 
 			if ((RemainingCount) == (0)) then
 				local Method: string = (((AllFulfilled) and ("Resolve")) or ("Reject"))
-				ReturnPromise[Method](ReturnPromise, unpack(Results, 1, PromisesCount))
+				ReturnPromise[Method](ReturnPromise, table.unpack(Results, 1, PromisesCount))
 			end
 		end) :: Function
 	end
@@ -120,9 +120,9 @@ function PromiseUtilities.Invert(CurrentPromise: PromiseData): PromiseData
 		local Results: any? = {CurrentPromise:GetResults()}
 
 		if (Results[1]) then
-			return (Promise.Rejected(unpack(Results, 2))) :: PromiseData
+			return (Promise.Rejected(table.unpack(Results, 2))) :: PromiseData
 		else
-			return (Promise.Resolved(unpack(Results, 2))) :: PromiseData
+			return (Promise.Resolved(table.unpack(Results, 2))) :: PromiseData
 		end
 	end
 end
