@@ -27,5 +27,5 @@ Sample:
 	@class MyClass
 ]=]
 
-local Signal: { [any]: any } = game:GetService("ReplicatedStorage"):WaitForChild("Packages")["Signal"]
+local Signal: { [any]: any } = require(game:GetService("ReplicatedStorage"):WaitForChild("Packages")["Signal"])
 ```
