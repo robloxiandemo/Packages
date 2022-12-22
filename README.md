@@ -23,5 +23,5 @@
 # Quenty's NevermoreEngine
 | Module | Dependency | Description |
 | -- | -- | -- |
-| [Promise](https://robloxiandemo.github.io/Roblox-Modules/api/Promise) | `Promise = "robloxiandemo/promise-demo@0.1.5"` | A forked variant of [Quenty's Promise](https://quenty.github.io/NevermoreEngine/api/Promise/) that provides compatibility for usage with Wally. |
-| [PromiseUtilities](https://robloxiandemo.github.io/Roblox-Modules/api/Promise) | `PromiseUtilities = "robloxiandemo/promiseutilities-demo@0.1.0"` | A forked variant of [Quenty's PromiseUtilities](https://quenty.github.io/NevermoreEngine/api/PromiseUtils/) that provides compatibility for usage with Wally. |
+| [Promise](https://robloxiandemo.github.io/Roblox-Modules/api/Promise) | `Promise = "robloxiandemo/promise-demo@0.1.6"` | A forked variant of [Quenty's Promise](https://quenty.github.io/NevermoreEngine/api/Promise/) that provides compatibility for usage with Wally. |
+| [PromiseUtilities](https://robloxiandemo.github.io/Roblox-Modules/api/Promise) | `PromiseUtilities = "robloxiandemo/promiseutilities-demo@0.1.1"` | A forked variant of [Quenty's PromiseUtilities](https://quenty.github.io/NevermoreEngine/api/PromiseUtils/) that provides compatibility for usage with Wally. |

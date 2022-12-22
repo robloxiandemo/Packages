@@ -197,7 +197,7 @@ end
 ]=]
 function Promise:Wait(): (string) -> (any?)
 	if self["Fulfilled"] then
-		return (unpack(self["Fulfilled"], 1, self["ValuesLength"])) :: any?
+		return (table.unpack(self["Fulfilled"], 1, self["ValuesLength"])) :: any?
 	elseif self["Rejected"] then
 		return (error(tostring(self["Rejected"][1]), 2)) :: string
 	else
@@ -215,7 +215,7 @@ function Promise:Wait(): (string) -> (any?)
 		if (self["Rejected"]) then
 			return (error(tostring(self["Rejected"][1]), 2)) :: string
 		else
-			return (unpack(self["Fulfilled"], 1, self["ValuesLength"])) :: any?
+			return (table.unpack(self["Fulfilled"], 1, self["ValuesLength"])) :: any?
 		end
 	end
 end
@@ -230,9 +230,9 @@ end
 ]=]
 function Promise:Yield(): (boolean, any?)
 	if (self["Fulfilled"]) then
-		return (true) :: boolean, (unpack(self["Fulfilled"], 1, self["ValuesLength"])) :: any?
+		return (true) :: boolean, (table.unpack(self["Fulfilled"], 1, self["ValuesLength"])) :: any?
 	elseif (self["Rejected"]) then
-		return (false) :: boolean, (unpack(self["Rejected"], 1, self["ValuesLength"])) :: any?
+		return (false) :: boolean, (table.unpack(self["Rejected"], 1, self["ValuesLength"])) :: any?
 	else
 		local BindableEvent: BindableEvent = Instance.new("BindableEvent")
 
@@ -246,9 +246,9 @@ function Promise:Yield(): (boolean, any?)
 		BindableEvent:Destroy()
 
 		if (self["Fulfilled"]) then
-			return (true) :: boolean, (unpack(self["Fulfilled"], 1, self["ValuesLength"])) :: any?
+			return (true) :: boolean, (table.unpack(self["Fulfilled"], 1, self["ValuesLength"])) :: any?
 		elseif (self["Rejected"]) then
-			return (false) :: boolean, (unpack(self["Rejected"], 1, self["ValuesLength"])) :: any?
+			return (false) :: boolean, (table.unpack(self["Rejected"], 1, self["ValuesLength"])) :: any?
 		end
 	end
 end
@@ -351,7 +351,7 @@ function Promise:Fulfill(...: any?): any?
 	self["PendingExecuteList"] = nil
 
 	for _: number, Data: any? in pairs(List) do
-		self:ExecuteThen(unpack(Data))
+		self:ExecuteThen(table.unpack(Data))
 	end
 end
 
@@ -377,7 +377,7 @@ function Promise:Reject(...: any?): PromiseData
 	self["PendingExecuteList"] = nil
 
 	for _: number, Data: any? in pairs(List) do
-		self:ExecuteThen(unpack(Data))
+		self:ExecuteThen(table.unpack(Data))
 	end
 
 	if ((self["UnconsumedException"]) and ((self["ValuesLength"]) > (0))) then
@@ -530,9 +530,9 @@ end
 ]=]
 function Promise:GetResults(): (boolean, any?)
 	if (self["Rejected"]) then
-		return (false) :: boolean, (unpack(self["Rejected"], 1, self["ValuesLength"])) :: any?
+		return (false) :: boolean, (table.unpack(self["Rejected"], 1, self["ValuesLength"])) :: any?
 	elseif self["Fulfilled"] then
-		return (true) :: boolean, (unpack(self["Fulfilled"], 1, self["ValuesLength"])) :: any?
+		return (true) :: boolean, (table.unpack(self["Fulfilled"], 1, self["ValuesLength"])) :: any?
 	else
 		error("Still pending!")
 	end
@@ -572,13 +572,21 @@ function Promise:ExecuteThen(OnFulfilled: Function?, OnRejected: Function?,
 	if (self["Fulfilled"]) then
 		if ((type(OnFulfilled)) == ("function")) then
 			if (CurrentPromise) then
-				CurrentPromise:Resolve(OnFulfilled(unpack(self["Fulfilled"], 1, self["ValuesLength"])))
+				CurrentPromise:Resolve(
+					OnFulfilled(
+						table.unpack(
+							self["Fulfilled"],
+							1,
+							self["ValuesLength"]
+						)
+					)
+				)
 
 				return (CurrentPromise) :: PromiseData
 			else
 				local Results: table = table.pack(
 					OnFulfilled(
-						unpack(
+						table.unpack(
 
 							self["Fulfilled"],
 							1,
@@ -611,13 +619,21 @@ function Promise:ExecuteThen(OnFulfilled: Function?, OnRejected: Function?,
 	elseif (self["Rejected"]) then
 		if ((type(OnRejected)) == ("function")) then
 			if (CurrentPromise) then
-				CurrentPromise:Resolve(OnRejected(unpack(self["Rejected"], 1, self["ValuesLength"])))
+				CurrentPromise:Resolve(
+					OnRejected(
+						table.unpack(
+							self["Rejected"],
+							1,
+							self["ValuesLength"]
+						)
+					)
+				)
 
 				return (CurrentPromise) :: PromiseData
 			else
 				local Results: table = table.pack(
 					OnRejected(
-						unpack(
+						table.unpack(
 
 							self["Rejected"],
 							1,

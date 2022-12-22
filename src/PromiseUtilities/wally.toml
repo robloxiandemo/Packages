@@ -1,7 +1,7 @@
 [package]
 name = "robloxiandemo/promiseutilities-demo"
 description = "A modification / rewrite of Quenty's PromiseUtilities (NevermoreEngine/PromiseUtilities), featuring type-syntaxing, which has built-in compatiblity for usage with Wally."
-version = "0.1.0"
+version = "0.1.1"
 license = "MIT"
 
 authors = [
